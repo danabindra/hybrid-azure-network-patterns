@@ -14,7 +14,7 @@
   <g transform="translate(10,20)">
     <rect class="box" x="0"   y="0" width="150" height="50" rx="6"/><text class="txt" x="75"  y="30" text-anchor="middle">Branch Office</text>
     <rect class="box" x="180" y="0" width="140" height="50" rx="6"/><text class="txt" x="250" y="30" text-anchor="middle">vEdge Router</text>
-    <rect class="box" x="350" y="0" width="190" height="50" rx="6"/><text class="txt" x="445" y="30" text-anchor="middle">MPLS Backbone (AS 25676)</text>
+    <rect class="box" x="350" y="0" width="190" height="50" rx="6"/><text class="txt" x="445" y="30" text-anchor="middle">MPLS Backbone (AS xxxxx)</text>
     <rect class="box" x="570" y="0" width="180" height="50" rx="6"/><text class="txt" x="660" y="30" text-anchor="middle">ExpressRoute (Central)</text>
     <rect class="box" x="780" y="0" width="130" height="50" rx="6"/><text class="txt" x="845" y="30" text-anchor="middle">Azure Hub VNet</text>
     <rect class="box" x="930" y="0" width="210" height="50" rx="6"/><text class="txt" x="1035" y="22" text-anchor="middle">Check Point /</text><text class="txt" x="1035" y="38" text-anchor="middle">FortiGate VMSS</text>

@@ -1,0 +1,187 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1400 700">
+  
+  <ns0:rect width="1400" height="700" fill="#f8f9fa" x="0" y="0" />
+  
+  
+  <ns0:g id="on-premises">
+    <ns0:rect x="50" y="150" width="300" height="400" rx="15" fill="#f5f5f5" stroke="#666" stroke-width="3" />
+    <ns0:text x="130.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" dominant-baseline="middle">On-Premises Infrastructure</ns0:text>
+    <ns0:text x="130.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="12" dominant-baseline="middle">Corporate Data Center</ns0:text>
+    
+    
+    <ns0:rect x="70" y="220" width="120" height="80" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="2" />
+    <ns0:text x="130.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" dominant-baseline="middle">Active Directory</ns0:text>
+    <ns0:text x="130.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="10" dominant-baseline="middle">Domain Controllers</ns0:text>
+    <ns0:text x="130.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">corp.company.com</ns0:text>
+    <ns0:text x="130.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">LDAP: 389, 636</ns0:text>
+    
+    
+    <ns0:rect x="210" y="220" width="120" height="80" rx="8" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" />
+    <ns0:text x="270.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" dominant-baseline="middle">DNS Servers</ns0:text>
+    <ns0:text x="270.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="10" dominant-baseline="middle">Primary/Secondary</ns0:text>
+    <ns0:text x="270.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">10.1.10.10/11</ns0:text>
+    <ns0:text x="270.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">Port: 53</ns0:text>
+    
+    
+    <ns0:rect x="70" y="320" width="120" height="60" rx="8" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" />
+    <ns0:text x="130.00" y="350.00" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" dominant-baseline="middle">Azure AD Connect</ns0:text>
+    <ns0:text x="130.00" y="350.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">Identity Sync</ns0:text>
+    <ns0:text x="130.00" y="350.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">HTTPS: 443</ns0:text>
+    
+    
+    <ns0:rect x="210" y="320" width="120" height="60" rx="8" fill="#fff8e1" stroke="#ffc107" stroke-width="2" />
+    <ns0:text x="270.00" y="350.00" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" dominant-baseline="middle">NTP Server</ns0:text>
+    <ns0:text x="270.00" y="350.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">Time Sync</ns0:text>
+    <ns0:text x="270.00" y="350.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">UDP: 123</ns0:text>
+    
+    
+    <ns0:rect x="140" y="450" width="120" height="60" rx="8" fill="#ffebee" stroke="#f44336" stroke-width="2" />
+    <ns0:text x="200.00" y="480.00" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" dominant-baseline="middle">MPLS Router</ns0:text>
+    <ns0:text x="200.00" y="480.00" text-anchor="middle" font-family="Arial" font-size="10" dominant-baseline="middle">AS 25676</ns0:text>
+    <ns0:text x="200.00" y="480.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">BGP Peering</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:g id="expressroute">
+    <ns0:rect x="450" y="350" width="150" height="100" rx="10" fill="#e8f5e8" stroke="#4caf50" stroke-width="3" />
+    <ns0:text x="525.00" y="400.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" dominant-baseline="middle">ExpressRoute</ns0:text>
+    <ns0:text x="525.00" y="400.00" text-anchor="middle" font-family="Arial" font-size="12" dominant-baseline="middle">Central Region</ns0:text>
+    <ns0:text x="525.00" y="400.00" text-anchor="middle" font-family="Arial" font-size="10" dominant-baseline="middle">Private Peering</ns0:text>
+    <ns0:text x="525.00" y="400.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">1 Gbps Circuit</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:g id="azure-hub">
+    <ns0:rect x="700" y="280" width="280" height="240" rx="15" fill="#e3f2fd" stroke="#2196f3" stroke-width="3" />
+    <ns0:text x="840.00" y="400.00" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" dominant-baseline="middle">Azure Hub VNet (Central)</ns0:text>
+    <ns0:text x="840.00" y="400.00" text-anchor="middle" font-family="Arial" font-size="12" dominant-baseline="middle">10.100.0.0/16</ns0:text>
+    
+    
+    <ns0:rect x="720" y="350" width="110" height="50" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2" />
+    <ns0:text x="775.00" y="375.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">ER Gateway</ns0:text>
+    <ns0:text x="775.00" y="375.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">GatewaySubnet</ns0:text>
+    <ns0:text x="775.00" y="375.00" text-anchor="middle" font-family="Arial" font-size="8" dominant-baseline="middle">10.100.0.0/27</ns0:text>
+    
+    
+    <ns0:rect x="850" y="350" width="110" height="50" rx="5" fill="#e1f5fe" stroke="#0288d1" stroke-width="2" />
+    <ns0:text x="905.00" y="375.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">Private DNS</ns0:text>
+    <ns0:text x="905.00" y="375.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">DNS Zones</ns0:text>
+    <ns0:text x="905.00" y="375.00" text-anchor="middle" font-family="Arial" font-size="8" dominant-baseline="middle">168.63.129.16</ns0:text>
+    
+    
+    <ns0:rect x="720" y="420" width="110" height="50" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" />
+    <ns0:text x="775.00" y="445.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">DNS Forwarder</ns0:text>
+    <ns0:text x="775.00" y="445.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">Custom DNS</ns0:text>
+    <ns0:text x="775.00" y="445.00" text-anchor="middle" font-family="Arial" font-size="8" dominant-baseline="middle">10.100.10.10</ns0:text>
+    
+    
+    <ns0:rect x="850" y="420" width="110" height="50" rx="5" fill="#fff8e1" stroke="#ffa000" stroke-width="2" />
+    <ns0:text x="905.00" y="445.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">Domain Controller</ns0:text>
+    <ns0:text x="905.00" y="445.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">(Read-Only)</ns0:text>
+    <ns0:text x="905.00" y="445.00" text-anchor="middle" font-family="Arial" font-size="8" dominant-baseline="middle">10.100.10.20</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:g id="azure-spoke">
+    <ns0:rect x="1050" y="280" width="280" height="240" rx="15" fill="#f3e5f5" stroke="#9c27b0" stroke-width="3" />
+    <ns0:text x="1190.00" y="400.00" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" dominant-baseline="middle">Production Spoke VNet</ns0:text>
+    <ns0:text x="1190.00" y="400.00" text-anchor="middle" font-family="Arial" font-size="12" dominant-baseline="middle">10.101.0.0/16</ns0:text>
+    
+    
+    <ns0:rect x="1070" y="350" width="110" height="60" rx="5" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" />
+    <ns0:text x="1125.00" y="380.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">Domain-Joined</ns0:text>
+    <ns0:text x="1125.00" y="380.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">VMs</ns0:text>
+    <ns0:text x="1125.00" y="380.00" text-anchor="middle" font-family="Arial" font-size="8" dominant-baseline="middle">10.101.1.0/24</ns0:text>
+    
+    
+    <ns0:rect x="1200" y="350" width="110" height="60" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2" />
+    <ns0:text x="1255.00" y="380.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">App Servers</ns0:text>
+    <ns0:text x="1255.00" y="380.00" text-anchor="middle" font-family="Arial" font-size="10" dominant-baseline="middle">SQL/Web</ns0:text>
+    <ns0:text x="1255.00" y="380.00" text-anchor="middle" font-family="Arial" font-size="8" dominant-baseline="middle">10.101.2.0/24</ns0:text>
+    
+    
+    <ns0:rect x="1070" y="430" width="110" height="60" rx="5" fill="#ffebee" stroke="#f44336" stroke-width="2" />
+    <ns0:text x="1125.00" y="460.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">Azure SQL</ns0:text>
+    <ns0:text x="1125.00" y="460.00" text-anchor="middle" font-family="Arial" font-size="10" dominant-baseline="middle">Database</ns0:text>
+    <ns0:text x="1125.00" y="460.00" text-anchor="middle" font-family="Arial" font-size="8" dominant-baseline="middle">Private Endpoint</ns0:text>
+    
+    
+    <ns0:rect x="1200" y="430" width="110" height="60" rx="5" fill="#e1f5fe" stroke="#0288d1" stroke-width="2" />
+    <ns0:text x="1255.00" y="460.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">Storage Account</ns0:text>
+    <ns0:text x="1255.00" y="460.00" text-anchor="middle" font-family="Arial" font-size="10" dominant-baseline="middle">Blob/Files</ns0:text>
+    <ns0:text x="1255.00" y="460.00" text-anchor="middle" font-family="Arial" font-size="8" dominant-baseline="middle">Private Endpoint</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:g id="peering">
+    <ns0:path d="M 980 400 Q 1015 400 1050 400" stroke="#9c27b0" stroke-width="4" fill="none" stroke-dasharray="8,4" />
+    <ns0:text x="1125.00" y="380.00" text-anchor="middle" font-family="Arial" font-size="10" fill="#9c27b0" font-weight="bold" dominant-baseline="middle">VNet Peering</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:g id="traffic-flows">
+    
+    <ns0:path d="M 350 480 L 450 400" stroke="#666" stroke-width="3" fill="none" marker-end="url(#arrowhead-gray)" />
+    
+    
+    <ns0:path d="M 600 400 L 700 400" stroke="#666" stroke-width="3" fill="none" marker-end="url(#arrowhead-gray)" />
+    
+    
+    <ns0:path d="M 330 250 Q 525 150 1070 380" stroke="#ff9800" stroke-width="3" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowhead-orange)" />
+    <ns0:text x="520" y="140" text-anchor="middle" font-family="Arial" font-size="10" fill="#ff9800" font-weight="bold">Kerberos Authentication</ns0:text>
+    
+    
+    <ns0:path d="M 330 260 Q 525 200 850 375" stroke="#2196f3" stroke-width="3" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowhead-blue)" />
+    <ns0:text x="520" y="190" text-anchor="middle" font-family="Arial" font-size="10" fill="#2196f3" font-weight="bold">DNS Resolution</ns0:text>
+    
+    
+    <ns0:path d="M 330 350 Q 525 250 1070 390" stroke="#ffc107" stroke-width="3" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowhead-yellow)" />
+    <ns0:text x="520" y="240" text-anchor="middle" font-family="Arial" font-size="10" fill="#ffc107" font-weight="bold">NTP Time Sync</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:defs>
+    <ns0:marker id="arrowhead-gray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <ns0:polygon points="0 0, 8 3, 0 6" fill="#666" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <ns0:polygon points="0 0, 8 3, 0 6" fill="#ff9800" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <ns0:polygon points="0 0, 8 3, 0 6" fill="#2196f3" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-yellow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <ns0:polygon points="0 0, 8 3, 0 6" fill="#ffc107" />
+    </ns0:marker>
+  </ns0:defs>
+  
+  
+  <ns0:g id="config-details">
+    <ns0:rect x="50" y="580" width="1280" height="100" rx="10" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" />
+    <ns0:text x="690.00" y="630.00" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" dominant-baseline="middle">Integrated DNS/IPAM Configuration: Infoblox + SD-WAN + Azure</ns0:text>
+    
+    
+    <ns0:rect x="70" y="620" width="280" height="50" rx="5" fill="#fff" stroke="#666" />
+    <ns0:text x="210.00" y="645.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">Infoblox Grid Configuration</ns0:text>
+    <ns0:text x="210.00" y="645.00" font-family="Courier" font-size="8" text-anchor="middle" dominant-baseline="middle">Grid Master: 10.1.10.20 (On-Premises)</ns0:text>
+    <ns0:text x="210.00" y="645.00" font-family="Courier" font-size="8" text-anchor="middle" dominant-baseline="middle">Grid Member: 10.100.10.10 (Azure Hub)</ns0:text>
+    
+    
+    <ns0:rect x="370" y="620" width="280" height="50" rx="5" fill="#fff" stroke="#666" />
+    <ns0:text x="510.00" y="645.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">SD-WAN DNS Policy Engine</ns0:text>
+    <ns0:text x="510.00" y="645.00" font-family="Courier" font-size="8" text-anchor="middle" dominant-baseline="middle">Azure/Corp domains &#8594; MPLS transport</ns0:text>
+    <ns0:text x="510.00" y="645.00" font-family="Courier" font-size="8" text-anchor="middle" dominant-baseline="middle">O365/Internet &#8594; Local breakout</ns0:text>
+    
+    
+    <ns0:rect x="670" y="620" width="280" height="50" rx="5" fill="#fff" stroke="#666" />
+    <ns0:text x="810.00" y="645.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">Azure Private DNS Zones</ns0:text>
+    <ns0:text x="690.00" y="630.00" font-family="Courier" font-size="8" text-anchor="middle" dominant-baseline="middle">Auto-discovery: Private Link endpoints</ns0:text>
+    <ns0:text x="690.00" y="630.00" font-family="Courier" font-size="8" text-anchor="middle" dominant-baseline="middle">API sync: Infoblox &#8594; Azure zones</ns0:text>
+    
+    
+    <ns0:rect x="970" y="620" width="280" height="50" rx="5" fill="#fff" stroke="#666" />
+    <ns0:text x="1110.00" y="645.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">Unified IPAM Management</ns0:text>
+    <ns0:text x="1110.00" y="645.00" font-family="Courier" font-size="8" text-anchor="middle" dominant-baseline="middle">On-Prem: 10.1.0.0/16 | Azure: 10.100+/16</ns0:text>
+    <ns0:text x="1110.00" y="645.00" font-family="Courier" font-size="8" text-anchor="middle" dominant-baseline="middle">Automated VM registration &amp; cleanup</ns0:text>
+  </ns0:g>
+</ns0:svg>

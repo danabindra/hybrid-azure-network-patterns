@@ -1,0 +1,141 @@
+<svg viewBox="0 0 1400 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1400" height="600" fill="#f8f9fa"/>
+  
+  <!-- On-Premises Network -->
+  <g id="on-premises">
+    <rect x="50" y="250" width="150" height="100" rx="10" fill="#f5f5f5" stroke="#666" stroke-width="3"/>
+    <text x="125" y="275" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">On-Premises</text>
+    <text x="125" y="295" text-anchor="middle" font-family="Arial" font-size="12">Enterprise Network</text>
+    
+    <!-- Router/Gateway -->
+    <rect x="70" y="310" width="110" height="30" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="125" y="328" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">BGP Router</text>
+    <text x="125" y="340" text-anchor="middle" font-family="Arial" font-size="9">AS 25676</text>
+  </g>
+  
+  <!-- Equinix Cloud Exchange Fabric -->
+  <g id="equinix-fabric">
+    <rect x="300" y="200" width="200" height="200" rx="15" fill="#fff3e0" stroke="#f57c00" stroke-width="4"/>
+    <text x="400" y="225" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Equinix Cloud</text>
+    <text x="400" y="245" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Exchange Fabric</text>
+    <text x="400" y="265" text-anchor="middle" font-family="Arial" font-size="12">(ECX Fabric)</text>
+    
+    <!-- Cross-Connect Infrastructure -->
+    <rect x="320" y="290" width="160" height="40" rx="5" fill="#ffcc80" stroke="#e65100" stroke-width="2"/>
+    <text x="400" y="308" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Layer 2/3 Cross-Connects</text>
+    <text x="400" y="322" text-anchor="middle" font-family="Arial" font-size="9">BGP Route Optimization</text>
+    
+    <!-- VRF Instances -->
+    <rect x="320" y="340" width="70" height="35" rx="3" fill="#ffe0b2" stroke="#ff9800" stroke-width="2"/>
+    <text x="355" y="355" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold">VRF Azure</text>
+    <text x="355" y="368" text-anchor="middle" font-family="Arial" font-size="8">VLAN 100</text>
+    
+    <rect x="410" y="340" width="70" height="35" rx="3" fill="#ffe0b2" stroke="#ff9800" stroke-width="2"/>
+    <text x="445" y="355" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold">VRF OCI</text>
+    <text x="445" y="368" text-anchor="middle" font-family="Arial" font-size="8">VLAN 200</text>
+  </g>
+  
+  <!-- Azure Path -->
+  <g id="azure-path">
+    <!-- ExpressRoute Circuit -->
+    <rect x="600" y="80" width="140" height="80" rx="8" fill="#e3f2fd" stroke="#2196f3" stroke-width="3"/>
+    <text x="670" y="105" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Azure ExpressRoute</text>
+    <text x="670" y="125" text-anchor="middle" font-family="Arial" font-size="11">Circuit</text>
+    <text x="670" y="140" text-anchor="middle" font-family="Arial" font-size="10">1-10 Gbps</text>
+    <text x="670" y="152" text-anchor="middle" font-family="Arial" font-size="9">AS 12076</text>
+    
+    <!-- ExpressRoute Connection -->
+    <rect x="800" y="80" width="140" height="80" rx="8" fill="#bbdefb" stroke="#1976d2" stroke-width="3"/>
+    <text x="870" y="105" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">ExpressRoute</text>
+    <text x="870" y="125" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Connection</text>
+    <text x="870" y="145" text-anchor="middle" font-family="Arial" font-size="10">Private Peering</text>
+    
+    <!-- Virtual Network Gateway -->
+    <rect x="1000" y="80" width="140" height="80" rx="8" fill="#90caf9" stroke="#1565c0" stroke-width="3"/>
+    <text x="1070" y="105" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Virtual Network</text>
+    <text x="1070" y="125" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Gateway</text>
+    <text x="1070" y="145" text-anchor="middle" font-family="Arial" font-size="10">ER Gateway</text>
+    
+    <!-- Azure Virtual Network -->
+    <rect x="1200" y="80" width="140" height="80" rx="8" fill="#64b5f6" stroke="#0d47a1" stroke-width="3"/>
+    <text x="1270" y="105" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Azure Virtual</text>
+    <text x="1270" y="125" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Network</text>
+    <text x="1270" y="145" text-anchor="middle" font-family="Arial" font-size="10">10.100.0.0/16</text>
+  </g>
+  
+  <!-- Oracle Cloud Infrastructure Path -->
+  <g id="oci-path">
+    <!-- OCI FastConnect -->
+    <rect x="600" y="440" width="140" height="80" rx="8" fill="#ffebee" stroke="#f44336" stroke-width="3"/>
+    <text x="670" y="465" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">OCI FastConnect</text>
+    <text x="670" y="485" text-anchor="middle" font-family="Arial" font-size="11">Service</text>
+    <text x="670" y="500" text-anchor="middle" font-family="Arial" font-size="10">1-10 Gbps</text>
+    <text x="670" y="512" text-anchor="middle" font-family="Arial" font-size="9">AS 31898</text>
+    
+    <!-- Virtual Circuit -->
+    <rect x="800" y="440" width="140" height="80" rx="8" fill="#ef9a9a" stroke="#d32f2f" stroke-width="3"/>
+    <text x="870" y="465" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Virtual Circuit</text>
+    <text x="870" y="485" text-anchor="middle" font-family="Arial" font-size="11">(VC)</text>
+    <text x="870" y="505" text-anchor="middle" font-family="Arial" font-size="10">Private Peering</text>
+    
+    <!-- Dynamic Routing Gateway -->
+    <rect x="1000" y="440" width="140" height="80" rx="8" fill="#e57373" stroke="#c62828" stroke-width="3"/>
+    <text x="1070" y="465" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Dynamic Routing</text>
+    <text x="1070" y="485" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Gateway (DRG)</text>
+    <text x="1070" y="505" text-anchor="middle" font-family="Arial" font-size="10">BGP Routing</text>
+    
+    <!-- Virtual Cloud Network -->
+    <rect x="1200" y="440" width="140" height="80" rx="8" fill="#f44336" stroke="#b71c1c" stroke-width="3"/>
+    <text x="1270" y="465" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Virtual Cloud</text>
+    <text x="1270" y="485" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Network (VCN)</text>
+    <text x="1270" y="505" text-anchor="middle" font-family="Arial" font-size="10">10.200.0.0/16</text>
+  </g>
+  
+  <!-- Oracle Cloud Label -->
+  <g id="oracle-cloud">
+    <ellipse cx="1270" cy="550" rx="60" ry="25" fill="#fff" stroke="#f44336" stroke-width="2"/>
+    <text x="1270" y="548" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#f44336">Oracle</text>
+    <text x="1270" y="562" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#f44336">Cloud</text>
+  </g>
+  
+  <!-- Microsoft Azure Label -->
+  <g id="microsoft-azure">
+    <ellipse cx="1270" cy="50" rx="60" ry="25" fill="#fff" stroke="#2196f3" stroke-width="2"/>
+    <text x="1270" y="48" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2196f3">Microsoft</text>
+    <text x="1270" y="62" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2196f3">Azure</text>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g id="connections">
+    <!-- On-Premises to Equinix -->
+    <line x1="200" y1="300" x2="300" y2="300" stroke="#666" stroke-width="3"/>
+    
+    <!-- Equinix to Azure Path -->
+    <line x1="500" y1="250" x2="600" y2="120" stroke="#2196f3" stroke-width="3"/>
+    
+    <!-- Azure Path Connections -->
+    <line x1="740" y1="120" x2="800" y2="120" stroke="#2196f3" stroke-width="3"/>
+    <line x1="940" y1="120" x2="1000" y2="120" stroke="#2196f3" stroke-width="3"/>
+    <line x1="1140" y1="120" x2="1200" y2="120" stroke="#2196f3" stroke-width="3"/>
+    
+    <!-- Equinix to OCI Path -->
+    <line x1="500" y1="350" x2="600" y2="480" stroke="#f44336" stroke-width="3"/>
+    
+    <!-- OCI Path Connections -->
+    <line x1="740" y1="480" x2="800" y2="480" stroke="#f44336" stroke-width="3"/>
+    <line x1="940" y1="480" x2="1000" y2="480" stroke="#f44336" stroke-width="3"/>
+    <line x1="1140" y1="480" x2="1200" y2="480" stroke="#f44336" stroke-width="3"/>
+  </g>
+  
+  <!-- BGP Communities Callout -->
+  <g id="bgp-communities">
+    <rect x="50" y="450" width="220" height="120" rx="8" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="160" y="470" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">BGP Traffic Engineering</text>
+    <text x="60" y="490" font-family="Arial" font-size="9">• Azure Custom Communities</text>
+    <text x="60" y="505" font-family="Arial" font-size="9">• AS-Path Prepending</text>
+    <text x="60" y="520" font-family="Arial" font-size="9">• Local Preference Control</text>
+    <text x="60" y="535" font-family="Arial" font-size="9">• Route Filtering</text>
+    <text x="60" y="550" font-family="Arial" font-size="9">• Automated Failover</text>
+  </g>
+</svg>

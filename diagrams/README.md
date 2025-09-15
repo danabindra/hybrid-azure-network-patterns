@@ -1,7 +1,7 @@
 ## Network Flows (Azure NW Strategy)
 
 <p align="center">
-  <img src="diagrams/png/1_onprem_er.png" alt="On-Prem → Azure Hub via ER" width="100%">
+  <img src="png/1_onprem_er.png" alt="On-Prem → Azure Hub via ER" width="100%">
 </p>
 
 <p align="center">
@@ -27,6 +27,7 @@
 <p align="center">
   <img src="diagrams/png/7_internet_ingress.png" alt="Internet Ingress traffic (WAF → NVA → Spokes)" width="100%">
 </p>
+
 
 
 

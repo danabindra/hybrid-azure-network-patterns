@@ -40,14 +40,15 @@ jobs:
         run: |
           mkdir -p diagrams/svg
           shopt -s nullglob
-          for f in diagrams/mermaid/*.mmd; do
-            base=$(basename "$f" .mmd)
-            echo "Generating SVG for $f -> diagrams/svg/${base}.svg"
-            mmdc -p puppeteer-config.json -i "$f" -o "diagrams/svg/${base}.svg"
-          done
-      - name: Commit if changed
-        if: steps.checkdir.outputs.has_mmd == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore(diagrams): regenerate Mermaid SVGs [skip ci]"
-          file_pattern: diagrams/svg/*.svg
+       failed_files=()
+       for f in diagrams/mermaid/*.mmd; do
+         base=$(basename "$f" .mmd)
+         echo "Generating SVG for $f -> diagrams/svg/${base}.svg"
+         if ! mmdc -p puppeteer-config.json -i "$f" -o "diagrams/svg/${base}.svg"; then
+           failed_files+=("$f")
+         fi
+       done
+       if [ ${#failed_files[@]} -gt 0 ]; then
+         echo "Failed to generate diagrams for: ${failed_files[*]}"
+         exit 1
+       fi

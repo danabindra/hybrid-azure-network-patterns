@@ -1,0 +1,38 @@
+<svg width="1800" height="260" viewBox="0 0 1800 260" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg{fill:#0a0a0a}
+    .node{fill:#fff;stroke:#111827;stroke-width:2;rx:16;ry:16;filter:url(#d)}
+    .txt{font:600 20px system-ui,Segoe UI,Roboto,Arial;fill:#111827}
+    .cap{font:500 14px system-ui,Segoe UI,Roboto,Arial;fill:#374151}
+    .arrow{fill:none;stroke:#d1d5db;stroke-width:2.5;marker-end:url(#m)}
+    .arrow2{fill:none;stroke:#9ca3af;stroke-width:2.5;marker-end:url(#m)}
+  </style>
+  <defs>
+    <filter id="d" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.2" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+    <marker id="m" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#d1d5db"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1800" height="260"/>
+  <!-- Nodes -->
+  <g transform="translate(40,90)"><rect class="node" width="230" height="80"/><text class="txt" x="24" y="48">On-Prem DC</text></g>
+  <g transform="translate(330,30)"><rect class="node" width="250" height="80"/><text class="txt" x="22" y="48">ER Circuit (Primary)</text></g>
+  <g transform="translate(330,150)"><rect class="node" width="250" height="80"/><text class="txt" x="12" y="48">ER Circuit (Secondary)</text></g>
+  <g transform="translate(640,90)"><rect class="node" width="220" height="80"/><text class="txt" x="34" y="48">ER Gateway</text></g>
+  <g transform="translate(920,90)"><rect class="node" width="240" height="80"/><text class="txt" x="66" y="48">NVA VMSS</text></g>
+  <g transform="translate(1210,90)"><rect class="node" width="220" height="80"/><text class="txt" x="36" y="48">Azure Hub VNet</text></g>
+  <g transform="translate(1490,90)"><rect class="node" width="250" height="80"/><text class="txt" x="28" y="48">Spokes / Workloads</text></g>
+  <!-- Lines -->
+  <path class="arrow" d="M270,130 L330,70"/>
+  <path class="arrow2" d="M270,130 L330,190"/>
+  <path class="arrow" d="M580,70 L640,130"/>
+  <path class="arrow2" d="M580,190 L640,130"/>
+  <path class="arrow" d="M860,130 L920,130"/>
+  <path class="arrow" d="M1160,130 L1210,130"/>
+  <path class="arrow" d="M1430,130 L1490,130"/>
+  <!-- labels -->
+  <text class="cap" x="360" y="22">(ER-P)</text>
+  <text class="cap" x="358" y="242">(ER-S)</text>
+</svg>

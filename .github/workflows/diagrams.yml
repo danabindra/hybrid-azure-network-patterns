@@ -20,7 +20,7 @@ jobs:
           if [ -d diagrams/mermaid ]; then echo "has_mmd=true" >> $GITHUB_OUTPUT; else echo "has_mmd=false" >> $GITHUB_OUTPUT; fi
       - name: Install mermaid-cli
         if: steps.checkdir.outputs.has_mmd == 'true'
-        run: npm install -g @mermaid-js/mermaid-cli
+        run: npm install -g @mermaid-js/mermaid-cli@10.9.1
       - name: Create puppeteer config
         if: steps.checkdir.outputs.has_mmd == 'true'
         run: |

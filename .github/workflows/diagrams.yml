@@ -1,0 +1,45 @@
+name: Rebuild diagrams from Mermaid
+on:
+  schedule:
+    # 16:15 UTC = 09:15 PT
+    - cron: "15 16 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - 'diagrams/mermaid/**/*.mmd'
+
+permissions:
+  contents: write
+
+jobs:
+  build_mermaid:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Skip if no mermaid dir
+        id: checkdir
+        run: |
+          if [ -d diagrams/mermaid ]; then echo "has_mmd=true" >> $GITHUB_OUTPUT; else echo "has_mmd=false" >> $GITHUB_OUTPUT; fi
+
+      - name: Install mermaid-cli
+        if: steps.checkdir.outputs.has_mmd == 'true'
+        run: npm install -g @mermaid-js/mermaid-cli
+
+      - name: Build SVGs
+        if: steps.checkdir.outputs.has_mmd == 'true'
+        run: |
+          mkdir -p diagrams/svg
+          shopt -s nullglob
+          for f in diagrams/mermaid/*.mmd; do
+            base=$(basename "$f" .mmd)
+            mmdc -i "$f" -o "diagrams/svg/${base}.svg"
+          done
+
+      - name: Commit if changed
+        if: steps.checkdir.outputs.has_mmd == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(diagrams): regenerate Mermaid SVGs [skip ci]"
+          file_pattern: diagrams/svg/*.svg
+

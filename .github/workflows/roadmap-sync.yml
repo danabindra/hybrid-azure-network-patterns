@@ -1,0 +1,71 @@
+name: Sync ROADMAP from issues
+on:
+  schedule:
+    # 16:00 UTC = 09:00 PT
+    - cron: "0 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build docs/ROADMAP.generated.md from issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const {owner, repo} = context.repo;
+
+            async function list(label) {
+              return await github.paginate(
+                github.rest.issues.listForRepo,
+                { owner, repo, state: 'open', labels: label, per_page: 100 }
+              );
+            }
+
+            const roadmap = await list('roadmap').catch(() => []);
+            const todo = await list('todo').catch(() => []);
+
+            function row(i) {
+              const labels = i.labels?.map(l => typeof l === 'string' ? l : l.name).join(', ') || '';
+              const assignee = (i.assignee && (i.assignee.login || i.assignee)) || '—';
+              return `| #${i.number} | [${i.title}](${i.html_url}) | ${assignee} | ${labels} | ${new Date(i.updated_at).toISOString().slice(0,10)} |`;
+            }
+
+            const header = `# ROADMAP (generated)\n\n_Last sync: ${new Date().toISOString()}_\n\n` +
+              `This file is generated from GitHub Issues. Edit the issues (labels: \`roadmap\`, \`todo\`) — not this file.\n\n`;
+
+            const tableHdr = `| ID | Title | Assignee | Labels | Updated |\n|---:|-------|---------|--------|---------|\n`;
+            const roadmapTbl = roadmap.length ? roadmap.map(row).join('\n') : '_No open roadmap items._';
+            const todoTbl = todo.length ? todo.map(row).join('\n') : '_No open TODO items._';
+
+            const out = header +
+              `## Roadmap\n\n${tableHdr}${roadmapTbl}\n\n` +
+              `## TODO\n\n${tableHdr}${todoTbl}\n`;
+
+            const outDir = path.join(process.env.GITHUB_WORKSPACE, 'docs');
+            const outFile = path.join(outDir, 'ROADMAP.generated.md');
+            if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, {recursive: true});
+
+            let changed = true;
+            if (fs.existsSync(outFile)) {
+              const cur = fs.readFileSync(outFile, 'utf8');
+              changed = (cur !== out);
+            }
+            fs.writeFileSync(outFile, out, 'utf8');
+            core.setOutput('changed', changed);
+
+      - name: Commit if changed
+        if: steps.github_script.outputs.changed != 'false'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(docs): sync ROADMAP from issues [skip ci]"
+          file_pattern: docs/ROADMAP.generated.md
+

@@ -1,0 +1,30 @@
+name: Markdown lint (auto-fix)
+on:
+  pull_request:
+    paths: ["**/*.md"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Install markdownlint-cli
+        run: npm install -g markdownlint-cli
+
+      - name: Lint & fix
+        run: |
+          markdownlint "**/*.md" -f || true
+
+      - name: Commit fixes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: markdownlint auto-fixes"
+          file_pattern: "**/*.md"
+

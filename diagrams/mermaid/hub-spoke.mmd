@@ -1,0 +1,43 @@
+flowchart LR
+  subgraph On-Prem DC
+    A[Users/Apps]
+    B[Core Router]
+  end
+
+  subgraph Provider
+    ER[ExpressRoute | Private Peering]
+  end
+
+  subgraph Azure Region A
+    H1[Hub VNet]
+    CG1[Check Point CloudGuard VMSS<br/>or FortiGate VMSS]
+    ARS1[Azure Route Server]
+    KV1[(Azure Key Vault)]
+    S1A[Spoke VNet: App A]
+    S1B[Spoke VNet: App B]
+  end
+
+  subgraph Azure Region B
+    H2[Hub VNet]
+    CG2[CloudGuard/FortiGate VMSS]
+    ARS2[Azure Route Server]
+    KV2[(Azure Key Vault)]
+    S2A[Spoke VNet: App C]
+  end
+
+  A --> B --> ER
+  ER --> H1
+  ER --> H2
+
+  H1 --> CG1 --> S1A
+  CG1 --> S1B
+  H2 --> CG2 --> S2A
+
+  H1 <-- VNet Peering --> S1A
+  H1 <-- VNet Peering --> S1B
+  H2 <-- VNet Peering --> S2A
+  H1 <-- Global VNet Peering --> H2
+
+  KV1 -. certs/keys .- CG1
+  KV2 -. certs/keys .- CG2
+

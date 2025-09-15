@@ -40,15 +40,15 @@ jobs:
         run: |
           mkdir -p diagrams/svg
           shopt -s nullglob
-       failed_files=()
-       for f in diagrams/mermaid/*.mmd; do
-         base=$(basename "$f" .mmd)
-         echo "Generating SVG for $f -> diagrams/svg/${base}.svg"
-         if ! mmdc -p puppeteer-config.json -i "$f" -o "diagrams/svg/${base}.svg"; then
-           failed_files+=("$f")
-         fi
-       done
-       if [ ${#failed_files[@]} -gt 0 ]; then
-         echo "Failed to generate diagrams for: ${failed_files[*]}"
-         exit 1
-       fi
+          failed_files=()
+          for f in diagrams/mermaid/*.mmd; do
+            base=$(basename "$f" .mmd)
+            echo "Generating SVG for $f -> diagrams/svg/${base}.svg"
+            if ! mmdc -p puppeteer-config.json -i "$f" -o "diagrams/svg/${base}.svg"; then
+              failed_files+=("$f")
+            fi
+          done
+          if [ ${#failed_files[@]} -gt 0 ]; then
+            echo "Failed to generate diagrams for: ${failed_files[*]}"
+            exit 1
+          fi

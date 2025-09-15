@@ -7,25 +7,34 @@ on:
   push:
     paths:
       - 'diagrams/mermaid/**/*.mmd'
-
 permissions:
   contents: write
-
 jobs:
   build_mermaid:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Skip if no mermaid dir
         id: checkdir
         run: |
           if [ -d diagrams/mermaid ]; then echo "has_mmd=true" >> $GITHUB_OUTPUT; else echo "has_mmd=false" >> $GITHUB_OUTPUT; fi
-
       - name: Install mermaid-cli
         if: steps.checkdir.outputs.has_mmd == 'true'
         run: npm install -g @mermaid-js/mermaid-cli
-
+      - name: Create puppeteer config
+        if: steps.checkdir.outputs.has_mmd == 'true'
+        run: |
+          cat > puppeteer-config.json << EOF
+          {
+            "args": [
+              "--no-sandbox",
+              "--disable-setuid-sandbox",
+              "--disable-dev-shm-usage",
+              "--disable-gpu",
+              "--no-first-run"
+            ]
+          }
+          EOF
       - name: Build SVGs
         if: steps.checkdir.outputs.has_mmd == 'true'
         run: |
@@ -33,13 +42,12 @@ jobs:
           shopt -s nullglob
           for f in diagrams/mermaid/*.mmd; do
             base=$(basename "$f" .mmd)
-            mmdc -i "$f" -o "diagrams/svg/${base}.svg"
+            echo "Generating SVG for $f -> diagrams/svg/${base}.svg"
+            mmdc -p puppeteer-config.json -i "$f" -o "diagrams/svg/${base}.svg"
           done
-
       - name: Commit if changed
         if: steps.checkdir.outputs.has_mmd == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(diagrams): regenerate Mermaid SVGs [skip ci]"
           file_pattern: diagrams/svg/*.svg
-

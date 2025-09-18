@@ -28,3 +28,7 @@ Thumbs.db
 *.pdf
 *.docx
 
+# Graveyard Files
+
+.graveyard/*
+.graveyard.*

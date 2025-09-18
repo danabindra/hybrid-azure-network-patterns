@@ -123,10 +123,10 @@ Architecture patterns include automated logging, change management integration, 
 
 **Note**: These patterns represent production-tested designs implemented across enterprise Azure deployments. All diagrams and configurations have been validated in real-world environments with regulatory compliance requirements.
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+
+## Contributing
 
 Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests to help improve these network architecture patterns.

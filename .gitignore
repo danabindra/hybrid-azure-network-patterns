@@ -19,3 +19,12 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Docs
+
+*.ppt
+*.pptx
+*.doc
+*.pdf
+*.docx
+

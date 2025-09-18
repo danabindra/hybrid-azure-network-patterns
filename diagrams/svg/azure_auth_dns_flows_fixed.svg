@@ -37,7 +37,7 @@
     <!-- MPLS Router -->
     <rect x="140" y="450" width="120" height="60" rx="8" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
     <text x="200" y="475" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">MPLS Router</text>
-    <text x="200" y="490" text-anchor="middle" font-family="Arial" font-size="10">AS 25676</text>
+    <text x="200" y="490" text-anchor="middle" font-family="Arial" font-size="10">AS 65XXX</text>
     <text x="200" y="502" text-anchor="middle" font-family="Arial" font-size="9">BGP Peering</text>
   </g>
   

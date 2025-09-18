@@ -18,7 +18,7 @@
   <g id="mpls">
     <ellipse cx="350" cy="200" rx="100" ry="60" fill="#fff3e0" stroke="#f57c00" stroke-width="3"/>
     <text x="350" y="185" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">MPLS Backbone</text>
-    <text x="350" y="205" text-anchor="middle" font-family="Arial" font-size="12">AS 25676</text>
+    <text x="350" y="205" text-anchor="middle" font-family="Arial" font-size="12">AS 65XXX</text>
     <text x="350" y="220" text-anchor="middle" font-family="Arial" font-size="10">BGP/ISIS Core</text>
     
     <!-- PE Routers -->

@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="diagrams/png/4_internet_egress_fxf.png" alt="Internet Egress via FXF Hub" width="100%">
+  <img src="diagrams/png/4_internet_egress_AcmeCo.png" alt="Internet Egress via AcmeCo Hub" width="100%">
 </p>
 
 <p align="center">

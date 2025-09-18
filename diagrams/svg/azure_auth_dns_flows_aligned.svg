@@ -37,7 +37,7 @@
     
     <ns0:rect x="140" y="450" width="120" height="60" rx="8" fill="#ffebee" stroke="#f44336" stroke-width="2" />
     <ns0:text x="200.00" y="480.00" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" dominant-baseline="middle">MPLS Router</ns0:text>
-    <ns0:text x="200.00" y="480.00" text-anchor="middle" font-family="Arial" font-size="10" dominant-baseline="middle">AS 25676</ns0:text>
+    <ns0:text x="200.00" y="480.00" text-anchor="middle" font-family="Arial" font-size="10" dominant-baseline="middle">AS 65XXX</ns0:text>
     <ns0:text x="200.00" y="480.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">BGP Peering</ns0:text>
   </ns0:g>
   

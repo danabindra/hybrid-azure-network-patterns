@@ -1,0 +1,152 @@
+<svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#f8f9fa"/>
+  
+  <!-- On-Premises Infrastructure -->
+  <g id="on-premises">
+    <rect x="50" y="250" width="180" height="120" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+    <text x="140" y="275" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">On-Premises</text>
+    <text x="140" y="295" text-anchor="middle" font-family="Arial" font-size="12">Data Center</text>
+    
+    <!-- Network Switch -->
+    <rect x="70" y="310" width="140" height="40" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="140" y="325" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Core Switch</text>
+    <text x="140" y="340" text-anchor="middle" font-family="Arial" font-size="9">802.1q VLAN Tagging</text>
+    <text x="140" y="355" text-anchor="middle" font-family="Arial" font-size="8">10.1.0.0/16</text>
+  </g>
+  
+  <!-- Equinix Cloud Exchange Fabric -->
+  <g id="equinix">
+    <rect x="350" y="200" width="220" height="220" rx="10" fill="#ffebee" stroke="#f44336" stroke-width="3"/>
+    <text x="460" y="225" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Equinix Cloud Exchange</text>
+    <text x="460" y="245" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Fabric™</text>
+    
+    <!-- Virtual Circuit to Azure -->
+    <rect x="370" y="260" width="180" height="35" rx="5" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+    <text x="460" y="278" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Azure Virtual Circuit</text>
+    <text x="460" y="290" text-anchor="middle" font-family="Arial" font-size="9">ExpressRoute Connection</text>
+    
+    <!-- Central Fabric Core -->
+    <rect x="370" y="310" width="180" height="45" rx="5" fill="#fff8e1" stroke="#ffa000" stroke-width="2"/>
+    <text x="460" y="328" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Fabric Interconnect</text>
+    <text x="460" y="343" text-anchor="middle" font-family="Arial" font-size="10">Layer 2/3 Switching</text>
+    <text x="460" y="353" text-anchor="middle" font-family="Arial" font-size="8">BGP Route Exchange</text>
+    
+    <!-- Virtual Circuit to Oracle -->
+    <rect x="370" y="370" width="180" height="35" rx="5" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+    <text x="460" y="388" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Oracle Virtual Circuit</text>
+    <text x="460" y="400" text-anchor="middle" font-family="Arial" font-size="9">FastConnect Connection</text>
+  </g>
+  
+  <!-- Microsoft Azure Cloud -->
+  <g id="azure-cloud">
+    <rect x="680" y="80" width="280" height="180" rx="10" fill="#e3f2fd" stroke="#2196f3" stroke-width="3"/>
+    <text x="820" y="105" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Microsoft Azure</text>
+    <text x="820" y="125" text-anchor="middle" font-family="Arial" font-size="12">Central US Region</text>
+    
+    <!-- ExpressRoute Gateway -->
+    <rect x="700" y="140" width="120" height="40" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="760" y="158" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">ExpressRoute</text>
+    <text x="760" y="170" text-anchor="middle" font-family="Arial" font-size="9">Gateway</text>
+    
+    <!-- Virtual Network -->
+    <rect x="840" y="140" width="100" height="40" rx="5" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="890" y="158" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Virtual Network</text>
+    <text x="890" y="170" text-anchor="middle" font-family="Arial" font-size="8">10.100.0.0/16</text>
+    
+    <!-- Hub VNet -->
+    <rect x="700" y="190" width="120" height="50" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+    <text x="760" y="210" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Hub VNet</text>
+    <text x="760" y="225" text-anchor="middle" font-family="Arial" font-size="9">Security/Transit</text>
+    <text x="760" y="235" text-anchor="middle" font-family="Arial" font-size="8">10.100.1.0/24</text>
+    
+    <!-- Spoke VNets -->
+    <rect x="840" y="190" width="100" height="50" rx="5" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
+    <text x="890" y="210" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Spoke VNets</text>
+    <text x="890" y="225" text-anchor="middle" font-family="Arial" font-size="9">Applications</text>
+    <text x="890" y="235" text-anchor="middle" font-family="Arial" font-size="8">10.101.x.0/24</text>
+  </g>
+  
+  <!-- Oracle Cloud Infrastructure -->
+  <g id="oracle-cloud">
+    <rect x="680" y="440" width="280" height="180" rx="10" fill="#ffebee" stroke="#f44336" stroke-width="3"/>
+    <text x="820" y="465" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Oracle Cloud Infrastructure</text>
+    <text x="820" y="485" text-anchor="middle" font-family="Arial" font-size="12">US East Region</text>
+    
+    <!-- Dynamic Routing Gateway -->
+    <rect x="700" y="500" width="120" height="40" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="760" y="518" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Dynamic Routing</text>
+    <text x="760" y="530" text-anchor="middle" font-family="Arial" font-size="9">Gateway (DRG)</text>
+    
+    <!-- Virtual Cloud Network -->
+    <rect x="840" y="500" width="100" height="40" rx="5" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="890" y="518" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Virtual Cloud</text>
+    <text x="890" y="530" text-anchor="middle" font-family="Arial" font-size="9">Network (VCN)</text>
+    
+    <!-- OCI FastConnect -->
+    <rect x="700" y="550" width="120" height="50" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+    <text x="760" y="570" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">OCI FastConnect</text>
+    <text x="760" y="585" text-anchor="middle" font-family="Arial" font-size="9">Private Connection</text>
+    <text x="760" y="595" text-anchor="middle" font-family="Arial" font-size="8">192.168.0.0/16</text>
+    
+    <!-- Compute Instances -->
+    <rect x="840" y="550" width="100" height="50" rx="5" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
+    <text x="890" y="570" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Compute</text>
+    <text x="890" y="585" text-anchor="middle" font-family="Arial" font-size="9">Instances</text>
+    <text x="890" y="595" text-anchor="middle" font-family="Arial" font-size="8">192.168.1.0/24</text>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g id="connections">
+    <!-- On-Premises to Equinix -->
+    <path d="M 230 330 L 350 330" stroke="#ff5722" stroke-width="4" fill="none"/>
+    <text x="290" y="320" text-anchor="middle" font-family="Arial" font-size="10" fill="#ff5722" font-weight="bold">Dedicated Circuit</text>
+    <text x="290" y="345" text-anchor="middle" font-family="Arial" font-size="8" fill="#ff5722">10 Gbps</text>
+    
+    <!-- Equinix to Azure -->
+    <path d="M 570 277 L 680 160" stroke="#2196f3" stroke-width="4" fill="none"/>
+    <text x="625" y="210" text-anchor="middle" font-family="Arial" font-size="10" fill="#2196f3" font-weight="bold">ExpressRoute</text>
+    <text x="625" y="225" text-anchor="middle" font-family="Arial" font-size="8" fill="#2196f3">Private Peering</text>
+    
+    <!-- Equinix to Oracle -->
+    <path d="M 570 388 L 680 520" stroke="#f44336" stroke-width="4" fill="none"/>
+    <text x="625" y="450" text-anchor="middle" font-family="Arial" font-size="10" fill="#f44336" font-weight="bold">FastConnect</text>
+    <text x="625" y="465" text-anchor="middle" font-family="Arial" font-size="8" fill="#f44336">Private Peering</text>
+  </g>
+  
+  <!-- Configuration Details -->
+  <g id="config-box">
+    <rect x="50" y="480" width="550" height="180" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="325" y="505" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Multi-Cloud Connectivity Configuration</text>
+    
+    <!-- BGP Configuration -->
+    <rect x="70" y="520" width="160" height="120" rx="5" fill="#fff" stroke="#666"/>
+    <text x="150" y="540" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">BGP Routing</text>
+    <text x="80" y="560" font-family="Courier" font-size="9">AS 65001 (On-Premises)</text>
+    <text x="80" y="575" font-family="Courier" font-size="9">AS 12076 (Azure)</text>
+    <text x="80" y="590" font-family="Courier" font-size="9">AS 31898 (Oracle)</text>
+    <text x="80" y="605" font-family="Courier" font-size="9">Route Exchange:</text>
+    <text x="80" y="620" font-family="Courier" font-size="9">- Private prefixes</text>
+    <text x="80" y="635" font-family="Courier" font-size="9">- Inter-cloud routes</text>
+    
+    <!-- VLAN Configuration -->
+    <rect x="250" y="520" width="160" height="120" rx="5" fill="#fff" stroke="#666"/>
+    <text x="330" y="540" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">VLAN Segmentation</text>
+    <text x="260" y="560" font-family="Courier" font-size="9">VLAN 100: Azure ExpressRoute</text>
+    <text x="260" y="575" font-family="Courier" font-size="9">VLAN 200: Oracle FastConnect</text>
+    <text x="260" y="590" font-family="Courier" font-size="9">VLAN 300: Management</text>
+    <text x="260" y="605" font-family="Courier" font-size="9">Redundancy:</text>
+    <text x="260" y="620" font-family="Courier" font-size="9">- Primary/Secondary paths</text>
+    <text x="260" y="635" font-family="Courier" font-size="9">- 99.99% SLA</text>
+    
+    <!-- Benefits -->
+    <rect x="430" y="520" width="160" height="120" rx="5" fill="#fff" stroke="#666"/>
+    <text x="510" y="540" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Key Benefits</text>
+    <text x="440" y="560" font-family="Arial" font-size="9">• Single interconnection point</text>
+    <text x="440" y="575" font-family="Arial" font-size="9">• Private cloud connectivity</text>
+    <text x="440" y="590" font-family="Arial" font-size="9">• Reduced latency</text>
+    <text x="440" y="605" font-family="Arial" font-size="9">• Enhanced security</text>
+    <text x="440" y="620" font-family="Arial" font-size="9">• Cost optimization</text>
+    <text x="440" y="635" font-family="Arial" font-size="9">• Simplified management</text>
+  </g>
+</svg>

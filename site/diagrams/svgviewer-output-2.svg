@@ -1,0 +1,141 @@
+<svg viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1600" height="1000" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="800" y="60" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold">Zscaler App Connector — Zero Trust Access to Private Apps in Azure VNet</text>
+  <text x="800" y="85" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Outbound-only connector • Identity-aware policy • Micro-tunnel per session • No inbound exposure</text>
+
+  <!-- Remote User -->
+  <g id="remote-user">
+    <rect x="60" y="220" width="320" height="560" rx="16" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+    <text x="220" y="250" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold">Remote User</text>
+    <text x="220" y="270" text-anchor="middle" font-family="Arial" font-size="12">Laptop / Mobile</text>
+
+    <rect x="90" y="300" width="260" height="80" rx="10" fill="#fff" stroke="#1976d2" stroke-width="2"/>
+    <text x="220" y="328" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Zscaler Client Connector</text>
+    <text x="220" y="350" text-anchor="middle" font-family="Arial" font-size="10">Intercepts private-app requests</text>
+
+    <rect x="90" y="400" width="260" height="60" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="220" y="430" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">User Request</text>
+    <text x="220" y="446" text-anchor="middle" font-family="Arial" font-size="10">e.g., https://app.internal.corp</text>
+
+    <rect x="90" y="480" width="260" height="90" rx="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+    <text x="220" y="507" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Identity Device Posture</text>
+    <text x="220" y="525" text-anchor="middle" font-family="Arial" font-size="10">Microsoft Entra ID (OIDC/SAML)</text>
+    <text x="220" y="540" text-anchor="middle" font-family="Arial" font-size="10">Context: user, group, device</text>
+
+    <rect x="90" y="590" width="260" height="70" rx="8" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="220" y="618" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Authorized Session</text>
+    <text x="220" y="636" text-anchor="middle" font-family="Arial" font-size="10">Policy allows access</text>
+
+    <rect x="90" y="670" width="260" height="90" rx="8" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+    <text x="220" y="698" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Denied Session</text>
+    <text x="220" y="716" text-anchor="middle" font-family="Arial" font-size="10">Policy blocks; app remains hidden</text>
+  </g>
+
+  <!-- Zscaler Cloud -->
+  <g id="zte">
+    <rect x="520" y="160" width="560" height="340" rx="20" fill="#fff3e0" stroke="#ff9800" stroke-width="3"/>
+    <text x="800" y="190" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold">Zscaler Zero Trust Exchange (ZTE)</text>
+    <text x="800" y="210" text-anchor="middle" font-family="Arial" font-size="12">Global cloud • Policy engine • Nearest ingress</text>
+
+    <rect x="560" y="230" width="220" height="90" rx="10" fill="#fff" stroke="#ff9800" stroke-width="2"/>
+    <text x="670" y="260" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Policy Identity Validation</text>
+    <text x="670" y="278" text-anchor="middle" font-family="Arial" font-size="10">Microsoft Entra ID integration</text>
+    <text x="670" y="292" text-anchor="middle" font-family="Arial" font-size="10">Zero-trust access rules</text>
+
+    <rect x="800" y="230" width="240" height="90" rx="10" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="920" y="260" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Session Broker</text>
+    <text x="920" y="278" text-anchor="middle" font-family="Arial" font-size="10">Selects nearest App Connector</text>
+    <text x="920" y="292" text-anchor="middle" font-family="Arial" font-size="10">Builds per-user micro-tunnel</text>
+
+    <rect x="560" y="330" width="220" height="120" rx="10" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
+    <text x="670" y="360" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Client Connector Traffic</text>
+    <text x="670" y="378" text-anchor="middle" font-family="Arial" font-size="10">Outbound TLS to nearest ZTE POP</text>
+    <text x="670" y="395" text-anchor="middle" font-family="Arial" font-size="10">No split-tunnel to private app</text>
+
+    <rect x="800" y="330" width="240" height="120" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+    <text x="920" y="360" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Entra ID</text>
+    <text x="920" y="378" text-anchor="middle" font-family="Arial" font-size="10">User/group, device posture</text>
+    <text x="920" y="395" text-anchor="middle" font-family="Arial" font-size="10">MFA, conditional access</text>
+  </g>
+
+  <!-- Azure Spoke VNet -->
+  <g id="azure-vnet">
+    <rect x="1120" y="180" width="420" height="620" rx="18" fill="#e8f5e8" stroke="#2e7d32" stroke-width="3"/>
+    <text x="1330" y="210" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold">Azure Spoke VNet</text>
+    <text x="1330" y="230" text-anchor="middle" font-family="Arial" font-size="12">App Subnet • Connector Subnet</text>
+
+    <!-- App Connector -->
+    <rect x="1150" y="260" width="170" height="80" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="2"/>
+    <text x="1235" y="288" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">App Connector</text>
+    <text x="1235" y="306" text-anchor="middle" font-family="Arial" font-size="10">Outbound-only to ZTE</text>
+
+    <!-- Private App -->
+    <rect x="1340" y="260" width="170" height="80" rx="10" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+    <text x="1425" y="288" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Private Application</text>
+    <text x="1425" y="306" text-anchor="middle" font-family="Arial" font-size="10">e.g., SAP, Jira, Internal API</text>
+
+    <!-- No inbound note -->
+    <rect x="1150" y="360" width="360" height="70" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="1330" y="388" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">No Inbound Access</text>
+    <text x="1330" y="406" text-anchor="middle" font-family="Arial" font-size="10">Connector does not accept inbound internet traffic</text>
+
+    <!-- Micro-tunnel established -->
+    <rect x="1150" y="440" width="360" height="70" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="1330" y="468" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Per-Session Micro-Tunnel</text>
+    <text x="1330" y="486" text-anchor="middle" font-family="Arial" font-size="10">End-to-end encrypted path via ZTE</text>
+
+    <!-- Cloaking -->
+    <rect x="1150" y="520" width="360" height="70" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+    <text x="1330" y="548" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Application Cloaking</text>
+    <text x="1330" y="566" text-anchor="middle" font-family="Arial" font-size="10">Unreachable from internet; not exposed</text>
+  </g>
+
+  <!-- Flows (with arrows for clarity) -->
+  <!-- 1. User request intercepted -->
+  <line x1="350" y1="430" x2="560" y2="430" stroke="#1976d2" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <text x="455" y="420" font-family="Arial" font-size="11" text-anchor="middle" fill="#1976d2">Intercept forward</text>
+
+  <!-- 2. Validation at ZTE -->
+  <line x1="670" y1="320" x2="920" y2="320" stroke="#9c27b0" stroke-width="2.5" marker-end="url(#arrowPurple)"/>
+  <text x="795" y="310" font-family="Arial" font-size="11" text-anchor="middle" fill="#9c27b0">Identity + policy</text>
+
+  <!-- 3. Outbound-only App Connector to ZTE -->
+  <line x1="1235" y1="300" x2="1080" y2="260" stroke="#2e7d32" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <text x="1155" y="250" font-family="Arial" font-size="11" text-anchor="middle" fill="#2e7d32">Outbound TLS</text>
+
+  <!-- 4. Micro-tunnel path (user ↔ app via ZTE) -->
+  <path d="M350,620 C520,620 1080,620 1150,475" fill="none" stroke="#0288d1" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrowBlue)"/>
+  <text x="800" y="600" font-family="Arial" font-size="11" text-anchor="middle" fill="#0288d1">Micro-tunnel (per session)</text>
+
+  <!-- Legends / Steps -->
+  <g id="legend">
+    <rect x="520" y="520" width="560" height="230" rx="12" fill="#ffffff" stroke="#bdbdbd"/>
+    <text x="800" y="548" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Flow Summary</text>
+    <text x="540" y="575" font-family="Arial" font-size="11">1) <tspan font-weight="bold">User request</tspan> intercepted by Zscaler Client Connector.</text>
+    <text x="540" y="595" font-family="Arial" font-size="11">2) <tspan font-weight="bold">Validation</tspan> at ZTE using identity policy (Microsoft Entra ID).</text>
+    <text x="540" y="615" font-family="Arial" font-size="11">3) <tspan font-weight="bold">Outbound-only</tspan> App Connector builds secure path; no inbound ports opened.</text>
+    <text x="540" y="635" font-family="Arial" font-size="11">4) <tspan font-weight="bold">Micro-tunnel</tspan> created between Client Connector and App Connector.</text>
+    <text x="540" y="655" font-family="Arial" font-size="11">5) <tspan font-weight="bold">Cloaking:</tspan> apps are not discoverable from the internet.</text>
+  </g>
+
+  <!-- Arrowhead markers -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#1976d2"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#9c27b0"/>
+    </marker>
+  </defs>
+
+  <!-- Footer -->
+  <text x="800" y="950" text-anchor="middle" font-family="Arial" font-size="11" fill="#666">
+    Diagram style matches Azure topology deck: light background, colored boxes, and clear labeled flows.
+  </text>
+</svg>

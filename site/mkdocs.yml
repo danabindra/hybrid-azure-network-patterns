@@ -1,0 +1,18 @@
+site_name: Hybrid Azure Network Patterns
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Patterns:
+      - Branch to Azure: patterns/branch-to-azure.md
+      - Internet Egress: patterns/internet-egress.md
+      - Internet Ingress (Front Door): patterns/front-door-ingress.md
+      - Region-to-Region Transit: patterns/region-transit.md
+  - Diagrams: diagrams.md
+  - Compliance: compliance/mappings.md
+plugins:
+  - search
+  - tags
+markdown_extensions:
+  - toc:
+      permalink: true

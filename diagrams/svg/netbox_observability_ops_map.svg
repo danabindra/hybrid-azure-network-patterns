@@ -1,0 +1,364 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="100%" height="100%" fill="#F3E8FF"/>
+
+  <!-- Background and Gradients -->
+  <defs>
+    <!-- Ocean gradient -->
+    <radialGradient id="oceanGrad" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#0a2540;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#051223;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Port status gradients -->
+    <radialGradient id="portGreen">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="portYellow">
+      <stop offset="0%" style="stop-color:#ffcc00;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ffcc00;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="portRed">
+      <stop offset="0%" style="stop-color:#ff3333;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ff3333;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Connection line gradient -->
+    <linearGradient id="connectionGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.2" />
+      <stop offset="50%" style="stop-color:#00ff88;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0.2" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="portGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Animated dash pattern for data flow -->
+    <pattern id="movingDash" x="0" y="0" width="20" height="1" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="10" y2="0" stroke="#00ff88" stroke-width="2" opacity="0.6">
+        <animate attributeName="x1" from="0" to="20" dur="1s" repeatCount="indefinite"/>
+        <animate attributeName="x2" from="10" to="30" dur="1s" repeatCount="indefinite"/>
+      </line>
+    </pattern>
+  </defs>
+
+  <!-- Ocean Background -->
+  <rect width="1920" height="1080" fill="url(#oceanGrad)"/>
+  
+  <!-- World Map Outline (simplified) -->
+  <g opacity="0.3">
+    <!-- North America -->
+    <path d="M 300 400 L 400 350 L 500 360 L 550 380 L 600 420 L 580 480 L 500 500 L 400 480 L 350 450 Z" 
+          fill="none" stroke="#1e3a5f" stroke-width="1"/>
+    
+    <!-- South America -->
+    <path d="M 450 550 L 480 600 L 470 700 L 450 780 L 420 800 L 400 750 L 410 650 L 430 580 Z" 
+          fill="none" stroke="#1e3a5f" stroke-width="1"/>
+    
+    <!-- Europe -->
+    <path d="M 900 350 L 950 340 L 1000 360 L 980 400 L 950 420 L 920 400 L 900 380 Z" 
+          fill="none" stroke="#1e3a5f" stroke-width="1"/>
+    
+    <!-- Africa -->
+    <path d="M 920 480 L 960 500 L 980 600 L 960 700 L 920 720 L 880 680 L 870 580 L 890 500 Z" 
+          fill="none" stroke="#1e3a5f" stroke-width="1"/>
+    
+    <!-- Asia -->
+    <path d="M 1100 300 L 1300 320 L 1400 380 L 1380 450 L 1300 480 L 1200 440 L 1150 380 Z" 
+          fill="none" stroke="#1e3a5f" stroke-width="1"/>
+    
+    <!-- Australia -->
+    <path d="M 1350 650 L 1420 660 L 1450 700 L 1420 740 L 1360 730 L 1340 690 Z" 
+          fill="none" stroke="#1e3a5f" stroke-width="1"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1920" height="100" fill="#0a1628" fill-opacity="0.9"/>
+  <text x="960" y="55" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    REAL-TIME GLOBAL OPERATIONS MAP
+  </text>
+  <text x="960" y="85" font-family="Arial, sans-serif" font-size="18" fill="#00ff88" text-anchor="middle">
+    NetBox Network Intelligence | Live Vessel Tracking &amp; Port Connectivity
+  </text>
+
+  <!-- Network Connections (animated) -->
+  <!-- Trans-Pacific Route -->
+  <line x1="480" y1="440" x2="1380" y2="400" stroke="url(#connectionGrad)" stroke-width="3" opacity="0.6"/>
+  <circle r="3" fill="#00ff88" filter="url(#glow)">
+    <animateMotion dur="10s" repeatCount="indefinite">
+      <mpath href="#transpacific"/>
+    </animateMotion>
+  </circle>
+  <path id="transpacific" d="M 480 440 L 1380 400" fill="none"/>
+  
+  <!-- Atlantic Route -->
+  <line x1="480" y1="440" x2="950" y2="380" stroke="url(#connectionGrad)" stroke-width="3" opacity="0.6"/>
+  <circle r="3" fill="#00ff88" filter="url(#glow)">
+    <animateMotion dur="8s" repeatCount="indefinite">
+      <mpath href="#atlantic"/>
+    </animateMotion>
+  </circle>
+  <path id="atlantic" d="M 480 440 L 950 380" fill="none"/>
+
+  <!-- Europe-Asia Route -->
+  <line x1="950" y1="380" x2="1380" y2="400" stroke="url(#connectionGrad)" stroke-width="3" opacity="0.6"/>
+  <circle r="3" fill="#00ff88" filter="url(#glow)">
+    <animateMotion dur="9s" repeatCount="indefinite">
+      <mpath href="#euroasia"/>
+    </animateMotion>
+  </circle>
+  <path id="euroasia" d="M 950 380 L 1380 400" fill="none"/>
+
+  <!-- Asia-Australia Route -->
+  <line x1="1380" y1="400" x2="1400" y2="690" stroke="url(#connectionGrad)" stroke-width="2" opacity="0.6"/>
+
+  <!-- Major Ports with Status -->
+  
+  <!-- Los Angeles Port -->
+  <g transform="translate(480, 440)">
+    <circle cx="0" cy="0" r="20" fill="url(#portYellow)" filter="url(#portGlow)"/>
+    <circle cx="0" cy="0" r="10" fill="#ffcc00" filter="url(#glow)"/>
+    <rect x="20" y="-60" width="240" height="100" rx="10" fill="#0a1628" fill-opacity="0.9" stroke="#ffcc00" stroke-width="1"/>
+    <text x="30" y="-40" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Los Angeles</text>
+    <text x="30" y="-20" font-family="Arial, sans-serif" font-size="12" fill="#ffcc00">⚠️ Bandwidth: 85%</text>
+    <text x="30" y="0" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Vessels: 8 | Loading: 45%</text>
+    <text x="30" y="20" font-family="Arial, sans-serif" font-size="12" fill="#999999">Latency: 15ms</text>
+    <circle cx="240" cy="-40" r="5" fill="#ffcc00">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Rotterdam Port -->
+  <g transform="translate(950, 380)">
+    <circle cx="0" cy="0" r="20" fill="url(#portGreen)" filter="url(#portGlow)"/>
+    <circle cx="0" cy="0" r="10" fill="#00ff88" filter="url(#glow)"/>
+    <rect x="20" y="-60" width="240" height="100" rx="10" fill="#0a1628" fill-opacity="0.9" stroke="#00ff88" stroke-width="1"/>
+    <text x="30" y="-40" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Rotterdam</text>
+    <text x="30" y="-20" font-family="Arial, sans-serif" font-size="12" fill="#00ff88">✅ All Systems Normal</text>
+    <text x="30" y="0" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Vessels: 12 | Loading: 78%</text>
+    <text x="30" y="20" font-family="Arial, sans-serif" font-size="12" fill="#999999">Latency: 47ms to Singapore</text>
+    <circle cx="240" cy="-40" r="5" fill="#00ff88"/>
+  </g>
+
+  <!-- Singapore Port -->
+  <g transform="translate(1380, 400)">
+    <circle cx="0" cy="0" r="20" fill="url(#portRed)" filter="url(#portGlow)"/>
+    <circle cx="0" cy="0" r="10" fill="#ff3333" filter="url(#glow)"/>
+    <rect x="-260" y="-60" width="240" height="100" rx="10" fill="#0a1628" fill-opacity="0.9" stroke="#ff3333" stroke-width="1"/>
+    <text x="-250" y="-40" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Singapore</text>
+    <text x="-250" y="-20" font-family="Arial, sans-serif" font-size="12" fill="#ff3333">🔴 Critical: 92% Bandwidth</text>
+    <text x="-250" y="0" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Vessels: 23 | Loading: 92%</text>
+    <text x="-250" y="20" font-family="Arial, sans-serif" font-size="12" fill="#999999">Action: Upgrade Required</text>
+    <circle cx="-30" cy="-40" r="5" fill="#ff3333">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Shanghai Port -->
+  <g transform="translate(1350, 350)">
+    <circle cx="0" cy="0" r="15" fill="url(#portGreen)" filter="url(#portGlow)"/>
+    <circle cx="0" cy="0" r="8" fill="#00ff88" filter="url(#glow)"/>
+    <text x="20" y="5" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Shanghai</text>
+    <text x="20" y="20" font-family="Arial, sans-serif" font-size="11" fill="#00ff88">15 vessels</text>
+  </g>
+
+  <!-- Hamburg Port -->
+  <g transform="translate(980, 340)">
+    <circle cx="0" cy="0" r="15" fill="url(#portGreen)" filter="url(#portGlow)"/>
+    <circle cx="0" cy="0" r="8" fill="#00ff88" filter="url(#glow)"/>
+    <text x="20" y="5" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Hamburg</text>
+    <text x="20" y="20" font-family="Arial, sans-serif" font-size="11" fill="#00ff88">7 vessels</text>
+  </g>
+
+  <!-- Long Beach Port -->
+  <g transform="translate(500, 470)">
+    <circle cx="0" cy="0" r="15" fill="url(#portGreen)" filter="url(#portGlow)"/>
+    <circle cx="0" cy="0" r="8" fill="#00ff88" filter="url(#glow)"/>
+    <text x="20" y="5" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Long Beach</text>
+    <text x="20" y="20" font-family="Arial, sans-serif" font-size="11" fill="#00ff88">5 vessels</text>
+  </g>
+
+  <!-- Sydney Port -->
+  <g transform="translate(1400, 690)">
+    <circle cx="0" cy="0" r="15" fill="url(#portGreen)" filter="url(#portGlow)"/>
+    <circle cx="0" cy="0" r="8" fill="#00ff88" filter="url(#glow)"/>
+    <text x="-60" y="5" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Sydney</text>
+    <text x="-60" y="20" font-family="Arial, sans-serif" font-size="11" fill="#00ff88">4 vessels</text>
+  </g>
+
+  <!-- Vessel Icons (moving along routes) -->
+  <g>
+    <text font-size="20" fill="#0099ff" filter="url(#glow)">🚢
+      <animateMotion dur="20s" repeatCount="indefinite">
+        <mpath href="#vessel1path"/>
+      </animateMotion>
+    </text>
+    <path id="vessel1path" d="M 480 440 Q 900 350 1380 400" fill="none"/>
+  </g>
+
+  <g>
+    <text font-size="20" fill="#0099ff" filter="url(#glow)">🚢
+      <animateMotion dur="18s" repeatCount="indefinite">
+        <mpath href="#vessel2path"/>
+      </animateMotion>
+    </text>
+    <path id="vessel2path" d="M 1380 400 Q 1100 450 950 380" fill="none"/>
+  </g>
+
+  <g>
+    <text font-size="20" fill="#0099ff" filter="url(#glow)">🚢
+      <animateMotion dur="15s" repeatCount="indefinite">
+        <mpath href="#vessel3path"/>
+      </animateMotion>
+    </text>
+    <path id="vessel3path" d="M 950 380 Q 700 400 480 440" fill="none"/>
+  </g>
+
+  <!-- Live Statistics Panel -->
+  <g transform="translate(80, 140)">
+    <rect x="0" y="0" width="350" height="280" rx="15" fill="#0a1628" fill-opacity="0.9" stroke="#00ff88" stroke-width="1"/>
+    <text x="20" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">Network Statistics</text>
+    
+    <line x1="20" y1="50" x2="330" y2="50" stroke="#1e3a5f" stroke-width="1"/>
+    
+    <text x="20" y="80" font-family="Arial, sans-serif" font-size="14" fill="#999999">Global Latency Average:</text>
+    <text x="280" y="80" font-family="Arial, sans-serif" font-size="14" fill="#00ff88" text-anchor="end">23.4ms</text>
+    
+    <text x="20" y="110" font-family="Arial, sans-serif" font-size="14" fill="#999999">Active Vessels:</text>
+    <text x="280" y="110" font-family="Arial, sans-serif" font-size="14" fill="#00ff88" text-anchor="end">847 / 850</text>
+    
+    <text x="20" y="140" font-family="Arial, sans-serif" font-size="14" fill="#999999">Connected Ports:</text>
+    <text x="280" y="140" font-family="Arial, sans-serif" font-size="14" fill="#00ff88" text-anchor="end">52 / 52</text>
+    
+    <text x="20" y="170" font-family="Arial, sans-serif" font-size="14" fill="#999999">Data Throughput:</text>
+    <text x="280" y="170" font-family="Arial, sans-serif" font-size="14" fill="#0099ff" text-anchor="end">847 Gbps</text>
+    
+    <text x="20" y="200" font-family="Arial, sans-serif" font-size="14" fill="#999999">API Calls/Minute:</text>
+    <text x="280" y="200" font-family="Arial, sans-serif" font-size="14" fill="#0099ff" text-anchor="end">12,453</text>
+    
+    <text x="20" y="230" font-family="Arial, sans-serif" font-size="14" fill="#999999">Alerts Active:</text>
+    <text x="280" y="230" font-family="Arial, sans-serif" font-size="14" fill="#ff9900" text-anchor="end">2 Critical, 3 Warning</text>
+    
+    <text x="20" y="260" font-family="Arial, sans-serif" font-size="14" fill="#999999">System Health:</text>
+    <text x="280" y="260" font-family="Arial, sans-serif" font-size="14" fill="#00ff88" text-anchor="end">94.3%</text>
+  </g>
+
+  <!-- Alert Feed -->
+  <g transform="translate(1490, 140)">
+    <rect x="0" y="0" width="350" height="280" rx="15" fill="#0a1628" fill-opacity="0.9" stroke="#ff9900" stroke-width="1"/>
+    <text x="20" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">Live Alert Feed</text>
+    
+    <line x1="20" y1="50" x2="330" y2="50" stroke="#1e3a5f" stroke-width="1"/>
+    
+    <!-- Alert items -->
+    <g transform="translate(20, 70)">
+      <circle cx="5" cy="5" r="4" fill="#ff3333">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      <text x="15" y="8" font-family="Arial, sans-serif" font-size="12" fill="#ff3333">14:32:15 - Singapore bandwidth critical</text>
+    </g>
+    
+    <g transform="translate(20, 100)">
+      <circle cx="5" cy="5" r="4" fill="#ff9900"/>
+      <text x="15" y="8" font-family="Arial, sans-serif" font-size="12" fill="#ff9900">14:31:47 - LA Port approaching limit</text>
+    </g>
+    
+    <g transform="translate(20, 130)">
+      <circle cx="5" cy="5" r="4" fill="#00ff88"/>
+      <text x="15" y="8" font-family="Arial, sans-serif" font-size="12" fill="#00ff88">14:30:23 - Rotterdam backup complete</text>
+    </g>
+    
+    <g transform="translate(20, 160)">
+      <circle cx="5" cy="5" r="4" fill="#0099ff"/>
+      <text x="15" y="8" font-family="Arial, sans-serif" font-size="12" fill="#0099ff">14:29:11 - New vessel connected: MSC-847</text>
+    </g>
+    
+    <g transform="translate(20, 190)">
+      <circle cx="5" cy="5" r="4" fill="#00ff88"/>
+      <text x="15" y="8" font-family="Arial, sans-serif" font-size="12" fill="#00ff88">14:28:05 - Shanghai route optimized</text>
+    </g>
+    
+    <g transform="translate(20, 220)">
+      <circle cx="5" cy="5" r="4" fill="#ff9900"/>
+      <text x="15" y="8" font-family="Arial, sans-serif" font-size="12" fill="#ff9900">14:27:33 - DNS cache refresh needed</text>
+    </g>
+    
+    <g transform="translate(20, 250)">
+      <circle cx="5" cy="5" r="4" fill="#00ff88"/>
+      <text x="15" y="8" font-family="Arial, sans-serif" font-size="12" fill="#00ff88">14:26:19 - Hamburg failover test passed</text>
+    </g>
+  </g>
+
+  <!-- Bottom Command Bar -->
+  <g transform="translate(0, 960)">
+    <rect x="0" y="0" width="1920" height="120" fill="#0a1628" fill-opacity="0.9"/>
+    
+    <!-- Quick Stats -->
+    <g transform="translate(100, 30)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">GLOBAL FLEET STATUS</text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#00ff88">847 Active Vessels</text>
+      <text x="0" y="55" font-family="Arial, sans-serif" font-size="14" fill="#999999">Pacific: 234 | Atlantic: 187 | Asia: 326 | Other: 100</text>
+    </g>
+    
+    <g transform="translate(500, 30)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">NETWORK HEALTH</text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#00ff88">99.92% Uptime</text>
+      <text x="0" y="55" font-family="Arial, sans-serif" font-size="14" fill="#999999">12 min to resolution | 2 incidents today</text>
+    </g>
+    
+    <g transform="translate(900, 30)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">BANDWIDTH UTILIZATION</text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ff9900">67.3% Global</text>
+      <text x="0" y="55" font-family="Arial, sans-serif" font-size="14" fill="#999999">Peak: Singapore 92% | Low: Sydney 34%</text>
+    </g>
+    
+    <g transform="translate(1300, 30)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">COMPLIANCE STATUS</text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#00ff88">IMO 2025 Ready</text>
+      <text x="0" y="55" font-family="Arial, sans-serif" font-size="14" fill="#999999">All 52 ports certified | Next audit: Q4</text>
+    </g>
+  </g>
+
+  <!-- NetBox Integration Status -->
+  <g transform="translate(1600, 50)">
+    <rect x="0" y="0" width="240" height="30" rx="15" fill="#00ff88" fill-opacity="0.2" stroke="#00ff88" stroke-width="1"/>
+    <circle cx="20" cy="15" r="5" fill="#00ff88">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="35" y="20" font-family="Arial, sans-serif" font-size="14" fill="#00ff88">NetBox Sync: Real-time</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(80, 880)">
+    <rect x="0" y="0" width="350" height="60" rx="10" fill="#0a1628" fill-opacity="0.8"/>
+    <text x="10" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Port Status:</text>
+    <circle cx="30" cy="40" r="5" fill="#00ff88"/>
+    <text x="40" y="45" font-family="Arial, sans-serif" font-size="12" fill="#999999">Normal</text>
+    <circle cx="110" cy="40" r="5" fill="#ffcc00"/>
+    <text x="120" y="45" font-family="Arial, sans-serif" font-size="12" fill="#999999">Warning</text>
+    <circle cx="190" cy="40" r="5" fill="#ff3333"/>
+    <text x="200" y="45" font-family="Arial, sans-serif" font-size="12" fill="#999999">Critical</text>
+    <text x="260" y="45" font-family="Arial, sans-serif" font-size="18" fill="#0099ff">🚢 Vessel</text>
+  </g>
+
+  <!-- Timestamp -->
+  <text x="1840" y="1060" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="end">
+    Real-time data from NetBox DCIM | Updated: 09/12/2025 14:32:17 UTC | Latency: 12ms
+  </text>
+</svg>

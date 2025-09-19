@@ -27,8 +27,3 @@
 <p align="center">
   <img src="diagrams/png/7_internet_ingress.png" alt="Internet Ingress traffic (WAF → NVA → Spokes)" width="100%">
 </p>
-
-
-
-
-

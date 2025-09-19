@@ -1,0 +1,174 @@
+<svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#f8f9fa"/>
+  
+  <!-- Branch Office -->
+  <g id="branch">
+    <rect x="50" y="150" width="140" height="100" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="120" y="175" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Branch Office</text>
+    <text x="120" y="195" text-anchor="middle" font-family="Arial" font-size="12">Branch Site</text>
+    <text x="120" y="210" text-anchor="middle" font-family="Arial" font-size="10">10.1.50.0/24</text>
+    
+    <!-- vEdge Router -->
+    <rect x="90" y="220" width="60" height="20" rx="3" fill="#ff9800" stroke="#f57c00"/>
+    <text x="120" y="232" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">vEdge Router</text>
+  </g>
+  
+  <!-- MPLS Cloud -->
+  <g id="mpls">
+    <ellipse cx="400" cy="200" rx="120" ry="70" fill="#fff3e0" stroke="#f57c00" stroke-width="3"/>
+    <text x="400" y="185" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">MPLS Backbone</text>
+    <text x="400" y="205" text-anchor="middle" font-family="Arial" font-size="12">AS 65XXX</text>
+    <text x="400" y="220" text-anchor="middle" font-family="Arial" font-size="10">BGP/ISIS Core</text>
+    
+    <!-- PE Routers -->
+    <circle cx="350" cy="240" r="8" fill="#f57c00"/>
+    <text x="350" y="255" text-anchor="middle" font-family="Arial" font-size="8">PE-1</text>
+    <circle cx="450" cy="240" r="8" fill="#f57c00"/>
+    <text x="450" y="255" text-anchor="middle" font-family="Arial" font-size="8">PE-2</text>
+  </g>
+  
+  <!-- ExpressRoute Circuit -->
+  <g id="expressroute">
+    <rect x="600" y="160" width="120" height="80" rx="8" fill="#e8f5e8" stroke="#4caf50" stroke-width="3"/>
+    <text x="660" y="185" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">ExpressRoute</text>
+    <text x="660" y="205" text-anchor="middle" font-family="Arial" font-size="12">Central Region</text>
+    <text x="660" y="220" text-anchor="middle" font-family="Arial" font-size="10">1 Gbps Circuit</text>
+    <text x="660" y="235" text-anchor="middle" font-family="Arial" font-size="9">Microsoft Peering</text>
+  </g>
+  
+  <!-- Azure Hub VNet -->
+  <g id="hub-vnet">
+    <rect x="800" y="80" width="280" height="200" rx="10" fill="#e3f2fd" stroke="#2196f3" stroke-width="3"/>
+    <text x="940" y="105" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Azure Hub VNet (Central)</text>
+    <text x="940" y="125" text-anchor="middle" font-family="Arial" font-size="12">10.100.0.0/16</text>
+    
+    <!-- ExpressRoute Gateway -->
+    <rect x="820" y="140" width="100" height="40" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="870" y="155" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">ER Gateway</text>
+    <text x="870" y="170" text-anchor="middle" font-family="Arial" font-size="9">GatewaySubnet</text>
+    
+    <!-- CheckPoint VMSS -->
+    <rect x="940" y="140" width="120" height="50" rx="5" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+    <text x="1000" y="158" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">CheckPoint VMSS</text>
+    <text x="1000" y="173" text-anchor="middle" font-family="Arial" font-size="10">Firewall Cluster</text>
+    <text x="1000" y="185" text-anchor="middle" font-family="Arial" font-size="9">10.100.1.0/24</text>
+    
+    <!-- Internal Load Balancer -->
+    <rect x="820" y="200" width="100" height="30" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+    <text x="870" y="218" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold">Internal LB</text>
+    <text x="870" y="228" text-anchor="middle" font-family="Arial" font-size="8">10.100.2.100</text>
+    
+    <!-- Route Table -->
+    <rect x="940" y="200" width="120" height="30" rx="5" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="1000" y="218" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold">Route Table</text>
+    <text x="1000" y="228" text-anchor="middle" font-family="Arial" font-size="8">UDR → CheckPoint</text>
+  </g>
+  
+  <!-- VNet Peering Connection -->
+  <g id="peering">
+    <path d="M 900 280 Q 900 340 900 380" stroke="#9c27b0" stroke-width="4" fill="none" stroke-dasharray="8,4"/>
+    <text x="910" y="330" font-family="Arial" font-size="12" fill="#9c27b0" font-weight="bold">VNet Peering</text>
+    <text x="910" y="345" font-family="Arial" font-size="10" fill="#9c27b0">Hub ↔ Spoke</text>
+  </g>
+  
+  <!-- Azure Spoke VNet -->
+  <g id="spoke-vnet">
+    <rect x="800" y="380" width="280" height="150" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="3"/>
+    <text x="940" y="405" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Spoke VNet</text>
+    <text x="940" y="425" text-anchor="middle" font-family="Arial" font-size="12">10.101.0.0/16</text>
+    
+    <!-- Workload Subnet -->
+    <rect x="820" y="440" width="120" height="70" rx="5" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="880" y="460" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Workload Subnet</text>
+    <text x="880" y="475" text-anchor="middle" font-family="Arial" font-size="10">10.101.1.0/24</text>
+    <text x="880" y="490" text-anchor="middle" font-family="Arial" font-size="10">SAP Application</text>
+    <text x="880" y="505" text-anchor="middle" font-family="Arial" font-size="9">Server: 10.101.1.10</text>
+    
+    <!-- Database Subnet -->
+    <rect x="960" y="440" width="100" height="70" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="1010" y="460" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Database</text>
+    <text x="1010" y="475" text-anchor="middle" font-family="Arial" font-size="10">Subnet</text>
+    <text x="1010" y="490" text-anchor="middle" font-family="Arial" font-size="10">SAP HANA</text>
+    <text x="1010" y="505" text-anchor="middle" font-family="Arial" font-size="9">10.101.2.10</text>
+  </g>
+  
+  <!-- Traffic Flow Arrows -->
+  <g id="arrows">
+    <!-- Branch to MPLS -->
+    <path d="M 190 180 L 280 180" stroke="#ff5722" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="235" y="170" text-anchor="middle" font-family="Arial" font-size="10" fill="#ff5722" font-weight="bold">Step 1</text>
+    <text x="235" y="195" text-anchor="middle" font-family="Arial" font-size="8" fill="#ff5722">SD-WAN Policy</text>
+    
+    <!-- MPLS to ER -->
+    <path d="M 520 180 L 600 180" stroke="#ff5722" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="560" y="170" text-anchor="middle" font-family="Arial" font-size="10" fill="#ff5722" font-weight="bold">Step 2</text>
+    <text x="560" y="195" text-anchor="middle" font-family="Arial" font-size="8" fill="#ff5722">BGP Routing</text>
+    
+    <!-- ER to Hub Gateway -->
+    <path d="M 720 180 L 800 150" stroke="#ff5722" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="760" y="135" text-anchor="middle" font-family="Arial" font-size="10" fill="#ff5722" font-weight="bold">Step 3</text>
+    <text x="760" y="148" text-anchor="middle" font-family="Arial" font-size="8" fill="#ff5722">ER Gateway</text>
+    
+    <!-- Gateway to CheckPoint -->
+    <path d="M 920 150 L 940 155" stroke="#ff5722" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="930" y="140" text-anchor="middle" font-family="Arial" font-size="10" fill="#ff5722" font-weight="bold">Step 4</text>
+    
+    <!-- CheckPoint to Spoke -->
+    <path d="M 1000 190 Q 1020 320 960 380" stroke="#ff5722" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="1030" y="310" text-anchor="middle" font-family="Arial" font-size="10" fill="#ff5722" font-weight="bold">Step 5</text>
+    <text x="1030" y="325" text-anchor="middle" font-family="Arial" font-size="8" fill="#ff5722">Firewall Inspection</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ff5722"/>
+    </marker>
+    <marker id="arrowhead-small" markerWidth="2" markerHeight="1.5" refX="1.8" refY="0.75" orient="auto">
+      <polygon points="0 0, 2 0.75, 0 1.5" fill="#ff5722"/>
+    </marker>
+  </defs>
+  
+  <!-- SD-WAN Policy Configuration Box -->
+  <g id="sdwan-config">
+    <rect x="50" y="320" width="700" height="320" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="400" y="345" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Cisco SD-WAN Policy Sample Configuration</text>
+    
+    <!-- Application Policy -->
+    <rect x="70" y="360" width="320" height="120" rx="5" fill="#fff" stroke="#666"/>
+    <text x="230" y="380" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Application-Aware Policy</text>
+    <text x="80" y="400" font-family="Courier" font-size="9">app-list SAP_APPS</text>
+    <text x="90" y="415" font-family="Courier" font-size="9">app sap</text>
+    <text x="90" y="430" font-family="Courier" font-size="9">app tcp-3200-3299</text>
+    <text x="90" y="445" font-family="Courier" font-size="9">app tcp-50000-59999</text>
+    <text x="80" y="465" font-family="Courier" font-size="9">action: preferred-color gold</text>
+    
+    <!-- Data Policy -->
+    <rect x="410" y="360" width="320" height="120" rx="5" fill="#fff" stroke="#666"/>
+    <text x="570" y="380" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Data Policy</text>
+    <text x="420" y="400" font-family="Courier" font-size="9">sequence 10</text>
+    <text x="430" y="415" font-family="Courier" font-size="9">match app-list SAP_APPS</text>
+    <text x="430" y="430" font-family="Courier" font-size="9">action accept</text>
+    <text x="440" y="445" font-family="Courier" font-size="9">set dscp 26 (AF31)</text>
+    <text x="440" y="460" font-family="Courier" font-size="9">preferred-color gold</text>
+    
+    <!-- Control Policy -->
+    <rect x="70" y="500" width="320" height="120" rx="5" fill="#fff" stroke="#666"/>
+    <text x="230" y="520" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Control Policy</text>
+    <text x="80" y="540" font-family="Courier" font-size="9">route AZURE_CENTRAL_PREFIXES</text>
+    <text x="90" y="555" font-family="Courier" font-size="9">10.100.0.0/16</text>
+    <text x="90" y="570" font-family="Courier" font-size="9">10.101.0.0/16</text>
+    <text x="80" y="590" font-family="Courier" font-size="9">set preference 200</text>
+    <text x="80" y="605" font-family="Courier" font-size="9">set omp-tag 100</text>
+    
+    <!-- Path Selection -->
+    <rect x="410" y="500" width="320" height="120" rx="5" fill="#fff" stroke="#666"/>
+    <text x="570" y="520" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Path Selection Criteria</text>
+    <text x="420" y="540" font-family="Arial" font-size="9">• Loss &lt; 0.1%</text>
+    <text x="420" y="555" font-family="Arial" font-size="9">• Latency &lt; 50ms</text>
+    <text x="420" y="570" font-family="Arial" font-size="9">• Jitter &lt; 5ms</text>
+    <text x="420" y="585" font-family="Arial" font-size="9">• Bandwidth guarantee: 10Mbps</text>
+    <text x="420" y="600" font-family="Arial" font-size="9">• Failover: Auto to East US 2 region</text>
+  </g>
+</svg>

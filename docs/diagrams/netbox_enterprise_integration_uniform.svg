@@ -1,0 +1,185 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  
+  <ns0:rect width="1600" height="1000" fill="#f8f9fa" x="0" y="0" />
+  
+  
+  <ns0:g id="netbox-core">
+    <ns0:rect x="650" y="400" width="300" height="200" rx="20" fill="#1a237e" stroke="#000051" stroke-width="4" />
+    <ns0:text x="800.00" y="500.00" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="white" dominant-baseline="middle">NetBox</ns0:text>
+    <ns0:text x="800.00" y="500.00" text-anchor="middle" font-family="Arial" font-size="16" fill="white" dominant-baseline="middle">Infrastructure Resource</ns0:text>
+    <ns0:text x="800.00" y="500.00" text-anchor="middle" font-family="Arial" font-size="16" fill="white" dominant-baseline="middle">Management Platform</ns0:text>
+    
+    
+    <ns0:rect x="670" y="510" width="120" height="30" rx="5" fill="#3f51b5" stroke="#1a237e" />
+    <ns0:text x="730.00" y="525.00" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold" dominant-baseline="middle">Source of Truth</ns0:text>
+    
+    <ns0:rect x="810" y="510" width="120" height="30" rx="5" fill="#3f51b5" stroke="#1a237e" />
+    <ns0:text x="870.00" y="525.00" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold" dominant-baseline="middle">API-Driven</ns0:text>
+    
+    <ns0:rect x="670" y="550" width="120" height="30" rx="5" fill="#3f51b5" stroke="#1a237e" />
+    <ns0:text x="730.00" y="565.00" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold" dominant-baseline="middle">Vendor Agnostic</ns0:text>
+    
+    <ns0:rect x="810" y="550" width="120" height="30" rx="5" fill="#3f51b5" stroke="#1a237e" />
+    <ns0:text x="870.00" y="565.00" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold" dominant-baseline="middle">Open Source</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:g id="existing-systems">
+    
+    <ns0:rect x="100.0" y="300.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="190.00" y="350.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">Infoblox Grid</ns0:text>
+    <ns0:text x="190.00" y="350.00" text-anchor="middle" font-family="Arial" font-size="12" fill="white" dominant-baseline="middle">DNS/DHCP/IPAM</ns0:text>
+    <ns0:text x="190.00" y="350.00" text-anchor="middle" font-family="Arial" font-size="10" fill="white" dominant-baseline="middle">Operational Layer</ns0:text>
+    <ns0:text x="190.00" y="350.00" text-anchor="middle" font-family="Arial" font-size="9" fill="white" dominant-baseline="middle">Grid Master + Members</ns0:text>
+    
+    
+    <ns0:rect x="100.0" y="450.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="190.00" y="500.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">Cisco SD-WAN</ns0:text>
+    <ns0:text x="190.00" y="500.00" text-anchor="middle" font-family="Arial" font-size="12" fill="white" dominant-baseline="middle">vManage/vEdge</ns0:text>
+    <ns0:text x="190.00" y="500.00" text-anchor="middle" font-family="Arial" font-size="10" fill="white" dominant-baseline="middle">Policy Engine</ns0:text>
+    <ns0:text x="190.00" y="500.00" text-anchor="middle" font-family="Arial" font-size="9" fill="white" dominant-baseline="middle">Device Inventory</ns0:text>
+    
+    
+    <ns0:rect x="100.0" y="600.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="190.00" y="650.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">Azure Portal</ns0:text>
+    <ns0:text x="190.00" y="650.00" text-anchor="middle" font-family="Arial" font-size="12" fill="white" dominant-baseline="middle">Resource Manager</ns0:text>
+    <ns0:text x="190.00" y="650.00" text-anchor="middle" font-family="Arial" font-size="10" fill="white" dominant-baseline="middle">Native Management</ns0:text>
+    <ns0:text x="190.00" y="650.00" text-anchor="middle" font-family="Arial" font-size="9" fill="white" dominant-baseline="middle">VNets + Subnets</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:g id="cloud-platforms">
+    
+    <ns0:rect x="1330.0" y="210.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="1420.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">Azure Multi-Region</ns0:text>
+    <ns0:text x="1420.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">Central + East US 2</ns0:text>
+    <ns0:text x="1420.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="10" fill="white" dominant-baseline="middle">Hub/Spoke VNets</ns0:text>
+    <ns0:text x="1420.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="9" fill="white" dominant-baseline="middle">ExpressRoute Circuits</ns0:text>
+    <ns0:text x="1420.00" y="260.00" text-anchor="middle" font-family="Arial" font-size="9" fill="white" dominant-baseline="middle">Private DNS Zones</ns0:text>
+    
+    
+    <ns0:rect x="1330.0" y="340.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="1420.00" y="390.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">Oracle Cloud (OCI)</ns0:text>
+    <ns0:text x="1420.00" y="390.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">FastConnect VCNs</ns0:text>
+    <ns0:text x="1420.00" y="390.00" text-anchor="middle" font-family="Arial" font-size="9" fill="white" dominant-baseline="middle">via Equinix Fabric</ns0:text>
+    
+    
+    <ns0:rect x="1330.0" y="460.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="1420.00" y="510.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">On-Premises</ns0:text>
+    <ns0:text x="1420.00" y="510.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">MPLS Network</ns0:text>
+    <ns0:text x="1420.00" y="510.00" text-anchor="middle" font-family="Arial" font-size="10" fill="white" dominant-baseline="middle">Branch Offices</ns0:text>
+    <ns0:text x="1420.00" y="510.00" text-anchor="middle" font-family="Arial" font-size="9" fill="white" dominant-baseline="middle">Data Centers</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:g id="automation">
+    
+    <ns0:rect x="435.0" y="90.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="525.00" y="140.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">Terraform</ns0:text>
+    <ns0:text x="525.00" y="140.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">Infrastructure</ns0:text>
+    <ns0:text x="525.00" y="140.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">as Code</ns0:text>
+    
+    
+    <ns0:rect x="635.0" y="90.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="725.00" y="140.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">Azure DevOps</ns0:text>
+    <ns0:text x="725.00" y="140.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">CI/CD Pipelines</ns0:text>
+    <ns0:text x="725.00" y="140.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">Automation</ns0:text>
+    
+    
+    <ns0:rect x="835.0" y="90.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="925.00" y="140.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">Ansible</ns0:text>
+    <ns0:text x="925.00" y="140.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">Configuration</ns0:text>
+    <ns0:text x="925.00" y="140.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">Management</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:g id="data-analytics">
+    
+    <ns0:rect x="435.0" y="740.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="525.00" y="790.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">Azure Monitor</ns0:text>
+    <ns0:text x="525.00" y="790.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">Network Insights</ns0:text>
+    <ns0:text x="525.00" y="790.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">Telemetry</ns0:text>
+    
+    
+    <ns0:rect x="635.0" y="740.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="725.00" y="790.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">ServiceNow</ns0:text>
+    <ns0:text x="725.00" y="790.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">Change Mgmt</ns0:text>
+    <ns0:text x="725.00" y="790.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">CMDB Sync</ns0:text>
+    
+    
+    <ns0:rect x="835.0" y="740.0" width="180.0" height="100.0" rx="10" fill="#E6F0FF" stroke="#1E3A8A" stroke-width="2" />
+    <ns0:text x="925.00" y="790.00" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white" dominant-baseline="middle">Power BI</ns0:text>
+    <ns0:text x="925.00" y="790.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">Compliance</ns0:text>
+    <ns0:text x="925.00" y="790.00" text-anchor="middle" font-family="Arial" font-size="11" fill="white" dominant-baseline="middle">Analytics</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:g id="use-cases">
+    
+    <ns0:rect x="50" y="100" width="120" height="60" rx="8" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" />
+    <ns0:text x="110.00" y="130.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">IPAM Planning</ns0:text>
+    <ns0:text x="110.00" y="130.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">Subnet Design</ns0:text>
+    <ns0:text x="110.00" y="130.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">Conflict Prevention</ns0:text>
+    
+    
+    <ns0:rect x="200" y="100" width="120" height="60" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="2" />
+    <ns0:text x="260.00" y="130.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">Circuit Mgmt</ns0:text>
+    <ns0:text x="260.00" y="130.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">ExpressRoute</ns0:text>
+    <ns0:text x="260.00" y="130.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">Equinix Fabric</ns0:text>
+    
+    
+    <ns0:rect x="1100" y="750" width="120" height="60" rx="8" fill="#ffebee" stroke="#f44336" stroke-width="2" />
+    <ns0:text x="1160.00" y="780.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">DR Planning</ns0:text>
+    <ns0:text x="1160.00" y="780.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">Failover Paths</ns0:text>
+    <ns0:text x="1160.00" y="780.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">Dependencies</ns0:text>
+    
+    
+    <ns0:rect x="1250" y="750" width="120" height="60" rx="8" fill="#e1f5fe" stroke="#0288d1" stroke-width="2" />
+    <ns0:text x="1310.00" y="780.00" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" dominant-baseline="middle">Compliance</ns0:text>
+    <ns0:text x="1310.00" y="780.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">Audit Trails</ns0:text>
+    <ns0:text x="1310.00" y="780.00" text-anchor="middle" font-family="Arial" font-size="9" dominant-baseline="middle">SOX/PCI DSS</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:defs>
+    <ns0:marker id="arrowhead-blue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <ns0:polygon points="0 0, 10 4, 0 8" fill="#1a237e" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <ns0:polygon points="0 0, 8 3, 0 6" fill="#4caf50" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <ns0:polygon points="0 0, 8 3, 0 6" fill="#ff9800" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-red" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <ns0:polygon points="0 0, 8 3, 0 6" fill="#f44336" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-blue-light" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <ns0:polygon points="0 0, 8 3, 0 6" fill="#0288d1" />
+    </ns0:marker>
+  </ns0:defs>
+  
+  
+  <ns0:g id="title">
+    <ns0:text x="725.00" y="140.00" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#1a237e" dominant-baseline="middle">NetBox: Strategic Infrastructure Resource Management</ns0:text>
+    <ns0:text x="725.00" y="140.00" text-anchor="middle" font-family="Arial" font-size="16" fill="#666" dominant-baseline="middle">Unified Documentation, Automation Hub, and Source of Truth for Hybrid Azure Networks</ns0:text>
+  </ns0:g>
+  
+  
+  <ns0:g id="benefits">
+    <ns0:rect x="50" y="850" width="450" height="130" rx="10" fill="#f5f5f5" stroke="#ccc" stroke-width="2" />
+    <ns0:text x="275.00" y="915.00" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#1a237e" dominant-baseline="middle">Strategic Benefits</ns0:text>
+    
+    <ns0:text x="275.00" y="915.00" font-family="Arial" font-size="12" font-weight="bold" fill="#4caf50" text-anchor="middle" dominant-baseline="middle">&#8226; Single Source of Truth</ns0:text>
+    <ns0:text x="275.00" y="915.00" font-family="Arial" font-size="10" fill="#666" text-anchor="middle" dominant-baseline="middle">Unified documentation across hybrid environment</ns0:text>
+    
+    <ns0:text x="275.00" y="915.00" font-family="Arial" font-size="12" font-weight="bold" fill="#ff9800" text-anchor="middle" dominant-baseline="middle">&#8226; Automation Orchestration</ns0:text>
+    <ns0:text x="275.00" y="915.00" font-family="Arial" font-size="10" fill="#666" text-anchor="middle" dominant-baseline="middle">API-driven integration with IaC and DevOps</ns0:text>
+    
+    <ns0:text x="275.00" y="915.00" font-family="Arial" font-size="12" font-weight="bold" fill="#f44336" text-anchor="middle" dominant-baseline="middle">&#8226; Risk Mitigation</ns0:text>
+    <ns0:text x="275.00" y="915.00" font-family="Arial" font-size="10" fill="#666" text-anchor="middle" dominant-baseline="middle">Accurate documentation reduces outage impact</ns0:text>
+    
+    <ns0:text x="275.00" y="915.00" font-family="Arial" font-size="12" font-weight="bold" fill="#2196f3" text-anchor="middle" dominant-baseline="middle">&#8226; Compliance Automation</ns0:text>
+    <ns0:text x="275.00" y="915.00" font-family="Arial" font-size="10" fill="#666" text-anchor="middle" dominant-baseline="middle">Automated audit trails and change tracking</ns0:text>
+  </ns0:g>
+</ns0:svg>

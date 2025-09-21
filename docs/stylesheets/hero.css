@@ -4,44 +4,11 @@
     display: grid;
     place-items: center;
     text-align: center;
-    /* Use the SVG as a full-bleed background */
-    background: url("../assets/hero/network-hero.svg") center / cover no-repeat;
     isolation: isolate;
   }
   
-  .bh-hero-inner {
-    position: relative;
-    z-index: 1;
-    max-width: 900px;
-    padding: 6rem 1.25rem 2rem;
-  }
-  
-  .bh-hero h1 {
-    margin: 0;
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-    letter-spacing: -0.02em;
-  }
-  
-  .bh-hero p {
-    margin: .75rem auto 1.5rem;
-    color: var(--md-default-fg-color--light, rgba(255,255,255,.72));
-    font-size: clamp(1rem, 1.6vw, 1.15rem);
-    max-width: 42rem;
-  }
-  
+  .bh-hero-inner { position: relative; z-index: 1; max-width: 900px; padding: 6rem 1.25rem 2rem; }
   .bh-cta { display: inline-flex; gap: .75rem; flex-wrap: wrap; justify-content: center; }
-  .bh-btn {
-    display: inline-block;
-    padding: .65rem 1rem;
-    border-radius: .6rem;
-    background: var(--md-accent-fg-color);
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .bh-btn--ghost {
-    background: transparent;
-    color: var(--md-accent-fg-color);
-    outline: 1px solid color-mix(in oklab, var(--md-accent-fg-color) 60%, transparent);
-  }
+  .bh-btn { display: inline-block; padding: .65rem 1rem; border-radius: .6rem; background: var(--md-accent-fg-color); color: #000; text-decoration: none; font-weight: 600; }
+  .bh-btn--ghost { background: transparent; color: var(--md-accent-fg-color); outline: 1px solid color-mix(in oklab, var(--md-accent-fg-color) 60%, transparent); }
   

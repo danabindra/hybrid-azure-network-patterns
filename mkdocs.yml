@@ -48,8 +48,10 @@ theme:
 plugins:
   - search
   - tags
+
 extra_css:
   - stylesheets/hero.css
+  
 markdown_extensions:
   - admonition
   - attr_list

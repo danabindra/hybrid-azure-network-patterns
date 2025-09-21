@@ -82,6 +82,7 @@ Connect enterprise branches to Azure through a regional **hub-and-spoke** landin
 ## Deploy options
 
 === "Bicep (hub core)"
+
 ```bicep
 param location string = resourceGroup().location
 param hubVnetName string = 'hub-vnet'

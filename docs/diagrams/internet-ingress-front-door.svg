@@ -1,0 +1,201 @@
+<svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#f8f9fa"/>
+  
+  <!-- Internet Cloud -->
+  <g id="internet">
+    <ellipse cx="200" cy="120" rx="120" ry="50" fill="#f1f8e9" stroke="#689f38" stroke-width="3"/>
+    <text x="200" y="110" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Internet</text>
+    <text x="200" y="130" text-anchor="middle" font-family="Arial" font-size="12">Global Users</text>
+    <text x="200" y="145" text-anchor="middle" font-family="Arial" font-size="10">HTTPS Traffic</text>
+  </g>
+  
+  <!-- Azure Front Door -->
+  <g id="frontdoor">
+    <rect x="450" y="50" width="300" height="140" rx="10" fill="#e3f2fd" stroke="#2196f3" stroke-width="3"/>
+    <text x="600" y="75" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Azure Front Door</text>
+    <text x="600" y="95" text-anchor="middle" font-family="Arial" font-size="12">Global CDN Security Service</text>
+    
+    <!-- WAF Component -->
+    <rect x="470" y="110" width="120" height="60" rx="5" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+    <text x="530" y="130" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Web Application</text>
+    <text x="530" y="145" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Firewall (WAF)</text>
+    <text x="530" y="160" text-anchor="middle" font-family="Arial" font-size="9">OWASP Protection</text>
+    
+    <!-- CDN Component -->
+    <rect x="610" y="110" width="120" height="60" rx="5" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="670" y="130" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Global CDN</text>
+    <text x="670" y="145" text-anchor="middle" font-family="Arial" font-size="10">Edge Locations</text>
+    <text x="670" y="160" text-anchor="middle" font-family="Arial" font-size="9">Content Caching</text>
+  </g>
+  
+  <!-- Azure Hub VNet -->
+  <g id="hub-vnet">
+    <rect x="100" y="250" width="280" height="200" rx="10" fill="#e3f2fd" stroke="#2196f3" stroke-width="3"/>
+    <text x="240" y="275" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Azure Hub VNet (Central)</text>
+    <text x="240" y="295" text-anchor="middle" font-family="Arial" font-size="12">10.100.0.0/16</text>
+    
+    <!-- FortiGate VMSS -->
+    <rect x="120" y="310" width="110" height="45" rx="5" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+    <text x="175" y="328" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">FortiGate VMSS</text>
+    <text x="175" y="342" text-anchor="middle" font-family="Arial" font-size="9">Security Cluster</text>
+    <text x="175" y="352" text-anchor="middle" font-family="Arial" font-size="8">10.100.1.0/24</text>
+    
+    <!-- Internal Load Balancer -->
+    <rect x="250" y="310" width="110" height="45" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+    <text x="305" y="328" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Internal LB</text>
+    <text x="305" y="342" text-anchor="middle" font-family="Arial" font-size="9">Load Balancer</text>
+    <text x="305" y="352" text-anchor="middle" font-family="Arial" font-size="8">10.100.2.100</text>
+    
+    <!-- Private Link Service -->
+    <rect x="120" y="370" width="110" height="35" rx="5" fill="#fff8e1" stroke="#ffa000" stroke-width="2"/>
+    <text x="175" y="388" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold">Private Link Service</text>
+    <text x="175" y="398" text-anchor="middle" font-family="Arial" font-size="8">10.100.3.0/24</text>
+    
+    <!-- Application Gateway -->
+    <rect x="250" y="370" width="110" height="35" rx="5" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
+    <text x="305" y="388" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold">Application Gateway</text>
+    <text x="305" y="398" text-anchor="middle" font-family="Arial" font-size="8">10.100.4.0/24</text>
+  </g>
+  
+  <!-- Spoke VNet 1 - Production -->
+  <g id="spoke-vnet-1">
+    <rect x="450" y="250" width="300" height="180" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="3"/>
+    <text x="600" y="275" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Production Spoke VNet</text>
+    <text x="600" y="295" text-anchor="middle" font-family="Arial" font-size="12">10.101.0.0/16</text>
+    
+    <!-- Web Tier -->
+    <rect x="470" y="310" width="120" height="50" rx="5" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="530" y="330" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Web Tier</text>
+    <text x="530" y="345" text-anchor="middle" font-family="Arial" font-size="9">IIS/Apache Servers</text>
+    <text x="530" y="355" text-anchor="middle" font-family="Arial" font-size="8">10.101.1.0/24</text>
+    
+    <!-- Application Tier -->
+    <rect x="610" y="310" width="120" height="50" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="670" y="330" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">App Tier</text>
+    <text x="670" y="345" text-anchor="middle" font-family="Arial" font-size="9">API Services</text>
+    <text x="670" y="355" text-anchor="middle" font-family="Arial" font-size="8">10.101.2.0/24</text>
+    
+    <!-- Database Tier -->
+    <rect x="470" y="370" width="120" height="50" rx="5" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+    <text x="530" y="390" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Database Tier</text>
+    <text x="530" y="405" text-anchor="middle" font-family="Arial" font-size="9">SQL Cluster</text>
+    <text x="530" y="415" text-anchor="middle" font-family="Arial" font-size="8">10.101.3.0/24</text>
+    
+    <!-- Private Endpoints -->
+    <rect x="610" y="370" width="120" height="50" rx="5" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
+    <text x="670" y="390" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Private Endpoints</text>
+    <text x="670" y="405" text-anchor="middle" font-family="Arial" font-size="9">Storage/KeyVault</text>
+    <text x="670" y="415" text-anchor="middle" font-family="Arial" font-size="8">10.101.4.0/24</text>
+  </g>
+  
+  <!-- Spoke VNet 2 - Development -->
+  <g id="spoke-vnet-2">
+    <rect x="800" y="250" width="300" height="180" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="3"/>
+    <text x="950" y="275" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Development Spoke VNet</text>
+    <text x="950" y="295" text-anchor="middle" font-family="Arial" font-size="12">10.102.0.0/16</text>
+    
+    <!-- Dev Web Servers -->
+    <rect x="820" y="310" width="120" height="50" rx="5" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="880" y="330" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Dev Web Servers</text>
+    <text x="880" y="345" text-anchor="middle" font-family="Arial" font-size="9">Test Environment</text>
+    <text x="880" y="355" text-anchor="middle" font-family="Arial" font-size="8">10.102.1.0/24</text>
+    
+    <!-- Dev API Services -->
+    <rect x="960" y="310" width="120" height="50" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="1020" y="330" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Dev API Services</text>
+    <text x="1020" y="345" text-anchor="middle" font-family="Arial" font-size="9">Staging APIs</text>
+    <text x="1020" y="355" text-anchor="middle" font-family="Arial" font-size="8">10.102.2.0/24</text>
+    
+    <!-- Dev Database -->
+    <rect x="820" y="370" width="120" height="50" rx="5" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+    <text x="880" y="390" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Dev Database</text>
+    <text x="880" y="405" text-anchor="middle" font-family="Arial" font-size="9">Test Data</text>
+    <text x="880" y="415" text-anchor="middle" font-family="Arial" font-size="8">10.102.3.0/24</text>
+    
+    <!-- DevOps Tools -->
+    <rect x="960" y="370" width="120" height="50" rx="5" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
+    <text x="1020" y="390" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">DevOps Tools</text>
+    <text x="1020" y="405" text-anchor="middle" font-family="Arial" font-size="9">CI/CD Pipeline</text>
+    <text x="1020" y="415" text-anchor="middle" font-family="Arial" font-size="8">10.102.4.0/24</text>
+  </g>
+  
+  <!-- VNet Peering Connections -->
+  <g id="peering">
+    <!-- Hub to Spoke 1 -->
+    <path d="M 380 350 Q 415 350 450 350" stroke="#9c27b0" stroke-width="4" fill="none" stroke-dasharray="8,4"/>
+    <text x="415" y="340" text-anchor="middle" font-family="Arial" font-size="10" fill="#9c27b0" font-weight="bold">VNet Peering</text>
+    <text x="415" y="365" text-anchor="middle" font-family="Arial" font-size="8" fill="#666">(unused for Front Door traffic)</text>
+  </g>
+  
+  <!-- Internet to Front Door Connection -->
+  <g id="internet-connection">
+    <path d="M 320 120 L 450 120" stroke="#689f38" stroke-width="3" fill="none" stroke-dasharray="8,4" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- Front Door to Production Spoke Connection -->
+  <g id="frontdoor-spoke-connection">
+    <path d="M 600 190 L 600 250" stroke="#2196f3" stroke-width="3" fill="none" stroke-dasharray="8,4" marker-end="url(#arrowhead-blue)"/>
+    <text x="660" y="220" text-anchor="middle" font-family="Arial" font-size="9" fill="#2196f3" font-weight="bold">Private Link</text>
+    <text x="660" y="235" text-anchor="middle" font-family="Arial" font-size="8" fill="#2196f3">(Front Door traffic only)</text>
+  </g>
+  
+  <!-- Front Door to Development Spoke Connection -->
+  <g id="frontdoor-dev-connection">
+    <path d="M 750 120 Q 825 120 825 250" stroke="#2196f3" stroke-width="3" fill="none" stroke-dasharray="8,4" marker-end="url(#arrowhead-blue)"/>
+    <text x="825" y="110" text-anchor="middle" font-family="Arial" font-size="9" fill="#2196f3" font-weight="bold">Private Link</text>
+    <text x="825" y="100" text-anchor="middle" font-family="Arial" font-size="8" fill="#2196f3">(Front Door traffic only)</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#689f38"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2196f3"/>
+    </marker>
+  </defs>
+  
+  <!-- Configuration Details -->
+  <g id="config-box">
+    <rect x="50" y="480" width="1100" height="180" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="600" y="505" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Azure Front Door WAF Internet Ingress Configuration</text>
+    
+    <!-- Front Door Rules -->
+    <rect x="70" y="520" width="250" height="120" rx="5" fill="#fff" stroke="#666"/>
+    <text x="195" y="540" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Front Door Rules</text>
+    <text x="80" y="560" font-family="Courier" font-size="9">Origin: webapp.contoso.com</text>
+    <text x="80" y="575" font-family="Courier" font-size="9">Backend Pool: Prod Web Tier</text>
+    <text x="80" y="590" font-family="Courier" font-size="9">Health Probe: /health</text>
+    <text x="80" y="605" font-family="Courier" font-size="9">SSL: End-to-End TLS</text>
+    <text x="80" y="620" font-family="Courier" font-size="9">Session Affinity: Enabled</text>
+    
+    <!-- WAF Policy -->
+    <rect x="340" y="520" width="250" height="120" rx="5" fill="#fff" stroke="#666"/>
+    <text x="465" y="540" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">WAF Security Policy</text>
+    <text x="350" y="560" font-family="Courier" font-size="9">OWASP Core Rule Set 3.2</text>
+    <text x="350" y="575" font-family="Courier" font-size="9">SQL Injection Protection</text>
+    <text x="350" y="590" font-family="Courier" font-size="9">XSS Prevention</text>
+    <text x="350" y="605" font-family="Courier" font-size="9">Rate Limiting: 1000/min</text>
+    <text x="350" y="620" font-family="Courier" font-size="9">GeoFiltering: Allow US/EU</text>
+    
+    <!-- Private Link -->
+    <rect x="610" y="520" width="250" height="120" rx="5" fill="#fff" stroke="#666"/>
+    <text x="735" y="540" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Private Link Service</text>
+    <text x="620" y="560" font-family="Courier" font-size="9">Service: Hub App Gateway</text>
+    <text x="620" y="575" font-family="Courier" font-size="9">Connection: Front Door PLS</text>
+    <text x="620" y="590" font-family="Courier" font-size="9">Auto-Approval: Enabled</text>
+    <text x="620" y="605" font-family="Courier" font-size="9">Private IP: 10.100.3.10</text>
+    <text x="620" y="620" font-family="Courier" font-size="9">Visibility: Subscription</text>
+    
+    <!-- Traffic Flow -->
+    <rect x="880" y="520" width="250" height="120" rx="5" fill="#fff" stroke="#666"/>
+    <text x="1005" y="540" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Traffic Flow Path</text>
+    <text x="890" y="560" font-family="Arial" font-size="9">Internet → Front Door WAF</text>
+    <text x="890" y="575" font-family="Arial" font-size="9">WAF → Private Link Service</text>
+    <text x="890" y="590" font-family="Arial" font-size="9">PLS → Application Gateway</text>
+    <text x="890" y="605" font-family="Arial" font-size="9">App GW → Spoke Web Tier</text>
+    <text x="890" y="620" font-family="Arial" font-size="9">Secure Private Connectivity</text>
+  </g>
+</svg>

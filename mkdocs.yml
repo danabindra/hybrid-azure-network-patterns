@@ -13,12 +13,15 @@ nav:
       - Internet Egress via Hub NVA: patterns/internet-egress.md
       - Front Door / Ingress: patterns/front-door-ingress.md
       - Region-to-Region Transit: patterns/region-transit.md
+  - ARD: ARD.md
+  - Roadmap: ROADMAP.generated.md
   - Diagrams: diagrams.md
   - Compliance: compliance/mappings.md
 
 theme:
   name: material
   language: en
+  custom_dir: overrides
   icon:
     repo: fontawesome/brands/github
   features:
@@ -45,7 +48,8 @@ theme:
 plugins:
   - search
   - tags
-
+extra_css:
+  - stylesheets/hero.css
 markdown_extensions:
   - admonition
   - attr_list

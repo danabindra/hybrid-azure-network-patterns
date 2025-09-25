@@ -1,0 +1,132 @@
+<svg width="1400" height="940" viewBox="0 0 1400 940" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Inter, Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-family: Inter, Arial, sans-serif; font-size: 14px; fill: #475569; }
+      .region { fill: #f1f5f9; stroke: #cbd5e1; }
+      .vnet-frontend { fill: #e6f0ff; stroke: #1e3a8a; }
+      .vnet-backend  { fill: #e8f5e9; stroke: #166534; }
+      .nva { fill: #fff7ed; stroke: #9a3412; }
+      .nva-chip { fill: #fdba74; stroke: #9a3412; }
+      .hdr { font-family: Inter, Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #0f172a; }
+      .cidr { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #475569; }
+      .item { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #111827; }
+      .small { font-family: Inter, Arial, sans-serif; font-size: 12px; fill: #334155; }
+      .legend { fill: #ffffff; stroke: #cbd5e1; }
+      .legend-title { font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #0f172a; }
+      .line { stroke: #64748b; stroke-width: 3; }
+      .arrow { marker-end: url(#arrowhead); }
+      .chip { fill: #1e293b; stroke: #0b1223; }
+      .chip-text { font-family: Inter, Arial, sans-serif; font-size: 11px; fill: #e2e8f0; letter-spacing: 0.04em; text-transform: uppercase; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="700" y="44" text-anchor="middle" class="title">Region-to-Region NVA Transit Architecture</text>
+  <text x="700" y="66" text-anchor="middle" class="subtitle">Central (Primary Production) ↔ East US 2 (Disaster Recovery)</text>
+
+  <!-- Central Region container -->
+  <rect x="40" y="100" width="620" height="520" rx="16" ry="16" class="region"/>
+  <text x="60" y="130" class="hdr">Azure Central Region (Primary Production)</text>
+
+  <!-- Central: Backend VNet -->
+  <rect x="70" y="160" width="280" height="420" rx="14" ry="14" class="vnet-backend"/>
+  <text x="85" y="185" class="hdr">Backend VNet</text>
+  <text x="85" y="205" class="cidr">(10.100.0.0/16)</text>
+
+  <text x="85" y="235" class="item">• Database subnet</text>
+  <text x="85" y="260" class="item">• Application subnet</text>
+  <text x="85" y="285" class="item">• Storage subnet</text>
+  <text x="85" y="310" class="item">• Management subnet</text>
+
+  <!-- Central: NVA Transit Point -->
+  <rect x="370" y="240" width="270" height="120" rx="14" ry="14" class="nva"/>
+  <text x="385" y="265" class="hdr">NVA Transit Point</text>
+  <text x="385" y="285" class="cidr">Security inspection policy (10.100.10.0/24)</text>
+  <rect x="385" y="300" width="90" height="26" rx="6" ry="6" class="nva-chip"/>
+  <text x="430" y="317" text-anchor="middle" class="small" style="fill:#7c2d12;">DPI / IPS</text>
+  <rect x="480" y="300" width="78" height="26" rx="6" ry="6" class="nva-chip"/>
+  <text x="519" y="317" text-anchor="middle" class="small" style="fill:#7c2d12;">Policies</text>
+  <rect x="563" y="300" width="62" height="26" rx="6" ry="6" class="nva-chip"/>
+  <text x="594" y="317" text-anchor="middle" class="small" style="fill:#7c2d12;">Logs</text>
+
+  <!-- Central: Frontend VNet -->
+  <rect x="370" y="380" width="270" height="200" rx="14" ry="14" class="vnet-frontend"/>
+  <text x="385" y="405" class="hdr">Frontend VNet</text>
+  <text x="385" y="425" class="cidr">(10.101.0.0/16)</text>
+  <text x="385" y="455" class="item">• Gateway subnet</text>
+  <text x="385" y="480" class="item">• DMZ</text>
+  <text x="385" y="505" class="item">• Load Balancer</text>
+  <text x="385" y="530" class="item">• Public IP pools</text>
+
+  <!-- East Region container -->
+  <rect x="740" y="100" width="620" height="520" rx="16" ry="16" class="region"/>
+  <text x="760" y="130" class="hdr">Azure East US 2 Region (Disaster Recovery)</text>
+
+  <!-- East: Frontend VNet -->
+  <rect x="770" y="160" width="270" height="200" rx="14" ry="14" class="vnet-frontend"/>
+  <text x="785" y="185" class="hdr">Frontend VNet</text>
+  <text x="785" y="205" class="cidr">(10.200.0.0/16)</text>
+  <text x="785" y="235" class="item">• Gateway subnet (ingress)</text>
+
+  <!-- East: NVA Transit Point -->
+  <rect x="1070" y="240" width="270" height="120" rx="14" ry="14" class="nva"/>
+  <text x="1085" y="265" class="hdr">NVA Transit Point</text>
+  <text x="1085" y="285" class="cidr">Security inspection (10.200.10.0/24)</text>
+  <rect x="1085" y="300" width="90" height="26" rx="6" ry="6" class="nva-chip"/>
+  <text x="1130" y="317" text-anchor="middle" class="small" style="fill:#7c2d12;">DPI / IPS</text>
+  <rect x="1180" y="300" width="78" height="26" rx="6" ry="6" class="nva-chip"/>
+  <text x="1219" y="317" text-anchor="middle" class="small" style="fill:#7c2d12;">Policies</text>
+  <rect x="1263" y="300" width="62" height="26" rx="6" ry="6" class="nva-chip"/>
+  <text x="1294" y="317" text-anchor="middle" class="small" style="fill:#7c2d12;">Logs</text>
+
+  <!-- East: Backend VNet -->
+  <rect x="1070" y="380" width="270" height="200" rx="14" ry="14" class="vnet-backend"/>
+  <text x="1085" y="405" class="hdr">Backend VNet</text>
+  <text x="1085" y="425" class="cidr">(10.201.0.0/16)</text>
+  <text x="1085" y="455" class="item">• Database DR subnet</text>
+  <text x="1085" y="480" class="item">• Application DR subnet</text>
+  <text x="1085" y="505" class="item">• Storage DR subnet</text>
+  <text x="1085" y="530" class="item">• Backup subnet</text>
+
+  <!-- Inter-region transit spine -->
+  <rect x="690" y="170" width="20" height="440" rx="10" ry="10" class="chip"/>
+  <text x="700" y="155" text-anchor="middle" class="chip-text">inter-region transit</text>
+
+  <!-- Traffic Flow: Central → East US 2 -->
+  <line x1="350" y1="300" x2="370" y2="300" class="line arrow"/>
+  <line x1="505" y1="360" x2="505" y2="380" class="line arrow"/>
+  <line x1="640" y1="480" x2="690" y2="480" class="line arrow"/>
+  <line x1="710" y1="240" x2="770" y2="240" class="line arrow"/>
+  <line x1="1040" y1="240" x2="1070" y2="240" class="line arrow"/>
+  <line x1="1205" y1="360" x2="1205" y2="380" class="line arrow"/>
+
+  <!-- Flow caption -->
+  <text x="700" y="630" text-anchor="middle" class="small" style="font-style:italic;">
+    Central → East US 2 flow: Backend VNet → NVA (inspect) → Frontend VNet → Inter-Region Transit → East Frontend VNet → East NVA (inspect) → East Backend VNet
+  </text>
+
+  <!-- Bottom legend panel -->
+  <rect x="40" y="650" width="1320" height="230" rx="16" ry="16" class="legend"/>
+  <text x="70" y="680" class="legend-title">Use Cases</text>
+  <text x="70" y="705" class="item">• Database Replication: SQL Always On across regions with security inspection</text>
+  <text x="70" y="728" class="item">• Application Failover: Secure failover traffic during disaster scenarios</text>
+  <text x="70" y="751" class="item">• Backup and Recovery: Cross-region backup traffic with policy enforcement</text>
+  <text x="70" y="774" class="item">• Data Synchronization: Secure sync of critical business data</text>
+  <text x="70" y="797" class="item">• Compliance Logging: All inter-region traffic inspected and logged</text>
+
+  <text x="740" y="680" class="legend-title">NVA Security Functions</text>
+  <text x="740" y="705" class="item">• Traffic Inspection: Deep packet inspection for all inter-region flows</text>
+  <text x="740" y="728" class="item">• Policy Enforcement: Consistent security policies across regions</text>
+  <text x="740" y="751" class="item">• Threat Prevention: IPS, malware detection, data exfiltration prevention</text>
+  <text x="740" y="774" class="item">• Compliance Logging: Audit trails for regulatory requirements</text>
+  <text x="740" y="797" class="item">• Bandwidth Control: QoS and rate limiting for different traffic types</text>
+
+  <!-- Footer -->
+  <text x="700" y="900" text-anchor="middle" class="subtitle">
+    All region-to-region traffic passes through centralized NVA checkpoints; design favors HA, security, and DR readiness.
+  </text>
+</svg>

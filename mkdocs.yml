@@ -1,0 +1,77 @@
+site_name: Hybrid Azure Network Patterns
+site_description: Executable reference patterns for enterprise-grade hybrid networking on Azure.
+site_url: https://danabindra.github.io/hybrid-azure-network-patterns/
+
+repo_url: https://github.com/danabindra/hybrid-azure-network-patterns
+repo_name: danabindra/hybrid-azure-network-patterns
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Patterns:
+      - Branch → Azure (ER/SD-WAN): patterns/branch-to-azure.md
+      - Internet Egress via Hub NVA: patterns/internet-egress.md
+      - Front Door / Ingress: patterns/front-door-ingress.md
+      - Region-to-Region Transit: patterns/region-transit.md
+  - ARD: ARD.md
+  - Roadmap: ROADMAP.generated.md
+  - Diagrams: diagrams.md
+  - Compliance: compliance/mappings.md
+
+theme:
+  name: material
+  language: en
+  custom_dir: overrides
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - toc.integrate
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - search.suggest
+    - search.highlight
+    - announce.dismiss
+  palette:
+    - scheme: default
+      toggle: { icon: material/weather-night, name: Switch to dark mode }
+    - scheme: slate
+      toggle: { icon: material/weather-sunny, name: Switch to light mode }
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search
+  - tags
+
+extra_css:
+  - stylesheets/hero.css
+  
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - toc: { permalink: true }
+  - pymdownx.arithmatex: { generic: true }
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.tasklist: { custom_checkbox: true }
+
+docs_dir: docs
+strict: true

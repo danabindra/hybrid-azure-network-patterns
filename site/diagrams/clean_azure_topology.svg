@@ -1,0 +1,241 @@
+<svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Azure cloud gradient -->
+    <linearGradient id="azureCloud" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#357abd;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Data center gradient -->
+    <linearGradient id="dcGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#229954;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Express Route blue -->
+    <linearGradient id="expressRoute" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004499;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Arrow marker -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#ffffff"/>
+  
+  <!-- Data Centers -->
+  
+  <!-- Las Vegas Data Center -->
+  <g id="lasVegas">
+    <rect x="30" y="80" width="60" height="50" rx="5" fill="url(#dcGradient)" stroke="#229954" stroke-width="2"/>
+    <rect x="35" y="85" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="85" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="85" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="35" y="95" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="95" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="95" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="35" y="105" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="105" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="105" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="35" y="115" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="115" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="115" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <text x="60" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">
+      On-Premises
+    </text>
+    <text x="60" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">
+      Data Center
+    </text>
+    <text x="60" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">
+      Las Vegas
+    </text>
+  </g>
+  
+  <!-- WTC Data Center -->
+  <g id="wtc">
+    <rect x="30" y="250" width="60" height="50" rx="5" fill="url(#dcGradient)" stroke="#229954" stroke-width="2"/>
+    <rect x="35" y="255" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="255" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="255" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="35" y="265" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="265" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="265" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="35" y="275" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="275" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="275" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="35" y="285" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="285" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="285" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <text x="60" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">
+      On-Premises
+    </text>
+    <text x="60" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">
+      Data Center
+    </text>
+    <text x="60" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">
+      WTC
+    </text>
+  </g>
+  
+  <!-- Atlanta Data Center -->
+  <g id="atlanta">
+    <rect x="30" y="420" width="60" height="50" rx="5" fill="url(#dcGradient)" stroke="#229954" stroke-width="2"/>
+    <rect x="35" y="425" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="425" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="425" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="35" y="435" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="435" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="435" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="35" y="445" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="445" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="445" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="35" y="455" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="45" y="455" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <rect x="55" y="455" width="8" height="8" fill="#ffffff" opacity="0.8"/>
+    <text x="60" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">
+      On-Premises
+    </text>
+    <text x="60" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">
+      Data Center
+    </text>
+    <text x="60" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">
+      Atlanta
+    </text>
+  </g>
+  
+  <!-- Express Route connections from data centers -->
+  <line x1="90" y1="105" x2="180" y2="105" stroke="url(#expressRoute)" stroke-width="4"/>
+  <line x1="90" y1="275" x2="180" y2="275" stroke="url(#expressRoute)" stroke-width="4"/>
+  <line x1="90" y1="445" x2="180" y2="445" stroke="url(#expressRoute)" stroke-width="4"/>
+  
+  <!-- Lightning bolt icons for Express Route -->
+  <g id="lightning1">
+    <circle cx="135" cy="105" r="12" fill="url(#expressRoute)" stroke="#ffffff" stroke-width="2"/>
+    <path d="M130,98 L135,105 L132,105 L137,112 L132,105 L135,105 Z" fill="#ffffff"/>
+  </g>
+  <g id="lightning2">
+    <circle cx="135" cy="275" r="12" fill="url(#expressRoute)" stroke="#ffffff" stroke-width="2"/>
+    <path d="M130,268 L135,275 L132,275 L137,282 L132,275 L135,275 Z" fill="#ffffff"/>
+  </g>
+  <g id="lightning3">
+    <circle cx="135" cy="445" r="12" fill="url(#expressRoute)" stroke="#ffffff" stroke-width="2"/>
+    <path d="M130,438 L135,445 L132,445 L137,452 L132,445 L135,445 Z" fill="#ffffff"/>
+  </g>
+  
+  <!-- Express Route labels -->
+  <text x="135" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0066cc">
+    ExpressRoute (10Gbps)
+  </text>
+  <text x="135" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0066cc">
+    ExpressRoute (10Gbps)
+  </text>
+  <text x="135" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0066cc">
+    ExpressRoute (10Gbps)
+  </text>
+  
+  <!-- Equinix Cloud Exchange Fabric -->
+  <rect x="300" y="200" width="300" height="150" rx="10" fill="#f0f0f0" stroke="#cccccc" stroke-width="2"/>
+  <text x="450" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#0066cc">
+    Equinix
+  </text>
+  <text x="450" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0066cc">
+    Cloud Exchange
+  </text>
+  <text x="450" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0066cc">
+    Fabric
+  </text>
+  
+  <!-- Lightning bolts in Equinix box -->
+  <g id="equinixLightning1">
+    <path d="M374,266 L380,275 L376,275 L383,284 L376,275 L380,275 Z" fill="#0066cc"/>
+  </g>
+  <g id="equinixLightning2">
+    <path d="M514,266 L520,275 L516,275 L523,284 L516,275 L520,275 Z" fill="#0066cc"/>
+  </g>
+  
+  <!-- Connections from data centers to Equinix -->
+  <line x1="180" y1="105" x2="300" y2="220" stroke="url(#expressRoute)" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="180" y1="275" x2="300" y2="275" stroke="url(#expressRoute)" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="180" y1="445" x2="300" y2="330" stroke="url(#expressRoute)" stroke-width="4" marker-end="url(#arrow)"/>
+  
+  <!-- Azure Central US -->
+  <g id="azureCentral">
+    <!-- Cloud shape -->
+    <ellipse cx="750" cy="150" rx="120" ry="80" fill="url(#azureCloud)" stroke="#357abd" stroke-width="2"/>
+    <ellipse cx="720" cy="120" rx="60" ry="40" fill="url(#azureCloud)" stroke="#357abd" stroke-width="2"/>
+    <ellipse cx="780" cy="120" rx="60" ry="40" fill="url(#azureCloud)" stroke="#357abd" stroke-width="2"/>
+    <ellipse cx="750" cy="100" rx="40" ry="25" fill="url(#azureCloud)" stroke="#357abd" stroke-width="2"/>
+    
+    <!-- Azure Region label -->
+    <text x="750" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">
+      Azure Region: Central US
+    </text>
+    
+    <!-- Hub VNet -->
+    <rect x="720" y="130" width="60" height="25" rx="3" fill="#1e3a8a" stroke="#ffffff" stroke-width="1"/>
+    <text x="750" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff">
+      Hub VNT
+    </text>
+    
+    <!-- Firewall -->
+    <rect x="720" y="160" width="60" height="20" rx="3" fill="#dc2626" stroke="#ffffff" stroke-width="1"/>
+    <text x="750" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffffff">
+      Firewall
+    </text>
+    <!-- Shield icon -->
+    <path d="M785,165 L785,175 Q785,178 788,178 Q791,178 791,175 L791,165 Q788,162 785,165 Z" fill="#ffffff"/>
+    <path d="M786,166 L790,166 L790,174 Q788,176 786,174 Z" fill="#dc2626"/>
+  </g>
+  
+  <!-- Azure West US -->
+  <g id="azureWest">
+    <!-- Cloud shape -->
+    <ellipse cx="750" cy="450" rx="120" ry="80" fill="url(#azureCloud)" stroke="#357abd" stroke-width="2"/>
+    <ellipse cx="720" cy="420" rx="60" ry="40" fill="url(#azureCloud)" stroke="#357abd" stroke-width="2"/>
+    <ellipse cx="780" cy="420" rx="60" ry="40" fill="url(#azureCloud)" stroke="#357abd" stroke-width="2"/>
+    <ellipse cx="750" cy="400" rx="40" ry="25" fill="url(#azureCloud)" stroke="#357abd" stroke-width="2"/>
+    
+    <!-- Azure Region label -->
+    <text x="750" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">
+      Azure Region: West US
+    </text>
+    
+    <!-- Hub VNet -->
+    <rect x="720" y="430" width="60" height="25" rx="3" fill="#1e3a8a" stroke="#ffffff" stroke-width="1"/>
+    <text x="750" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff">
+      Hub VNT
+    </text>
+    
+    <!-- Firewall -->
+    <rect x="720" y="460" width="60" height="20" rx="3" fill="#dc2626" stroke="#ffffff" stroke-width="1"/>
+    <text x="750" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffffff">
+      Firewall
+    </text>
+    <!-- Shield icon -->
+    <path d="M785,465 L785,475 Q785,478 788,478 Q791,478 791,475 L791,465 Q788,462 785,465 Z" fill="#ffffff"/>
+    <path d="M786,466 L790,466 L790,474 Q788,476 786,474 Z" fill="#dc2626"/>
+  </g>
+  
+  <!-- Connections from Equinix to Azure -->
+  <line x1="600" y1="230" x2="680" y2="140" stroke="#333333" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="600" y1="320" x2="680" y2="440" stroke="#333333" stroke-width="4" marker-end="url(#arrow)"/>
+  
+  <!-- Approved Traffic arrows -->
+  <line x1="850" y1="170" x2="900" y2="170" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="905" y="175" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">
+    Approved Traffic
+  </text>
+  
+  <line x1="850" y1="470" x2="900" y2="470" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="905" y="475" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">
+    Approved Traffic
+  </text>
+  
+  <!-- Dotted line at bottom -->
+  <line x1="0" y1="650" x2="1000" y2="650" stroke="#cccccc" stroke-width="1" stroke-dasharray="5,5"/>
+  <circle cx="500" cy="650" r="3" fill="#4a90e2"/>
+</svg>

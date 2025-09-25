@@ -1,0 +1,187 @@
+<svg viewBox="0 0 1400 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1400" height="700" fill="#f8f9fa"/>
+  
+  <!-- On-Premises Infrastructure -->
+  <g id="on-premises">
+    <rect x="50" y="150" width="300" height="400" rx="15" fill="#f5f5f5" stroke="#666" stroke-width="3"/>
+    <text x="200" y="180" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">On-Premises Infrastructure</text>
+    <text x="200" y="200" text-anchor="middle" font-family="Arial" font-size="12">Corporate Data Center</text>
+    
+    <!-- Active Directory -->
+    <rect x="70" y="220" width="120" height="80" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="130" y="245" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Active Directory</text>
+    <text x="130" y="260" text-anchor="middle" font-family="Arial" font-size="10">Domain Controllers</text>
+    <text x="130" y="275" text-anchor="middle" font-family="Arial" font-size="9">corp.company.com</text>
+    <text x="130" y="290" text-anchor="middle" font-family="Arial" font-size="9">LDAP: 389, 636</text>
+    
+    <!-- DNS Servers -->
+    <rect x="210" y="220" width="120" height="80" rx="8" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+    <text x="270" y="245" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">DNS Servers</text>
+    <text x="270" y="260" text-anchor="middle" font-family="Arial" font-size="10">Primary/Secondary</text>
+    <text x="270" y="275" text-anchor="middle" font-family="Arial" font-size="9">10.1.10.10/11</text>
+    <text x="270" y="290" text-anchor="middle" font-family="Arial" font-size="9">Port: 53</text>
+    
+    <!-- Azure AD Connect -->
+    <rect x="70" y="320" width="120" height="60" rx="8" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="130" y="345" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Azure AD Connect</text>
+    <text x="130" y="360" text-anchor="middle" font-family="Arial" font-size="9">Identity Sync</text>
+    <text x="130" y="372" text-anchor="middle" font-family="Arial" font-size="9">HTTPS: 443</text>
+    
+    <!-- NTP Server -->
+    <rect x="210" y="320" width="120" height="60" rx="8" fill="#fff8e1" stroke="#ffc107" stroke-width="2"/>
+    <text x="270" y="345" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">NTP Server</text>
+    <text x="270" y="360" text-anchor="middle" font-family="Arial" font-size="9">Time Sync</text>
+    <text x="270" y="372" text-anchor="middle" font-family="Arial" font-size="9">UDP: 123</text>
+    
+    <!-- MPLS Router -->
+    <rect x="140" y="450" width="120" height="60" rx="8" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+    <text x="200" y="475" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">MPLS Router</text>
+    <text x="200" y="490" text-anchor="middle" font-family="Arial" font-size="10">AS 65XXX</text>
+    <text x="200" y="502" text-anchor="middle" font-family="Arial" font-size="9">BGP Peering</text>
+  </g>
+  
+  <!-- ExpressRoute Connection -->
+  <g id="expressroute">
+    <rect x="450" y="350" width="150" height="100" rx="10" fill="#e8f5e8" stroke="#4caf50" stroke-width="3"/>
+    <text x="525" y="380" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">ExpressRoute</text>
+    <text x="525" y="400" text-anchor="middle" font-family="Arial" font-size="12">Central Region</text>
+    <text x="525" y="420" text-anchor="middle" font-family="Arial" font-size="10">Private Peering</text>
+    <text x="525" y="435" text-anchor="middle" font-family="Arial" font-size="9">1 Gbps Circuit</text>
+  </g>
+  
+  <!-- Azure Hub VNet -->
+  <g id="azure-hub">
+    <rect x="700" y="280" width="280" height="240" rx="15" fill="#e3f2fd" stroke="#2196f3" stroke-width="3"/>
+    <text x="840" y="310" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Azure Hub VNet (Central)</text>
+    <text x="840" y="330" text-anchor="middle" font-family="Arial" font-size="12">10.100.0.0/16</text>
+    
+    <!-- ExpressRoute Gateway -->
+    <rect x="720" y="350" width="110" height="50" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="775" y="370" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">ER Gateway</text>
+    <text x="775" y="385" text-anchor="middle" font-family="Arial" font-size="9">GatewaySubnet</text>
+    <text x="775" y="395" text-anchor="middle" font-family="Arial" font-size="8">10.100.0.0/27</text>
+    
+    <!-- Azure Private DNS -->
+    <rect x="850" y="350" width="110" height="50" rx="5" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
+    <text x="905" y="370" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Private DNS</text>
+    <text x="905" y="385" text-anchor="middle" font-family="Arial" font-size="9">DNS Zones</text>
+    <text x="905" y="395" text-anchor="middle" font-family="Arial" font-size="8">168.63.129.16</text>
+    
+    <!-- DNS Forwarder -->
+    <rect x="720" y="420" width="110" height="50" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+    <text x="775" y="440" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">DNS Forwarder</text>
+    <text x="775" y="455" text-anchor="middle" font-family="Arial" font-size="9">Custom DNS</text>
+    <text x="775" y="465" text-anchor="middle" font-family="Arial" font-size="8">10.100.10.10</text>
+    
+    <!-- Domain Controller -->
+    <rect x="850" y="420" width="110" height="50" rx="5" fill="#fff8e1" stroke="#ffa000" stroke-width="2"/>
+    <text x="905" y="440" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Domain Controller</text>
+    <text x="905" y="455" text-anchor="middle" font-family="Arial" font-size="9">(Read-Only)</text>
+    <text x="905" y="465" text-anchor="middle" font-family="Arial" font-size="8">10.100.10.20</text>
+  </g>
+  
+  <!-- Azure Spoke VNet -->
+  <g id="azure-spoke">
+    <rect x="1050" y="280" width="280" height="240" rx="15" fill="#f3e5f5" stroke="#9c27b0" stroke-width="3"/>
+    <text x="1190" y="310" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Production Spoke VNet</text>
+    <text x="1190" y="330" text-anchor="middle" font-family="Arial" font-size="12">10.101.0.0/16</text>
+    
+    <!-- Domain-Joined VMs -->
+    <rect x="1070" y="350" width="110" height="60" rx="5" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="1125" y="370" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Domain-Joined</text>
+    <text x="1125" y="385" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">VMs</text>
+    <text x="1125" y="400" text-anchor="middle" font-family="Arial" font-size="8">10.101.1.0/24</text>
+    
+    <!-- Application Servers -->
+    <rect x="1200" y="350" width="110" height="60" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="1255" y="370" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">App Servers</text>
+    <text x="1255" y="385" text-anchor="middle" font-family="Arial" font-size="10">SQL/Web</text>
+    <text x="1255" y="400" text-anchor="middle" font-family="Arial" font-size="8">10.101.2.0/24</text>
+    
+    <!-- Azure SQL Database -->
+    <rect x="1070" y="430" width="110" height="60" rx="5" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+    <text x="1125" y="450" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Azure SQL</text>
+    <text x="1125" y="465" text-anchor="middle" font-family="Arial" font-size="10">Database</text>
+    <text x="1125" y="480" text-anchor="middle" font-family="Arial" font-size="8">Private Endpoint</text>
+    
+    <!-- Storage Account -->
+    <rect x="1200" y="430" width="110" height="60" rx="5" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
+    <text x="1255" y="450" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Storage Account</text>
+    <text x="1255" y="465" text-anchor="middle" font-family="Arial" font-size="10">Blob/Files</text>
+    <text x="1255" y="480" text-anchor="middle" font-family="Arial" font-size="8">Private Endpoint</text>
+  </g>
+  
+  <!-- VNet Peering -->
+  <g id="peering">
+    <path d="M 980 400 Q 1015 400 1050 400" stroke="#9c27b0" stroke-width="4" fill="none" stroke-dasharray="8,4"/>
+    <text x="1015" y="390" text-anchor="middle" font-family="Arial" font-size="10" fill="#9c27b0" font-weight="bold">VNet Peering</text>
+  </g>
+  
+  <!-- Traffic Flow Arrows with Labels -->
+  <g id="traffic-flows">
+    <!-- MPLS to ExpressRoute -->
+    <path d="M 350 480 L 450 400" stroke="#666" stroke-width="3" fill="none" marker-end="url(#arrowhead-gray)"/>
+    
+    <!-- ExpressRoute to Hub -->
+    <path d="M 600 400 L 700 400" stroke="#666" stroke-width="3" fill="none" marker-end="url(#arrowhead-gray)"/>
+    
+    <!-- Authentication Flow -->
+    <path d="M 330 250 Q 525 150 1070 380" stroke="#ff9800" stroke-width="3" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowhead-orange)"/>
+    <text x="525" y="140" text-anchor="middle" font-family="Arial" font-size="10" fill="#ff9800" font-weight="bold">Kerberos Authentication</text>
+    
+    <!-- DNS Queries -->
+    <path d="M 330 260 Q 525 200 850 375" stroke="#2196f3" stroke-width="3" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowhead-blue)"/>
+    <text x="525" y="190" text-anchor="middle" font-family="Arial" font-size="10" fill="#2196f3" font-weight="bold">DNS Resolution</text>
+    
+    <!-- Time Sync -->
+    <path d="M 330 350 Q 525 250 1070 390" stroke="#ffc107" stroke-width="3" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowhead-yellow)"/>
+    <text x="525" y="240" text-anchor="middle" font-family="Arial" font-size="10" fill="#ffc107" font-weight="bold">NTP Time Sync</text>
+  </g>
+  
+  <!-- Arrow marker definitions -->
+  <defs>
+    <marker id="arrowhead-gray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#666"/>
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ff9800"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2196f3"/>
+    </marker>
+    <marker id="arrowhead-yellow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ffc107"/>
+    </marker>
+  </defs>
+  
+  <!-- Configuration Details -->
+  <g id="config-details">
+    <rect x="50" y="580" width="1280" height="100" rx="10" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+    <text x="690" y="605" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Integrated DNS/IPAM Configuration: Infoblox + SD-WAN + Azure</text>
+    
+    <!-- Infoblox Grid -->
+    <rect x="70" y="620" width="280" height="50" rx="5" fill="#fff" stroke="#666"/>
+    <text x="210" y="635" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Infoblox Grid Configuration</text>
+    <text x="80" y="650" font-family="Courier" font-size="8">Grid Master: 10.1.10.20 (On-Premises)</text>
+    <text x="80" y="660" font-family="Courier" font-size="8">Grid Member: 10.100.10.10 (Azure Hub)</text>
+    
+    <!-- SD-WAN DNS Policy -->
+    <rect x="370" y="620" width="280" height="50" rx="5" fill="#fff" stroke="#666"/>
+    <text x="510" y="635" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">SD-WAN DNS Policy Engine</text>
+    <text x="380" y="650" font-family="Courier" font-size="8">Azure/Corp domains → MPLS transport</text>
+    <text x="380" y="660" font-family="Courier" font-size="8">O365/Internet → Local breakout</text>
+    
+    <!-- Azure Integration -->
+    <rect x="670" y="620" width="280" height="50" rx="5" fill="#fff" stroke="#666"/>
+    <text x="810" y="635" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Azure Private DNS Zones</text>
+    <text x="680" y="650" font-family="Courier" font-size="8">Auto-discovery: Private Link endpoints</text>
+    <text x="680" y="660" font-family="Courier" font-size="8">API sync: Infoblox → Azure zones</text>
+    
+    <!-- IPAM Management -->
+    <rect x="970" y="620" width="280" height="50" rx="5" fill="#fff" stroke="#666"/>
+    <text x="1110" y="635" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">Unified IPAM Management</text>
+    <text x="980" y="650" font-family="Courier" font-size="8">On-Prem: 10.1.0.0/16 | Azure: 10.100+/16</text>
+    <text x="980" y="660" font-family="Courier" font-size="8">Automated VM registration & cleanup</text>
+  </g>
+</svg>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-label="Azure encryption topology diagram (hub &amp; spoke with cross-tenant TLS)">
+  <defs>
+    <linearGradient id="titleGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#0f6cbd"/>
+      <stop offset="1" stop-color="#1169a5"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arrowTls" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#0f6cbd"/>
+    </marker>
+    <symbol id="lock" viewBox="0 0 24 24">
+      <rect x="4" y="10" width="16" height="10" rx="2" ry="2" fill="#0f6cbd"/>
+      <path d="M8 10V7a4 4 0 1 1 8 0v3" fill="none" stroke="#0f6cbd" stroke-width="2"/>
+      <circle cx="12" cy="15" r="2.2" fill="#ffffff"/>
+    </symbol>
+    <style>
+      .bg { fill: #f7f9fc; }
+      .grid line { stroke: #e6edf5; stroke-width: 1; }
+      .card { filter: url(#cardShadow); }
+      .card-body { fill: #ffffff; stroke: #d7e3f4; stroke-width: 1; rx: 12; }
+      .titlebar { fill: url(#titleGrad); rx: 12; }
+      .titletext { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; font-size: 16px; font-weight: 600; fill: #ffffff; }
+      .subtitle { font-family: Inter, ui-sans-serif, system-ui; font-size: 12px; fill: #1f2937; }
+      .label { font-family: Inter, ui-sans-serif, system-ui; font-size: 13px; fill: #111827; }
+      .small { font-size: 12px; fill: #374151; }
+      .link { stroke: #3b3b3b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .tls { stroke: #0f6cbd; stroke-width: 2.5; fill: none; marker-end: url(#arrowTls); }
+      .dash { stroke-dasharray: 6 6; }
+      .badge { fill: #e8f1fb; stroke: #b6d3f7; stroke-width: 1; rx: 8; }
+      .badge-text { font-family: Inter, ui-sans-serif, system-ui; font-size: 12px; fill: #0f6cbd; font-weight: 600; }
+      .inner { fill: #f9fbfe; stroke: #e1eaf6; rx: 8; }
+      .kv { fill: #fff7e6; stroke: #f2c97e; }
+      .fw { fill: #fff0f3; stroke: #f7acbc; }
+      .tenantTag { fill: #EEF6FF; stroke: #BFD9FF; rx: 6; }
+      .tenantText { font-family: Inter, ui-sans-serif, system-ui; font-size: 12px; fill: #0b5cab; font-weight: 600; }
+    </style>
+  </defs>
+  <rect class="bg" width="1400" height="873.454" style=""/>
+  <g class="grid">
+    <line x1="0" y1="0" x2="1400" y2="0"/>
+    <line x1="0" y1="50" x2="1400" y2="50"/>
+    <line x1="0" y1="100" x2="1400" y2="100"/>
+    <line x1="0" y1="150" x2="1400" y2="150"/>
+    <line x1="0" y1="200" x2="1400" y2="200"/>
+    <line x1="0" y1="250" x2="1400" y2="250"/>
+    <line x1="0" y1="300" x2="1400" y2="300"/>
+    <line x1="0" y1="350" x2="1400" y2="350"/>
+    <line x1="0" y1="400" x2="1400" y2="400"/>
+    <line x1="0" y1="450" x2="1400" y2="450"/>
+    <line x1="0" y1="500" x2="1400" y2="500"/>
+    <line x1="0" y1="550" x2="1400" y2="550"/>
+    <line x1="0" y1="600" x2="1400" y2="600"/>
+    <line x1="0" y1="650" x2="1400" y2="650"/>
+    <line x1="0" y1="700" x2="1400" y2="700"/>
+    <line x1="0" y1="750" x2="1400" y2="750"/>
+    <line x1="0" y1="800" x2="1400" y2="800"/>
+    <line x1="0" y1="850" x2="1400" y2="850"/>
+    <line x1="0" y1="0" x2="0" y2="900"/>
+    <line x1="50" y1="0" x2="50" y2="900"/>
+    <line x1="100" y1="0" x2="100" y2="900"/>
+    <line x1="150" y1="0" x2="150" y2="900"/>
+    <line x1="200" y1="0" x2="200" y2="900"/>
+    <line x1="250" y1="0" x2="250" y2="900"/>
+    <line x1="300" y1="0" x2="300" y2="900"/>
+    <line x1="350" y1="0" x2="350" y2="900"/>
+    <line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="450" y1="0" x2="450" y2="900"/>
+    <line x1="500" y1="0" x2="500" y2="900"/>
+    <line x1="550" y1="0" x2="550" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="650" y1="0" x2="650" y2="900"/>
+    <line x1="700" y1="0" x2="700" y2="900"/>
+    <line x1="750" y1="0" x2="750" y2="900"/>
+    <line x1="800" y1="0" x2="800" y2="900"/>
+    <line x1="850" y1="0" x2="850" y2="900"/>
+    <line x1="900" y1="0" x2="900" y2="900"/>
+    <line x1="950" y1="0" x2="950" y2="900"/>
+    <line x1="1000" y1="0" x2="1000" y2="900"/>
+    <line x1="1050" y1="0" x2="1050" y2="900"/>
+    <line x1="1100" y1="0" x2="1100" y2="900"/>
+    <line x1="1150" y1="0" x2="1150" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+    <line x1="1250" y1="0" x2="1250" y2="900"/>
+    <line x1="1300" y1="0" x2="1300" y2="900"/>
+    <line x1="1350" y1="0" x2="1350" y2="900"/>
+  </g>
+  <g class="card">
+    <rect class="card-body" x="40" y="150" width="300" height="220" rx="12"/>
+    <rect class="titlebar" x="40" y="150" width="300" height="34" rx="12"/>
+    <text class="titletext" x="54" y="172" style="white-space: pre;">On-Premises</text>
+    <text class="subtitle" x="54" y="204" style="white-space: pre;">Users / Apps / Services</text>
+  </g>
+  <g style="" transform="matrix(0.950512, 0, 0, 0.882297, 2.969312, 40.489906)">
+    <rect class="inner" x="60" y="204" width="260" height="140" rx="8"/>
+    <text class="label" x="80" y="230" style="white-space: pre;">Branch / Data Center</text>
+    <rect class="badge" x="80" y="246" width="180" height="24" rx="8"/>
+    <text class="badge-text" x="170" y="263" text-anchor="middle" style="white-space: pre;">Private Network</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -23.9554, 43.795357)">
+    <rect class="badge" x="360" y="238" width="140" height="26" rx="12"/>
+    <text class="badge-text" x="430" y="256" text-anchor="middle" style="white-space: pre;">ExpressRoute</text>
+  </g>
+  <g class="card">
+    <rect class="card-body" x="450" y="90" width="420" height="260" rx="12"/>
+    <rect class="titlebar" x="450" y="90" width="420" height="34" rx="12"/>
+    <text class="titletext" x="464" y="112" style="white-space: pre;">Azure Hub VNet</text>
+    <rect class="tenantTag" x="745" y="96" width="115" height="20"/>
+    <text class="tenantText" x="802.5" y="110" text-anchor="middle" style="white-space: pre;">AcmeCo Tenant</text>
+    <text class="subtitle" x="464" y="144" style="white-space: pre;">Transit &amp; Security</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 4.790247, 115.948975)">
+    <rect class="kv" x="720" y="150" width="130" height="60" rx="10"/>
+    <text class="label" x="735" y="180" style="white-space: pre;">Azure Key Vault</text>
+    <text class="small" x="735" y="198" style="white-space: pre;">Certs &amp; Keys</text>
+  </g>
+  <g class="card" transform="matrix(1, 0, 0, 1, 115.890656, 1.374593)">
+    <rect class="card-body" x="920" y="70" width="360" height="200" rx="12"/>
+    <rect class="titlebar" x="920" y="70" width="360" height="34" rx="12"/>
+    <text class="titletext" x="934" y="92" style="white-space: pre;">Spoke VNet A (AcmeCo)</text>
+    <text class="subtitle" x="934" y="124" style="white-space: pre;">Workload A</text>
+  </g>
+  <rect class="inner" x="1055.5" y="135.478" width="320" height="120" rx="60" ry="60"/>
+  <text class="label" x="1082.91" y="152.037" style="white-space: pre; font-size: 13px;">App A / API</text>
+  <g class="card" transform="matrix(1, 0, 0, 1, 12.13807, -27.775103)">
+    <rect class="card-body" x="920" y="300" width="360" height="200" rx="12"/>
+    <rect class="titlebar" x="920" y="300" width="360" height="34" rx="12"/>
+    <text class="titletext" x="934" y="322" style="white-space: pre;">Spoke VNet B (AcmeCo)</text>
+    <text class="subtitle" x="934" y="354" style="white-space: pre;">                 Workload B</text>
+  </g>
+  <rect class="inner" x="948.997" y="364.866" width="296.532" height="76.671" rx="8" style=""/>
+  <text class="label" x="960" y="380" style="white-space: pre;">App B / DB</text>
+  <g class="card" transform="matrix(1, 0, 0, 1, -2.166025, -13.162766)">
+    <rect class="card-body" x="450" y="420" width="420" height="260" rx="12"/>
+    <rect class="titlebar" x="450" y="420" width="420" height="34" rx="12"/>
+    <text class="titletext" x="464" y="442" style="white-space: pre;">Azure Hub VNet</text>
+    <rect class="tenantTag" x="745" y="426" width="115" height="20"/>
+    <text class="tenantText" x="802.5" y="440" text-anchor="middle" style="white-space: pre;">SmithCo Tenant</text>
+    <text class="subtitle" x="464" y="474" style="white-space: pre;">Transit &amp; Security</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -2.420116, 63.94355)">
+    <rect class="fw" x="470" y="480" width="240" height="60" rx="10"/>
+    <text class="label" x="490" y="510" style="white-space: pre;">Check Point CloudGuard</text>
+    <text class="small" x="490" y="528" style="white-space: pre;">TLS/SSL Inspection</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 2.665877, 63.339565)">
+    <rect class="kv" x="720" y="480" width="130" height="60" rx="10"/>
+    <text class="label" x="735" y="510" style="white-space: pre;">Azure Key Vault</text>
+    <text class="small" x="735" y="528" style="white-space: pre;">Certs &amp; Keys</text>
+  </g>
+  <g class="card">
+    <rect class="card-body" x="920" y="450" width="360" height="200" rx="12"/>
+    <rect class="titlebar" x="920" y="450" width="360" height="34" rx="12"/>
+    <text class="titletext" x="934" y="472" style="white-space: pre;">Spoke VNet C (SmithCo)</text>
+    <text class="subtitle" x="934" y="504" style="white-space: pre;">Workload C</text>
+  </g>
+  <rect class="inner" x="941.529" y="516.245" width="320" height="120" rx="8"/>
+  <text class="label" x="960" y="530" style="white-space: pre;">Service C</text>
+  <path class="tls" d="M 341.762 282.622 C 381.762 282.622 391.762 272.622 451.762 272.622"/>
+  <use href="#lock" width="18" height="18" transform="matrix(1, 0, 0, 1, 400, 240)"/>
+  <text class="small" x="376.616" y="231.644" style="white-space: pre; font-size: 12px;">TLS over ER</text>
+  <path class="tls" d="M710,180 C820,140 870,140 920,140"/>
+  <use href="#lock" width="18" height="18" transform="matrix(1, 0, 0, 1, 820, 120)"/>
+  <text class="small" x="805" y="115" style="white-space: pre;">TLS</text>
+  <path class="tls" d="M710,180 C820,230 870,240 920,240"/>
+  <use href="#lock" width="18" height="18" transform="matrix(1, 0, 0, 1, 830, 220)"/>
+  <text class="small" x="815" y="218" style="white-space: pre;">TLS</text>
+  <path class="tls dash" d="M1100,180 C900,60 830,60 710,180 C830,300 900,300 1100,360"/>
+  <use href="#lock" width="18" height="18" transform="matrix(1, 0, 0, 1, 700, 160)"/>
+  <text class="small" x="650" y="150" style="white-space: pre;">Spoke↔Spoke TLS via Hub</text>
+  <path class="tls dash" d="M1100,180 C1000,220 900,240 660,240 C600,240 600,520 660,520 C900,520 980,560 1100,560"/>
+  <use href="#lock" width="18" height="18" transform="matrix(1, 0, 0, 1, 650, 500)"/>
+  <text class="small" x="524.659" y="527.464" style="white-space: pre; font-size: 12px;">Cross-Tenant TLS</text>
+  <g class="card" style="" transform="matrix(1, 0, 0.020222, 1.063655, -15.348992, -43.285431)">
+    <rect class="card-body" x="40" y="680" width="1240" height="160" rx="12"/>
+    <rect class="titlebar" x="40" y="680" width="1240" height="34" rx="12"/>
+    <text class="titletext" x="54" y="702" style="white-space: pre;">Encryption &amp; Inspection Policy</text>
+    <circle cx="64" cy="738" r="5" fill="#0f6cbd"/>
+    <text class="label" x="82" y="742" style="white-space: pre;">Spoke↔Spoke Encryption: TLS for hub-to-spoke &amp; spoke-to-spoke traffic</text>
+    <circle cx="64" cy="762" r="5" fill="#0f6cbd"/>
+    <text class="label" x="82" y="766" style="white-space: pre;">On‑Prem → Cloud: ExpressRoute with an additional TLS layer</text>
+    <circle cx="64" cy="786" r="5" fill="#0f6cbd"/>
+    <text class="label" x="82" y="790" style="white-space: pre;">Cross‑Tenant Services (SmithCo↔AcmeCo): Mandatory TLS enforcement</text>
+    <circle cx="64" cy="810" r="5" fill="#0f6cbd"/>
+    <text class="label" x="82" y="814" style="white-space: pre;">Azure Key Vault: Centralized certificate &amp; key management</text>
+    <circle cx="64" cy="834" r="5" fill="#0f6cbd"/>
+    <text class="label" x="81.766" y="835.173" style="white-space: pre; font-size: 13px;">Check Point CloudGuard: TLS/SSL inspection of east‑west &amp; north‑south flows</text>
+  </g>
+  <g>
+    <rect class="badge" x="520" y="210" width="160" height="26" rx="12"/>
+    <text class="badge-text" x="600" y="228" text-anchor="middle" style="white-space: pre;">Inspection Point</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0.224933, 120.693398)">
+    <rect class="fw" x="470" y="150" width="240" height="60" rx="10"/>
+    <text class="label" x="490" y="180" style="white-space: pre;">Check Point CloudGuard</text>
+    <text class="small" x="490" y="198" style="white-space: pre;">TLS/SSL Inspection</text>
+  </g>
+</svg>

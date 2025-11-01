@@ -1,0 +1,309 @@
+<svg viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="650" fill="#f8f9fa"/>
+
+  <!-- Title -->
+
+<text x="600" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">FedEx On-Premises to Azure Network Architecture</text>
+
+  <!-- On-Premises Section -->
+
+  <rect x="50" y="60" width="300" height="520" fill="#e8f4fd" stroke="#3498db" stroke-width="2" rx="10"/>
+  <text x="200" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">On-Premises (UTE)</text>
+
+  <!-- UTE Internal Network -->
+
+  <rect x="70" y="100" width="260" height="100" fill="#ffffff" stroke="#7fb3d3" stroke-width="1" rx="5"/>
+  <text x="200" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">UTE Internal Network</text>
+  <text x="200" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34495e">RFC 1918 Address Space</text>
+  <text x="200" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Corporate Workloads</text>
+  <circle cx="150" cy="175" r="8" fill="#e74c3c"/>
+  <text x="165" y="180" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">Router</text>
+  <circle cx="250" cy="175" r="8" fill="#e74c3c"/>
+  <text x="265" y="180" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">Router</text>
+
+  <!-- Colo 1 -->
+
+  <rect x="70" y="220" width="120" height="180" fill="#fff3cd" stroke="#ffc107" stroke-width="2" rx="5"/>
+  <text x="130" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Colo 1</text>
+
+  <!-- NAP 1 -->
+
+  <rect x="80" y="250" width="100" height="40" fill="#ffffff" stroke="#28a745" stroke-width="1" rx="3"/>
+  <text x="130" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">NAP 1</text>
+  <text x="130" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Network Aggregation</text>
+
+  <!-- Check Point Firewall 1 -->
+
+  <rect x="80" y="300" width="100" height="30" fill="#ff6b6b" stroke="#dc3545" stroke-width="1" rx="3"/>
+  <text x="130" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Check Point</text>
+  <text x="130" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Firewall</text>
+
+  <!-- ExpressRoute Circuit 1 -->
+
+  <rect x="80" y="340" width="100" height="40" fill="#6f42c1" stroke="#563d7c" stroke-width="1" rx="3"/>
+  <text x="130" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">ExpressRoute</text>
+  <text x="130" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Dual Circuits</text>
+
+  <!-- Colo 2 -->
+
+  <rect x="210" y="220" width="120" height="180" fill="#fff3cd" stroke="#ffc107" stroke-width="2" rx="5"/>
+  <text x="270" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Colo 2</text>
+
+  <!-- NAP 2 -->
+
+  <rect x="220" y="250" width="100" height="40" fill="#ffffff" stroke="#28a745" stroke-width="1" rx="3"/>
+  <text x="270" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">NAP 2</text>
+  <text x="270" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Network Aggregation</text>
+
+  <!-- Check Point Firewall 2 -->
+
+  <rect x="220" y="300" width="100" height="30" fill="#ff6b6b" stroke="#dc3545" stroke-width="1" rx="3"/>
+  <text x="270" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Check Point</text>
+  <text x="270" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Firewall</text>
+
+  <!-- ExpressRoute Circuit 2 -->
+
+  <rect x="220" y="340" width="100" height="40" fill="#6f42c1" stroke="#563d7c" stroke-width="1" rx="3"/>
+  <text x="270" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">ExpressRoute</text>
+  <text x="270" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Dual Circuits</text>
+
+  <!-- IPSec Backup -->
+
+  <rect x="70" y="420" width="260" height="30" fill="#fd7e14" stroke="#fd7e14" stroke-width="1" rx="3"/>
+  <text x="200" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">IPSec Backup Tunnel (Interim Connectivity)</text>
+
+  <!-- BGP/Routing Info -->
+
+  <rect x="70" y="460" width="260" height="60" fill="#17a2b8" stroke="#138496" stroke-width="1" rx="3"/>
+  <text x="200" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Routing Protocol</text>
+  <text x="200" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">eBGP to Azure | Private Peering</text>
+  <text x="200" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">BFD: 3x 150ms (450ms total)</text>
+
+  <!-- DNS/Resolution -->
+
+  <rect x="70" y="530" width="260" height="30" fill="#20c997" stroke="#17a2b8" stroke-width="1" rx="3"/>
+  <text x="200" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">DNS - Conditional Forwarding to Azure</text>
+
+  <!-- Microsoft Cloud -->
+
+  <rect x="400" y="60" width="750" height="460" fill="#e8f5e8" stroke="#28a745" stroke-width="2" rx="10"/>
+  <text x="775" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">Microsoft Azure</text>
+
+  <!-- Central US Region -->
+
+  <rect x="420" y="100" width="350" height="280" fill="#ffffff" stroke="#007bff" stroke-width="2" rx="5"/>
+  <text x="595" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Central US (Primary)</text>
+
+  <!-- Hub VNet Central US -->
+
+  <rect x="440" y="140" width="150" height="110" fill="#cce5ff" stroke="#007bff" stroke-width="1" rx="3"/>
+  <text x="515" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2c3e50">Hub VNet</text>
+  <text x="515" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">10.x.x.x/24</text>
+
+  <!-- Check Point NVA Central -->
+
+  <rect x="450" y="185" width="130" height="25" fill="#ff6b6b" stroke="#dc3545" stroke-width="1" rx="3"/>
+  <text x="515" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Check Point CloudGuard</text>
+  <text x="515" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">L7 Inspection</text>
+
+  <!-- Route Server Central -->
+
+  <rect x="450" y="220" width="130" height="25" fill="#6610f2" stroke="#563d7c" stroke-width="1" rx="3"/>
+  <text x="515" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Azure Route Server</text>
+  <text x="515" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">BGP Route Exchange</text>
+
+  <!-- Spoke VNets Central -->
+
+  <rect x="610" y="140" width="140" height="110" fill="#f0f8ff" stroke="#4169e1" stroke-width="1" rx="3"/>
+  <text x="680" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2c3e50">Spoke VNets</text>
+  <text x="680" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">10.x.x.x/26</text>
+
+  <!-- Workloads -->
+
+  <circle cx="640" cy="195" r="6" fill="#28a745"/>
+  <text x="650" y="200" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">App1</text>
+  <circle cx="680" cy="195" r="6" fill="#28a745"/>
+  <text x="690" y="200" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">App2</text>
+  <circle cx="720" cy="195" r="6" fill="#28a745"/>
+  <text x="730" y="200" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">DB</text>
+
+  <circle cx="640" cy="220" r="6" fill="#ffc107"/>
+  <text x="650" y="225" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">Web</text>
+  <circle cx="680" cy="220" r="6" fill="#ffc107"/>
+  <text x="690" y="225" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">API</text>
+  <circle cx="720" cy="220" r="6" fill="#ffc107"/>
+  <text x="730" y="225" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">Cache</text>
+
+  <!-- ExpressRoute Gateway Central -->
+
+  <rect x="440" y="260" width="310" height="25" fill="#9932cc" stroke="#8b008b" stroke-width="1" rx="3"/>
+  <text x="595" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">ExpressRoute Gateway</text>
+  <text x="595" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Private Peering | BGP AS 65000</text>
+
+  <!-- DNS Private Resolver Central -->
+
+  <rect x="440" y="295" width="310" height="25" fill="#20c997" stroke="#17a2b8" stroke-width="1" rx="3"/>
+  <text x="595" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Azure DNS Private Resolver</text>
+  <text x="595" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Inbound/Outbound Endpoints</text>
+
+  <!-- Monitoring Central -->
+
+  <rect x="440" y="330" width="310" height="40" fill="#fff3e0" stroke="#ff9800" stroke-width="1" rx="3"/>
+  <text x="595" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">Monitoring & Observability</text>
+  <text x="595" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Prometheus + Grafana</text>
+  <text x="595" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Network Insights | BGP Status</text>
+
+  <!-- East US2 Region -->
+
+  <rect x="790" y="100" width="350" height="280" fill="#ffffff" stroke="#fd7e14" stroke-width="2" rx="5"/>
+  <text x="965" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">East US2 (Secondary)</text>
+
+  <!-- Hub VNet East US2 -->
+
+  <rect x="810" y="140" width="150" height="110" fill="#ffe4b5" stroke="#fd7e14" stroke-width="1" rx="3"/>
+  <text x="885" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2c3e50">Hub VNet</text>
+  <text x="885" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">10.y.y.y/24</text>
+
+  <!-- Check Point NVA East -->
+
+  <rect x="820" y="185" width="130" height="25" fill="#ff6b6b" stroke="#dc3545" stroke-width="1" rx="3"/>
+  <text x="885" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Check Point CloudGuard</text>
+  <text x="885" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">L7 Inspection</text>
+
+  <!-- Route Server East -->
+
+  <rect x="820" y="220" width="130" height="25" fill="#6610f2" stroke="#563d7c" stroke-width="1" rx="3"/>
+  <text x="885" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Azure Route Server</text>
+  <text x="885" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">BGP Route Exchange</text>
+
+  <!-- Spoke VNets East -->
+
+  <rect x="980" y="140" width="140" height="110" fill="#fff8dc" stroke="#daa520" stroke-width="1" rx="3"/>
+  <text x="1050" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2c3e50">Spoke VNets</text>
+  <text x="1050" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">10.y.y.y/26</text>
+
+  <!-- DR Workloads -->
+
+  <circle cx="1010" cy="195" r="6" fill="#dc3545"/>
+  <text x="1020" y="200" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">DR-App1</text>
+  <circle cx="1050" cy="195" r="6" fill="#dc3545"/>
+  <text x="1060" y="200" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">DR-App2</text>
+  <circle cx="1090" cy="195" r="6" fill="#dc3545"/>
+  <text x="1100" y="200" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">DR-DB</text>
+
+  <!-- ExpressRoute Gateway East -->
+
+  <rect x="810" y="260" width="310" height="25" fill="#9932cc" stroke="#8b008b" stroke-width="1" rx="3"/>
+  <text x="965" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">ExpressRoute Gateway</text>
+  <text x="965" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Private Peering | BGP AS 65001</text>
+
+  <!-- DNS Private Resolver East -->
+
+  <rect x="810" y="295" width="310" height="25" fill="#20c997" stroke="#17a2b8" stroke-width="1" rx="3"/>
+  <text x="965" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Azure DNS Private Resolver</text>
+  <text x="965" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Inbound/Outbound Endpoints</text>
+
+  <!-- Monitoring East -->
+
+  <rect x="810" y="330" width="310" height="40" fill="#fff3e0" stroke="#ff9800" stroke-width="1" rx="3"/>
+  <text x="965" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">Monitoring & Observability</text>
+  <text x="965" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Prometheus + Grafana</text>
+  <text x="965" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Network Insights | BGP Status</text>
+
+  <!-- Shared Services -->
+
+  <rect x="420" y="400" width="720" height="80" fill="#f8f9fa" stroke="#6c757d" stroke-width="1" rx="5"/>
+  <text x="780" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Shared Services</text>
+
+  <!-- Identity -->
+
+  <rect x="440" y="435" width="200" height="35" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1" rx="3"/>
+  <text x="540" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">Identity & Access</text>
+  <text x="540" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Azure AD | Zero Trust</text>
+
+  <!-- Security -->
+
+  <rect x="660" y="435" width="200" height="35" fill="#fce4ec" stroke="#e91e63" stroke-width="1" rx="3"/>
+  <text x="760" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">Security & Compliance</text>
+  <text x="760" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Azure Policy | Security Center</text>
+
+  <!-- Cost Management -->
+
+  <rect x="880" y="435" width="200" height="35" fill="#fff3e0" stroke="#ff9800" stroke-width="1" rx="3"/>
+  <text x="980" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">Cost Management</text>
+  <text x="980" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Budget Alerts | Optimization</text>
+
+  <!-- Connection Lines -->
+
+  <!-- UTE to NAPs -->
+
+  <line x1="200" y1="200" x2="130" y2="250" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="200" y1="200" x2="270" y2="250" stroke="#2c3e50" stroke-width="2"/>
+
+  <!-- ExpressRoute Connections -->
+
+  <line x1="180" y1="360" x2="440" y2="272" stroke="#9932cc" stroke-width="3" stroke-dasharray="5,5"/>
+  <line x1="320" y1="360" x2="810" y2="272" stroke="#9932cc" stroke-width="3" stroke-dasharray="5,5"/>
+
+  <!-- IPSec Backup -->
+
+  <line x1="200" y1="435" x2="595" y2="272" stroke="#fd7e14" stroke-width="2" stroke-dasharray="10,5"/>
+  <line x1="200" y1="435" x2="965" y2="272" stroke="#fd7e14" stroke-width="2" stroke-dasharray="10,5"/>
+
+  <!-- Hub-to-Spoke Peering -->
+
+  <line x1="590" y1="200" x2="610" y2="200" stroke="#007bff" stroke-width="2"/>
+  <line x1="960" y1="200" x2="980" y2="200" stroke="#fd7e14" stroke-width="2"/>
+
+  <!-- Inter-Region Hub-to-Hub Peering -->
+
+  <line x1="750" y1="200" x2="810" y2="200" stroke="#20c997" stroke-width="3"/>
+  <text x="780" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">Hub-to-Hub</text>
+  <text x="780" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">Global Peering</text>
+
+  <!-- DNS Resolution paths -->
+
+  <line x1="200" y1="545" x2="595" y2="305" stroke="#20c997" stroke-width="2" stroke-dasharray="3,3"/>
+  <line x1="200" y1="545" x2="965" y2="305" stroke="#20c997" stroke-width="2" stroke-dasharray="3,3"/>
+
+  <!-- Legend -->
+
+  <rect x="50" y="590" width="1100" height="40" fill="#ffffff" stroke="#6c757d" stroke-width="1" rx="3"/>
+  <text x="60" y="610" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">Legend:</text>
+
+  <!-- ExpressRoute Legend -->
+
+  <line x1="120" y1="608" x2="160" y2="608" stroke="#9932cc" stroke-width="3" stroke-dasharray="5,5"/>
+  <text x="170" y="612" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">ExpressRoute (Dual Circuits)</text>
+
+  <!-- IPSec Legend -->
+
+  <line x1="320" y1="608" x2="360" y2="608" stroke="#fd7e14" stroke-width="2" stroke-dasharray="10,5"/>
+  <text x="370" y="612" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">IPSec Backup</text>
+
+  <!-- VNet Peering Legend -->
+
+  <line x1="480" y1="608" x2="520" y2="608" stroke="#007bff" stroke-width="2"/>
+  <text x="530" y="612" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">VNet Peering</text>
+
+  <!-- Hub-to-Hub Legend -->
+
+  <line x1="620" y1="608" x2="660" y2="608" stroke="#20c997" stroke-width="3"/>
+  <text x="670" y="612" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">Hub-to-Hub Peering</text>
+
+  <!-- DNS Legend -->
+
+  <line x1="800" y1="608" x2="840" y2="608" stroke="#20c997" stroke-width="2" stroke-dasharray="3,3"/>
+  <text x="850" y="612" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">DNS Resolution</text>
+
+  <!-- BGP Legend -->
+
+  <circle cx="950" cy="608" r="4" fill="#17a2b8"/>
+  <text x="960" y="612" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">BGP Peering</text>
+
+  <!-- Security Zones Legend -->
+
+  <rect x="1050" y="604" width="15" height="8" fill="#ff6b6b"/>
+  <text x="1070" y="612" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">Security Inspection</text>
+</svg>

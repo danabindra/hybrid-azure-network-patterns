@@ -1,6 +1,6 @@
 # ROADMAP (generated)
 
-_Last sync: 2025-12-02T16:33:31.166Z_
+_Last sync: 2025-12-03T16:33:57.218Z_
 
 This file is generated from GitHub Issues. Edit the issues (labels: `roadmap`, `todo`) — not this file.
 

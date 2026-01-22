@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GitHub-optimized SVG: Use width="100%" for responsive scaling in README -->
+<svg xmlns="http://www.w3.org/2000/svg" 
+     viewBox="0 0 1450 1000" 
+     width="100%" 
+     height="auto"
+     preserveAspectRatio="xMidYMid meet"
+     role="img"
+     aria-label="FedEx GitHub-Hosted Azure-Integrated Ephemeral Runners Architecture Diagram">
+  <!-- 
+    FedEx Azure GitHub-Hosted Azure-Integrated Ephemeral Runners (RECOMMENDED)
+    Purpose: GitHub-managed runners with VNet injection - reduced complexity/cost/risk
+    Style: FedEx brand colors (Purple #4d148c, Orange #ff6600)
+  -->
+  
+  <defs>
+    <!-- FedEx Brand Gradients -->
+    <linearGradient id="fedexPurple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5d2d91"/>
+      <stop offset="100%" style="stop-color:#4d148c"/>
+    </linearGradient>
+    <linearGradient id="fedexOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff8533"/>
+      <stop offset="100%" style="stop-color:#ff6600"/>
+    </linearGradient>
+    <linearGradient id="azureBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0078d4"/>
+      <stop offset="100%" style="stop-color:#005a9e"/>
+    </linearGradient>
+    <linearGradient id="hubGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e0f0"/>
+      <stop offset="100%" style="stop-color:#d4c4e8"/>
+    </linearGradient>
+    <linearGradient id="landingZoneGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e6f3ff"/>
+      <stop offset="100%" style="stop-color:#cce5ff"/>
+    </linearGradient>
+    <linearGradient id="githubTenantGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f0f0"/>
+      <stop offset="100%" style="stop-color:#d8d8d8"/>
+    </linearGradient>
+    <linearGradient id="githubGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2b3137"/>
+      <stop offset="100%" style="stop-color:#24292e"/>
+    </linearGradient>
+    
+    <!-- Drop Shadow Filter -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- Connection Line Markers -->
+    <marker id="arrowBlack" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333333"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4d148c"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ff6600"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1450" height="1000" fill="#fafafa"/>
+  
+  <!-- ============================================ -->
+  <!-- HEADER -->
+  <!-- ============================================ -->
+  <rect x="0" y="0" width="1450" height="60" fill="url(#fedexPurple)"/>
+  <text x="30" y="38" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="bold" fill="white">FedEx</text>
+  <circle cx="95" cy="30" r="5" fill="#ff6600"/>
+  <text x="130" y="38" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="white">GitHub-Hosted Azure-Integrated Ephemeral Runners</text>
+  <rect x="1150" y="15" width="120" height="30" rx="4" fill="#28a745"/>
+  <text x="1210" y="35" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="white">✓ RECOMMENDED</text>
+  
+  <!-- ============================================ -->
+  <!-- BENEFITS CALLOUT -->
+  <!-- ============================================ -->
+  <rect x="30" y="75" width="1390" height="45" rx="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="50" y="95" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2e7d32">
+    ✓ Reduced Complexity | ✓ Reduced Operational Costs | ✓ Potential Cost Savings | ✓ Reduced Security Risks
+  </text>
+  <text x="50" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#666666">
+    GitHub manages runner lifecycle. Ephemeral VMs destroyed after each job. vNICs injected into your delegated subnet for private network access.
+  </text>
+  
+  <!-- ============================================ -->
+  <!-- GITHUB TENANT (TOP RIGHT) -->
+  <!-- ============================================ -->
+  <g id="github-tenant">
+    <!-- Azure logo indicator -->
+    <text x="1100" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#0078d4">A</text>
+    <text x="1130" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#333">GitHub Tenant</text>
+    
+    <!-- GitHub Tenant Box -->
+    <rect x="850" y="170" width="320" height="160" rx="8" fill="url(#githubTenantGradient)" stroke="#999999" stroke-width="2" filter="url(#dropShadow)"/>
+    
+    <!-- Ephemeral Runners Box -->
+    <rect x="870" y="190" width="280" height="120" rx="6" fill="white" stroke="#24292e" stroke-width="2"/>
+    <text x="1010" y="215" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#24292e">Ephemeral GitHub Hosted</text>
+    <text x="1010" y="232" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#24292e">Runners</text>
+    
+    <!-- GitHub Runner Icon -->
+    <rect x="970" y="250" width="80" height="45" rx="4" fill="#f6f8fa" stroke="#0078d4" stroke-width="1"/>
+    <circle cx="990" cy="272" r="12" fill="#24292e"/>
+    <text x="990" y="277" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="white">🐙</text>
+    <text x="1030" y="268" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#0078d4">GitHub</text>
+    <text x="1030" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#0078d4">Runner</text>
+    
+    <!-- Step 6 indicator -->
+    <circle cx="1150" cy="320" r="15" fill="white" stroke="#333" stroke-width="2"/>
+    <text x="1150" y="325" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">6</text>
+  </g>
+  
+  <!-- ============================================ -->
+  <!-- GITHUB ENTERPRISE (LEFT) -->
+  <!-- ============================================ -->
+  <g id="github-enterprise">
+    <!-- GitHub Logo -->
+    <circle cx="120" cy="380" r="50" fill="#24292e" filter="url(#dropShadow)"/>
+    <circle cx="120" cy="380" r="35" fill="white"/>
+    <text x="120" y="390" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" fill="#24292e">🐙</text>
+    
+    <text x="120" y="455" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#24292e">GitHub Enterprise</text>
+  </g>
+  
+  <!-- ============================================ -->
+  <!-- FEDEX TENANT (RIGHT SIDE) -->
+  <!-- ============================================ -->
+  <g id="fedex-tenant">
+    <!-- Azure logo indicator -->
+    <text x="1100" y="375" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#0078d4">A</text>
+    <text x="1130" y="375" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#333">FedEx Tenant</text>
+    
+    <!-- Delegated Subnet callout -->
+    <rect x="1100" y="390" width="140" height="95" rx="4" fill="#fff8e1" stroke="#ff6600" stroke-width="1"/>
+    <text x="1170" y="410" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold" fill="#ff6600">Delegated Subnet</text>
+    <text x="1170" y="425" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#666">w/ NSG</text>
+    <text x="1170" y="440" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#666" font-style="italic">Explicit deny –</text>
+    <text x="1170" y="452" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#666" font-style="italic">Inbound</text>
+    <text x="1170" y="470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="6" fill="#4d148c">"GitHub.Network/</text>
+    <text x="1170" y="480" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="6" fill="#4d148c">networkSettings"</text>
+  </g>
+  
+  <!-- ============================================ -->
+  <!-- LANDING ZONE -->
+  <!-- ============================================ -->
+  <g id="landing-zone">
+    <rect x="400" y="360" width="480" height="340" rx="10" fill="url(#landingZoneGradient)" stroke="#0078d4" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="640" y="385" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#0078d4">Landing Zone</text>
+    
+    <!-- Delegated Subnet -->
+    <rect x="420" y="405" width="440" height="70" rx="6" fill="white" stroke="#999" stroke-width="2" stroke-dasharray="6,3"/>
+    <text x="640" y="428" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold" fill="#666">Delegated Subnet</text>
+    
+    <!-- vNIC icons in delegated subnet -->
+    <g transform="translate(480, 440)">
+      <rect x="0" y="0" width="25" height="20" rx="2" fill="#4caf50" opacity="0.8"/>
+      <rect x="35" y="0" width="25" height="20" rx="2" fill="#4caf50" opacity="0.8"/>
+      <rect x="70" y="0" width="25" height="20" rx="2" fill="#4caf50" opacity="0.8"/>
+      <rect x="105" y="0" width="25" height="20" rx="2" fill="#4caf50" opacity="0.6"/>
+      <rect x="140" y="0" width="25" height="20" rx="2" fill="#4caf50" opacity="0.6"/>
+      <text x="85" y="35" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#666">vNICs (injected by GitHub)</text>
+    </g>
+    
+    <!-- NSG Icon -->
+    <rect x="820" y="420" width="35" height="40" rx="4" fill="#0078d4"/>
+    <text x="837" y="437" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="white">NSG</text>
+    <text x="837" y="450" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="white">🛡️</text>
+    
+    <!-- Workload Resources -->
+    <rect x="680" y="490" width="150" height="90" rx="5" fill="white" stroke="#0078d4" stroke-width="1"/>
+    
+    <!-- VM -->
+    <rect x="695" y="505" width="50" height="35" rx="3" fill="#e3f2fd" stroke="#0078d4" stroke-width="1"/>
+    <text x="720" y="520" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#0078d4">☁️</text>
+    <text x="720" y="533" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#0078d4">VM</text>
+    
+    <!-- VM Scale Sets -->
+    <rect x="695" y="545" width="50" height="30" rx="3" fill="#e3f2fd" stroke="#0078d4" stroke-width="1"/>
+    <text x="720" y="565" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="6" fill="#0078d4">VM Scale Sets</text>
+    
+    <!-- AKS -->
+    <rect x="755" y="505" width="60" height="70" rx="3" fill="#e3f2fd" stroke="#326ce5" stroke-width="1"/>
+    <text x="785" y="530" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#326ce5">⎈</text>
+    <text x="785" y="550" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#326ce5">AKS</text>
+    <text x="785" y="565" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="6" fill="#666">Kubernetes</text>
+    
+    <!-- Private Endpoint Subnet -->
+    <rect x="420" y="600" width="440" height="80" rx="6" fill="white" stroke="#9c27b0" stroke-width="2"/>
+    <text x="640" y="622" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold" fill="#9c27b0">Private Endpoint Subnet</text>
+    
+    <!-- PE connection icons -->
+    <g transform="translate(450, 635)">
+      <circle cx="15" cy="15" r="12" fill="#4caf50" opacity="0.7"/>
+      <line x1="27" y1="15" x2="60" y2="15" stroke="#4caf50" stroke-width="2"/>
+      <circle cx="95" cy="15" r="12" fill="#4caf50" opacity="0.7"/>
+      <line x1="107" y1="15" x2="140" y2="15" stroke="#4caf50" stroke-width="2"/>
+      <circle cx="175" cy="15" r="12" fill="#4caf50" opacity="0.7"/>
+      <line x1="187" y1="15" x2="220" y2="15" stroke="#4caf50" stroke-width="2"/>
+      <circle cx="255" cy="15" r="12" fill="#4caf50" opacity="0.7"/>
+      <line x1="267" y1="15" x2="300" y2="15" stroke="#4caf50" stroke-width="2"/>
+    </g>
+  </g>
+  
+  <!-- ============================================ -->
+  <!-- HUB -->
+  <!-- ============================================ -->
+  <g id="hub">
+    <ellipse cx="300" cy="560" rx="70" ry="70" fill="url(#hubGradient)" stroke="#4d148c" stroke-width="3" filter="url(#dropShadow)"/>
+    <text x="300" y="545" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#4d148c">Hub</text>
+    
+    <!-- Firewall icon -->
+    <rect x="270" y="555" width="60" height="45" rx="4" fill="#ff6600"/>
+    <text x="300" y="575" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="white">🧱</text>
+    <text x="300" y="592" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="white">Firewall</text>
+  </g>
+  
+  <!-- ============================================ -->
+  <!-- STORAGE & KEY VAULT -->
+  <!-- ============================================ -->
+  <g id="paas-services">
+    <!-- Storage Account -->
+    <rect x="520" y="720" width="100" height="70" rx="6" fill="white" stroke="#4caf50" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="570" y="755" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22">🗄️</text>
+    <text x="570" y="778" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#333">Storage Accounts</text>
+    
+    <!-- Key Vault -->
+    <rect x="660" y="720" width="100" height="70" rx="6" fill="white" stroke="#ffc107" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="710" y="755" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22">🔑</text>
+    <text x="710" y="778" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#333">Key Vaults</text>
+  </g>
+  
+  <!-- ============================================ -->
+  <!-- FLOW ARROWS WITH STEP NUMBERS -->
+  <!-- ============================================ -->
+  
+  <!-- Step 1: GitHub Enterprise to Ephemeral Runners -->
+  <path d="M 170 360 Q 400 200 850 250" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowBlack)"/>
+  <circle cx="450" cy="250" r="15" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="450" y="255" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">1</text>
+  
+  <!-- Step 2: Ephemeral Runners to Delegated Subnet (vNIC injection) -->
+  <path d="M 1010 330 L 1010 360 Q 1010 390 950 420 L 860 440" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowBlack)"/>
+  <circle cx="1010" cy="365" r="15" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="1010" y="370" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">2</text>
+  
+  <!-- Step 3: Landing Zone to Hub (outbound) -->
+  <path d="M 400 550 L 370 550" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowBlack)"/>
+  <circle cx="385" cy="580" r="15" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="385" y="585" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">3</text>
+  
+  <!-- Step 3 continued: Hub to GitHub Enterprise -->
+  <path d="M 270 500 Q 200 450 150 430" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowBlack)"/>
+  <text x="200" y="480" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#333">3 (continued)</text>
+  
+  <!-- Step 4: GitHub back to runners / Hub to Landing Zone -->
+  <path d="M 120 340 Q 120 280 200 260 Q 350 230 500 300 L 550 340" stroke="#333" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <circle cx="280" cy="280" r="15" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="280" y="285" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">4</text>
+  
+  <!-- Step 4 continued -->
+  <path d="M 370 560 L 400 520" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowBlack)"/>
+  <text x="360" y="530" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#333">4 (cont)</text>
+  
+  <!-- Step 5: Job to resources -->
+  <path d="M 640 475 L 680 500" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowBlack)"/>
+  <circle cx="655" cy="490" r="15" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="655" y="495" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">5</text>
+  
+  <!-- PE connections to Storage/Key Vault -->
+  <path d="M 550 680 L 560 720" stroke="#9c27b0" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  <path d="M 650 680 L 700 720" stroke="#9c27b0" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  
+  <!-- ============================================ -->
+  <!-- STEPS LEGEND -->
+  <!-- ============================================ -->
+  <g id="steps-legend" transform="translate(1100, 500)">
+    <rect x="0" y="0" width="185" height="200" rx="6" fill="white" stroke="#333" stroke-width="1" filter="url(#dropShadow)"/>
+    <rect x="0" y="0" width="185" height="25" rx="6 6 0 0" fill="#24292e"/>
+    <text x="92" y="17" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Steps:</text>
+    
+    <text x="10" y="45" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333"><tspan font-weight="bold">1</tspan> New Job sent from GH</text>
+    <text x="18" y="57" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">Actions to Ephemeral GH</text>
+    <text x="18" y="69" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">Runners</text>
+    
+    <text x="10" y="87" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333"><tspan font-weight="bold">2</tspan> Ephemeral Machines</text>
+    <text x="18" y="99" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">created with vNICs in</text>
+    <text x="18" y="111" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">FedEx Azure tenant</text>
+    
+    <text x="10" y="129" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333"><tspan font-weight="bold">3</tspan> Outbound Communication</text>
+    <text x="18" y="141" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">back to GitHub</text>
+    
+    <text x="10" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333"><tspan font-weight="bold">4</tspan> GitHub back to Runners</text>
+    <text x="18" y="167" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">Job sent to Runners</text>
+    
+    <text x="10" y="181" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333"><tspan font-weight="bold">5</tspan> Job (IaC/App) sent to</text>
+    <text x="18" y="193" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">resource</text>
+  </g>
+  
+  <!-- ============================================ -->
+  <!-- COMPARISON BOX -->
+  <!-- ============================================ -->
+  <g id="comparison" transform="translate(30, 720)">
+    <rect x="0" y="0" width="250" height="170" rx="6" fill="white" stroke="#4d148c" stroke-width="2" filter="url(#dropShadow)"/>
+    <rect x="0" y="0" width="250" height="28" rx="6 6 0 0" fill="url(#fedexPurple)"/>
+    <text x="125" y="19" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Why This Over Self-Hosted?</text>
+    
+    <text x="15" y="48" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">✓ No VMSS to manage/patch</text>
+    <text x="15" y="63" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">✓ No runner registration tokens</text>
+    <text x="15" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">✓ Truly ephemeral (destroyed per-job)</text>
+    <text x="15" y="93" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">✓ GitHub handles scaling</text>
+    <text x="15" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">✓ Reduced attack surface</text>
+    <text x="15" y="123" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">✓ Same network isolation via delegation</text>
+    <text x="15" y="138" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">✓ No Azure compute costs (GH minutes)</text>
+    <text x="15" y="153" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">✓ Always latest runner version</text>
+    <text x="15" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">✓ Compliance: GitHub SOC2/ISO27001</text>
+  </g>
+  
+  <!-- ============================================ -->
+  <!-- REQUIREMENTS STILL NEEDED -->
+  <!-- ============================================ -->
+  <g id="requirements" transform="translate(300, 810)">
+    <rect x="0" y="0" width="200" height="95" rx="6" fill="#fff3e0" stroke="#ff6600" stroke-width="2"/>
+    <text x="100" y="18" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold" fill="#ff6600">Still Required</text>
+    
+    <text x="10" y="38" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#333">• Private Endpoints (PE subnet)</text>
+    <text x="10" y="50" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#333">• Service Principals for Azure deploy</text>
+    <text x="10" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#333">• NSG on delegated subnet</text>
+    <text x="10" y="74" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#333">• Egress via Hub firewall</text>
+    <text x="10" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#333">• GitHub Enterprise license</text>
+  </g>
+  
+  <!-- ============================================ -->
+  <!-- LEGEND -->
+  <!-- ============================================ -->
+  <g id="legend" transform="translate(800, 810)">
+    <rect x="0" y="0" width="170" height="95" rx="6" fill="white" stroke="#ccc" stroke-width="1"/>
+    <rect x="0" y="0" width="170" height="22" rx="6 6 0 0" fill="#4d148c"/>
+    <text x="85" y="15" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Legend</text>
+    
+    <rect x="10" y="32" width="20" height="12" fill="url(#githubTenantGradient)" stroke="#999" stroke-width="1"/>
+    <text x="35" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#666">GitHub Tenant</text>
+    
+    <rect x="10" y="50" width="20" height="12" fill="url(#landingZoneGradient)" stroke="#0078d4" stroke-width="1"/>
+    <text x="35" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#666">FedEx Landing Zone</text>
+    
+    <rect x="10" y="68" width="20" height="12" fill="white" stroke="#999" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="35" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#666">Delegated Subnet</text>
+    
+    <rect x="100" y="32" width="12" height="12" fill="#4caf50" opacity="0.7"/>
+    <text x="117" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#666">vNIC / PE</text>
+  </g>
+  
+  <!-- ============================================ -->
+  <!-- STEP 6 NOTE -->
+  <!-- ============================================ -->
+  <g id="step6-note" transform="translate(1100, 715)">
+    <rect x="0" y="0" width="170" height="45" rx="4" fill="#ffebee" stroke="#dc3545" stroke-width="1"/>
+    <text x="85" y="18" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold" fill="#dc3545">Step 6</text>
+    <text x="85" y="32" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">Ephemeral GH Runners</text>
+    <text x="85" y="42" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#333">removed (auto cleanup)</text>
+  </g>
+  
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <line x1="30" y1="960" x2="1420" y2="960" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="30" y="980" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#999">
+    vNIC = Virtual Network Interface Card | PE = Private Endpoint | NSG = Network Security Group | AKS = Azure Kubernetes Service
+  </text>
+  <text x="1420" y="980" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#999">FedEx Azure Network Architecture | 2025 | RECOMMENDED</text>
+  
+</svg>

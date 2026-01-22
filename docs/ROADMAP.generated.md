@@ -1,6 +1,6 @@
 # ROADMAP (generated)
 
-_Last sync: 2026-01-21T16:56:15.402Z_
+_Last sync: 2026-01-22T16:39:24.063Z_
 
 This file is generated from GitHub Issues. Edit the issues (labels: `roadmap`, `todo`) — not this file.
 
@@ -8,11 +8,10 @@ This file is generated from GitHub Issues. Edit the issues (labels: `roadmap`, `
 
 | ID | Title | Assignee | Labels | Updated |
 |---:|-------|---------|--------|---------|
-| #3 | [Document ExpressRoute patterns](https://github.com/danabindra/hybrid-azure-network-patterns/issues/3) | — | roadmap | 2025-09-15 |
-| #1 | [Draft hybrid patterns overview doc](https://github.com/danabindra/hybrid-azure-network-patterns/issues/1) | — | roadmap | 2025-09-15 |
+_No open roadmap items._
 
 ## TODO
 
 | ID | Title | Assignee | Labels | Updated |
 |---:|-------|---------|--------|---------|
-| #2 | [Add hub-spoke mermaid diagram](https://github.com/danabindra/hybrid-azure-network-patterns/issues/2) | — | todo | 2025-09-15 |
+_No open TODO items._

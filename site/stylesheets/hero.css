@@ -1,0 +1,14 @@
+.bh-hero {
+    position: relative;
+    height: clamp(48vh, 60vh, 72vh);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    isolation: isolate;
+  }
+  
+  .bh-hero-inner { position: relative; z-index: 1; max-width: 900px; padding: 6rem 1.25rem 2rem; }
+  .bh-cta { display: inline-flex; gap: .75rem; flex-wrap: wrap; justify-content: center; }
+  .bh-btn { display: inline-block; padding: .65rem 1rem; border-radius: .6rem; background: var(--md-accent-fg-color); color: #000; text-decoration: none; font-weight: 600; }
+  .bh-btn--ghost { background: transparent; color: var(--md-accent-fg-color); outline: 1px solid color-mix(in oklab, var(--md-accent-fg-color) 60%, transparent); }
+  

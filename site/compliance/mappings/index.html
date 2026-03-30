@@ -48,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/hero.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -72,6 +74,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#compliance-mappings-draft" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -246,6 +253,44 @@
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ARD/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ARD
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ROADMAP.generated/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Roadmap
+
+      </a>
+    </li>
   
 
       
@@ -509,6 +554,50 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ARD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROADMAP.generated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../diagrams/" class="md-nav__link">
         
   
@@ -536,6 +625,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -586,9 +677,27 @@
   
 
 
-  <h1>Compliance</h1>
-
-
+<h1 id="compliance-mappings-draft">Compliance mappings (draft)<a class="headerlink" href="#compliance-mappings-draft" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>NIST 800-207</th>
+<th>MS CAF</th>
+<th>PCI DSS</th>
+<th>HIPAA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Branch→Azure</td>
+<td>Policy decision/enforcement at NVA</td>
+<td>Landing Zone</td>
+<td>1.2.1, 1.3.1</td>
+<td>164.312(e)(1)</td>
+</tr>
+</tbody>
+</table>
 
 
 

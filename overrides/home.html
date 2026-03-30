@@ -1,6 +1,8 @@
 {% extends "base.html" %}
+
 {% block content %}
-  <section class="bh-hero">
+  <section class="bh-hero"
+           style="background: url('{{ base_url }}/assets/hero/network-hero.svg?v=4') center / cover no-repeat;">
     <div class="bh-hero-inner">
       <h1>Infrastructure Playpens</h1>
       <p>Where cloud, networking, and automation collide — safely.</p>
@@ -11,5 +13,6 @@
     </div>
   </section>
 
-  {{ super() }}  {# regular page content from docs/index.md #}
+  {{ super() }}
 {% endblock %}
+

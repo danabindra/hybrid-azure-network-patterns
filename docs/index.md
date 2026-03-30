@@ -24,5 +24,5 @@ Production-tested network architecture patterns for enterprise Azure deployments
 
 ## Additional resources
 
-- [NIST SP 800-207 control mapping](../compliance/nist-800-207.md)
+- [NIST SP 800-207 control mapping](compliance/nist-800-207.md)
 - [Terraform modules](https://github.com/danabindra/hybrid-azure-network-patterns/tree/main/configurations/terraform) for hub VNet, spoke VNet, and NVA deployment

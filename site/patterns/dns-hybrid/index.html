@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://danabindra.github.io/hybrid-azure-network-patterns/patterns/region-transit/">
+        <link rel="canonical" href="https://danabindra.github.io/hybrid-azure-network-patterns/patterns/dns-hybrid/">
       
       
-        <link rel="prev" href="../front-door-ingress/">
+        <link rel="prev" href="../multi-cloud-connectivity/">
       
       
-        <link rel="next" href="../multi-cloud-connectivity/">
+        <link rel="next" href="../netbox-integration/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Region-to-Region Transit - Hybrid Azure Network Patterns</title>
+        <title>Hybrid DNS - Hybrid Azure Network Patterns</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#region-to-region-transit" class="md-skip">
+        <a href="#hybrid-dns-resolution" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Region-to-Region Transit
+              Hybrid DNS
             
           </span>
         </div>
@@ -527,6 +527,52 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../region-transit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Region-to-Region Transit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-cloud-connectivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-Cloud Connectivity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -544,7 +590,7 @@
   
   
   <span class="md-ellipsis">
-    Region-to-Region Transit
+    Hybrid DNS
     
   </span>
   
@@ -557,7 +603,7 @@
   
   
   <span class="md-ellipsis">
-    Region-to-Region Transit
+    Hybrid DNS
     
   </span>
   
@@ -599,18 +645,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cross-region-spoke-to-spoke" class="md-nav__link">
+  <a href="#azure-workload-resolving-on-premises-name" class="md-nav__link">
     <span class="md-ellipsis">
-      Cross-region spoke-to-spoke
+      Azure workload resolving on-premises name
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cross-region-replication-database-tier" class="md-nav__link">
+  <a href="#on-premises-client-resolving-azure-private-link-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      Cross-region replication (database tier)
+      On-premises client resolving Azure Private Link endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spoke-to-spoke-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spoke-to-spoke resolution
     </span>
   </a>
   
@@ -637,36 +692,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Routing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#central-us-hub" class="md-nav__link">
-    <span class="md-ellipsis">
-      Central US hub
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#east-us-2-hub" class="md-nav__link">
-    <span class="md-ellipsis">
-      East US 2 hub
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#frontendbackend-separation" class="md-nav__link">
+  <a href="#private-dns-zone-inventory" class="md-nav__link">
     <span class="md-ellipsis">
-      Frontend/backend separation
+      Private DNS zone inventory
     </span>
   </a>
   
@@ -683,45 +714,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#global-peering-costs" class="md-nav__link">
+  <a href="#private-dns-resolver-sizing" class="md-nav__link">
     <span class="md-ellipsis">
-      Global peering costs
+      Private DNS Resolver sizing
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nva-policy-synchronization" class="md-nav__link">
+  <a href="#zone-linking-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      NVA policy synchronization
+      Zone linking strategy
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#failover-design" class="md-nav__link">
+  <a href="#infoblox-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Failover design
+      Infoblox integration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#latency-budget" class="md-nav__link">
+  <a href="#bicep-snippet-private-dns-resolver" class="md-nav__link">
     <span class="md-ellipsis">
-      Latency budget
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bicep-snippet-global-peering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bicep snippet (global peering)
+      Bicep snippet (Private DNS Resolver)
     </span>
   </a>
   
@@ -754,52 +776,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../multi-cloud-connectivity/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Multi-Cloud Connectivity
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../dns-hybrid/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Hybrid DNS
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1015,7 +991,7 @@
 
 
   
-    <a href="https://github.com/danabindra/hybrid-azure-network-patterns/edit/main/docs/patterns/region-transit.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/danabindra/hybrid-azure-network-patterns/edit/main/docs/patterns/dns-hybrid.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1024,33 +1000,39 @@
     
       
     
-    <a href="https://github.com/danabindra/hybrid-azure-network-patterns/raw/main/docs/patterns/region-transit.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/danabindra/hybrid-azure-network-patterns/raw/main/docs/patterns/dns-hybrid.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="region-to-region-transit">Region-to-region transit<a class="headerlink" href="#region-to-region-transit" title="Permanent link">&para;</a></h1>
+<h1 id="hybrid-dns-resolution">Hybrid DNS resolution<a class="headerlink" href="#hybrid-dns-resolution" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Multi-region architecture where traffic between Central US (primary) and East US 2 (secondary) traverses hub NVAs in both regions. Global VNet peering connects the two hub VNets, and each region maintains independent frontend/backend spoke separation with NVA inspection at every boundary. This pattern supports active-active workloads, disaster recovery failover, and cross-region data replication with consistent security policy enforcement.</p>
-<p><img alt="Region-to-region transit architecture" src="../../diagrams/region-to-region.svg" /></p>
+<p>Unified name resolution across Azure and on-premises using Azure Private DNS Resolver in the hub VNet, integrated with on-premises Infoblox Grid and Active Directory DNS. Azure workloads resolve on-premises names through conditional forwarding, and branch users resolve Azure Private Link endpoints through the same path in reverse. The hub acts as the DNS transit point, keeping resolution paths consistent with the network inspection model.</p>
+<!-- TODO: ![Hybrid DNS architecture](../diagrams/dns-hybrid.svg) -->
+
 <hr />
 <h2 id="traffic-flow">Traffic flow<a class="headerlink" href="#traffic-flow" title="Permanent link">&para;</a></h2>
-<h3 id="cross-region-spoke-to-spoke">Cross-region spoke-to-spoke<a class="headerlink" href="#cross-region-spoke-to-spoke" title="Permanent link">&para;</a></h3>
+<h3 id="azure-workload-resolving-on-premises-name">Azure workload resolving on-premises name<a class="headerlink" href="#azure-workload-resolving-on-premises-name" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Spoke A (Central US)</strong> workload initiates a connection to <strong>Spoke B (East US 2)</strong>.</li>
-<li><strong>Spoke A UDR</strong> sends traffic to the <strong>Central US hub NVA</strong> (via ILB).</li>
-<li><strong>Central US NVA</strong> inspects and forwards to the <strong>East US 2 hub</strong> via global VNet peering.</li>
-<li><strong>East US 2 hub UDR</strong> routes traffic to the <strong>East US 2 NVA</strong> (via ILB) for a second inspection.</li>
-<li><strong>East US 2 NVA</strong> forwards to <strong>Spoke B</strong>.</li>
-<li><strong>Return traffic</strong> follows the reverse path, ensuring symmetric inspection at both hubs.</li>
+<li><strong>Spoke VM</strong> queries its configured DNS (Azure Private DNS Resolver inbound endpoint in the hub).</li>
+<li><strong>Private DNS Resolver</strong> checks Azure Private DNS zones linked to the hub VNet.</li>
+<li>No match found; <strong>forwarding ruleset</strong> matches the on-premises domain (<code>corp.newco.com</code>) and forwards to the <strong>Infoblox Grid VIP</strong> on-premises.</li>
+<li>Query travels through the <strong>hub NVA</strong> (if DNS traffic inspection is enabled) and <strong>ExpressRoute</strong> to the branch.</li>
+<li><strong>Infoblox Grid</strong> resolves from AD-integrated zones or authoritative zone data and returns the answer.</li>
 </ol>
-<h3 id="cross-region-replication-database-tier">Cross-region replication (database tier)<a class="headerlink" href="#cross-region-replication-database-tier" title="Permanent link">&para;</a></h3>
+<h3 id="on-premises-client-resolving-azure-private-link-endpoint">On-premises client resolving Azure Private Link endpoint<a class="headerlink" href="#on-premises-client-resolving-azure-private-link-endpoint" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Backend spoke (Central US)</strong> SQL/Cosmos DB initiates replication to <strong>backend spoke (East US 2)</strong>.</li>
-<li>Traffic follows the same dual-NVA path, ensuring data-in-transit is inspected at both region boundaries.</li>
-<li>For high-throughput replication, NVA policy can allowlist known replication endpoints with reduced inspection depth (skip TLS decrypt, keep IPS).</li>
+<li><strong>Branch client</strong> queries <code>storage.blob.core.windows.net</code> through the <strong>Infoblox Grid</strong>.</li>
+<li><strong>Infoblox conditional forwarder</strong> for <code>privatelink.blob.core.windows.net</code> sends the query to the <strong>Azure Private DNS Resolver inbound endpoint</strong> via ExpressRoute.</li>
+<li><strong>Private DNS Resolver</strong> resolves from the <code>privatelink.blob.core.windows.net</code> private zone linked to the hub VNet.</li>
+<li>Response returns the private IP of the storage account's private endpoint in the spoke.</li>
+</ol>
+<h3 id="spoke-to-spoke-resolution">Spoke-to-spoke resolution<a class="headerlink" href="#spoke-to-spoke-resolution" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Spoke A VM</strong> queries a name hosted in a private DNS zone linked to another spoke.</li>
+<li>Because all private zones are linked to the hub VNet, the <strong>Private DNS Resolver</strong> resolves directly from the zone without forwarding.</li>
 </ol>
 <hr />
 <h2 id="key-components">Key components<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h2>
@@ -1064,50 +1046,45 @@
 </thead>
 <tbody>
 <tr>
-<td>Hub VNet (Central US)</td>
-<td>Primary region transit and inspection</td>
-<td><code>Microsoft.Network/virtualNetworks</code></td>
+<td>Azure Private DNS Resolver</td>
+<td>Inbound/outbound DNS resolution in hub</td>
+<td><code>Microsoft.Network/dnsResolvers</code></td>
 </tr>
 <tr>
-<td>Hub VNet (East US 2)</td>
-<td>Secondary region transit and inspection</td>
-<td><code>Microsoft.Network/virtualNetworks</code></td>
+<td>Inbound endpoint</td>
+<td>Receives queries from on-premises and spokes</td>
+<td><code>Microsoft.Network/dnsResolvers/inboundEndpoints</code></td>
 </tr>
 <tr>
-<td>Global VNet peering</td>
-<td>Backbone connectivity between hubs</td>
-<td><code>Microsoft.Network/virtualNetworks/virtualNetworkPeerings</code></td>
+<td>Outbound endpoint</td>
+<td>Forwards queries to on-premises DNS</td>
+<td><code>Microsoft.Network/dnsResolvers/outboundEndpoints</code></td>
 </tr>
 <tr>
-<td>NVA VMSS (per region)</td>
-<td>L3-L7 inspection at each region boundary</td>
-<td><code>Microsoft.Compute/virtualMachineScaleSets</code></td>
+<td>DNS forwarding ruleset</td>
+<td>Conditional forwarding rules per domain</td>
+<td><code>Microsoft.Network/dnsForwardingRulesets</code></td>
 </tr>
 <tr>
-<td>ILB (per region)</td>
-<td>Stable next-hop, HA across NVA instances</td>
-<td><code>Microsoft.Network/loadBalancers</code> (Standard, internal)</td>
+<td>Azure Private DNS zones</td>
+<td>Host private link and custom zone records</td>
+<td><code>Microsoft.Network/privateDnsZones</code></td>
 </tr>
 <tr>
-<td>Frontend spoke VNets</td>
-<td>Web tier, API gateways, public-facing workloads</td>
-<td><code>Microsoft.Network/virtualNetworks</code></td>
+<td>VNet links</td>
+<td>Attach private zones to hub and spoke VNets</td>
+<td><code>Microsoft.Network/privateDnsZones/virtualNetworkLinks</code></td>
 </tr>
 <tr>
-<td>Backend spoke VNets</td>
-<td>Databases, internal services, storage</td>
-<td><code>Microsoft.Network/virtualNetworks</code></td>
-</tr>
-<tr>
-<td>Azure Monitor</td>
-<td>Cross-region latency, NVA throughput, peering metrics</td>
-<td><code>Microsoft.Insights/metricAlerts</code></td>
+<td>Infoblox Grid (on-prem)</td>
+<td>Authoritative DNS, IPAM, AD-integrated zones</td>
+<td>On-premises appliance</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h2>
-<h3 id="central-us-hub">Central US hub<a class="headerlink" href="#central-us-hub" title="Permanent link">&para;</a></h3>
+<p>DNS traffic (UDP/TCP 53) follows the same UDR paths as all other traffic:</p>
 <table>
 <thead>
 <tr>
@@ -1119,118 +1096,106 @@
 </thead>
 <tbody>
 <tr>
-<td>Hub UDR</td>
-<td>East US 2 spoke CIDRs</td>
-<td>Global peering</td>
-<td>Cross-region forward</td>
-</tr>
-<tr>
-<td>Hub UDR</td>
-<td>Central US spoke CIDRs</td>
-<td>NVA ILB</td>
-<td>Local spoke inspection</td>
-</tr>
-<tr>
 <td>Spoke UDR</td>
-<td><code>0.0.0.0/0</code></td>
-<td>NVA ILB</td>
-<td>Egress and cross-region via hub</td>
+<td>Hub DNS Resolver subnet</td>
+<td>Hub NVA ILB</td>
+<td>DNS queries from spokes through NVA (optional)</td>
 </tr>
 <tr>
-<td>Spoke UDR</td>
-<td>East US 2 CIDRs</td>
-<td>NVA ILB</td>
-<td>Cross-region through local NVA first</td>
+<td>Hub NVA UDR</td>
+<td>On-prem DNS CIDRs</td>
+<td>ExpressRoute gateway</td>
+<td>Forwarded queries to Infoblox</td>
 </tr>
 </tbody>
 </table>
-<h3 id="east-us-2-hub">East US 2 hub<a class="headerlink" href="#east-us-2-hub" title="Permanent link">&para;</a></h3>
-<p>Mirrors the Central US routing table with region CIDRs swapped.</p>
 <blockquote>
-<p>Both hubs must have <code>disableBgpRoutePropagation = true</code> on spoke route tables. Global peering does not transitively advertise spoke routes, so all cross-region paths are UDR-driven.</p>
+<p>If DNS traffic inspection is not required, spoke VNets can be linked directly to the forwarding ruleset, bypassing the NVA for DNS. This reduces latency for name resolution.</p>
 </blockquote>
 <hr />
-<h2 id="frontendbackend-separation">Frontend/backend separation<a class="headerlink" href="#frontendbackend-separation" title="Permanent link">&para;</a></h2>
-<p>Each region maintains two tiers of spokes:</p>
+<h2 id="private-dns-zone-inventory">Private DNS zone inventory<a class="headerlink" href="#private-dns-zone-inventory" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Tier</th>
+<th>Zone</th>
 <th>Purpose</th>
-<th>Connectivity</th>
-<th>Example workloads</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Frontend spoke</td>
-<td>Public-facing services</td>
-<td>Receives traffic from Front Door via Private Link; sends to backend via hub NVA</td>
-<td>API gateways, web apps, CDN origins</td>
+<td><code>privatelink.blob.core.windows.net</code></td>
+<td>Storage account private endpoints</td>
 </tr>
 <tr>
-<td>Backend spoke</td>
-<td>Data and internal services</td>
-<td>No direct internet access; only reachable through frontend via hub NVA</td>
-<td>SQL databases, Cosmos DB, internal APIs, storage accounts</td>
+<td><code>privatelink.database.windows.net</code></td>
+<td>Azure SQL private endpoints</td>
+</tr>
+<tr>
+<td><code>privatelink.vaultcore.azure.net</code></td>
+<td>Key Vault private endpoints</td>
+</tr>
+<tr>
+<td><code>privatelink.azurecr.io</code></td>
+<td>Container Registry private endpoints</td>
+</tr>
+<tr>
+<td><code>corp.newco.com</code></td>
+<td>Forwarded to on-prem Infoblox (not hosted in Azure)</td>
+</tr>
+<tr>
+<td><code>azure.newco.com</code></td>
+<td>Custom zone for Azure-hosted service records</td>
 </tr>
 </tbody>
 </table>
-<p>Frontend-to-backend traffic within the same region still traverses the hub NVA. There is no direct peering between frontend and backend spokes.</p>
 <hr />
 <h2 id="implementation-notes">Implementation notes<a class="headerlink" href="#implementation-notes" title="Permanent link">&para;</a></h2>
-<h3 id="global-peering-costs">Global peering costs<a class="headerlink" href="#global-peering-costs" title="Permanent link">&para;</a></h3>
-<p>Global VNet peering is billed per GB transferred (~$0.035/GB cross-region). For high-throughput replication workloads, evaluate whether the inspection overhead justifies the cost, or if an NVA allowlist for known replication flows can reduce processing load without compromising security posture.</p>
-<h3 id="nva-policy-synchronization">NVA policy synchronization<a class="headerlink" href="#nva-policy-synchronization" title="Permanent link">&para;</a></h3>
-<p>Both regions must enforce identical security policy. Use a centralized management plane (FortiManager or CheckPoint SmartConsole) to push policy to both NVA clusters simultaneously. Drift between regions creates compliance gaps.</p>
-<h3 id="failover-design">Failover design<a class="headerlink" href="#failover-design" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Active-active:</strong> Both regions serve traffic. Front Door routes to the closest healthy origin. Cross-region replication keeps data consistent.</li>
-<li><strong>Active-passive:</strong> Secondary region is warm standby. Recovery involves DNS cutover (Front Door handles this automatically) and promoting read replicas.</li>
-<li><strong>RTO target:</strong> &lt; 60 seconds for Front Door-based failover. Database promotion is workload-dependent.</li>
-</ul>
-<h3 id="latency-budget">Latency budget<a class="headerlink" href="#latency-budget" title="Permanent link">&para;</a></h3>
-<p>Central US to East US 2 round-trip latency is approximately 35-45ms over global VNet peering. Adding dual NVA inspection adds 1-3ms per hop depending on policy complexity. Total cross-region path: ~40-50ms.</p>
-<h3 id="bicep-snippet-global-peering">Bicep snippet (global peering)<a class="headerlink" href="#bicep-snippet-global-peering" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>resource peerCentralToEast &#39;Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2024-03-01&#39; = {
-  name: &#39;hub-centralus-to-hub-eastus2&#39;
-  parent: hubCentralUs
+<h3 id="private-dns-resolver-sizing">Private DNS Resolver sizing<a class="headerlink" href="#private-dns-resolver-sizing" title="Permanent link">&para;</a></h3>
+<p>Each inbound or outbound endpoint supports up to 10,000 queries per second. For most hybrid deployments, a single instance per region is sufficient. Deploy in both Central US and East US 2 hubs for regional redundancy.</p>
+<h3 id="zone-linking-strategy">Zone linking strategy<a class="headerlink" href="#zone-linking-strategy" title="Permanent link">&para;</a></h3>
+<p>Link all <code>privatelink.*</code> zones to the hub VNet. Link application-specific custom zones to both hub and relevant spoke VNets. Avoid linking zones to spokes that do not need them to limit the resolution scope.</p>
+<h3 id="infoblox-integration">Infoblox integration<a class="headerlink" href="#infoblox-integration" title="Permanent link">&para;</a></h3>
+<p>Configure Infoblox Grid members with conditional forwarders pointing to the Azure Private DNS Resolver inbound endpoint IP. Use Infoblox DNS Traffic Control (DTC) to load balance across resolver endpoints in both regions.</p>
+<h3 id="bicep-snippet-private-dns-resolver">Bicep snippet (Private DNS Resolver)<a class="headerlink" href="#bicep-snippet-private-dns-resolver" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>param location string = resourceGroup().location
+param hubVnetId string
+
+resource resolver &#39;Microsoft.Network/dnsResolvers@2022-07-01&#39; = {
+  name: &#39;newco-dns-resolver&#39;
+  location: location
   properties: {
-    remoteVirtualNetwork: { id: hubEastUs2.id }
-    allowVirtualNetworkAccess: true
-    allowForwardedTraffic: true
-    allowGatewayTransit: false
-    useRemoteGateways: false
+    virtualNetwork: { id: hubVnetId }
   }
 }
 
-resource peerEastToCentral &#39;Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2024-03-01&#39; = {
-  name: &#39;hub-eastus2-to-hub-centralus&#39;
-  parent: hubEastUs2
+resource inbound &#39;Microsoft.Network/dnsResolvers/inboundEndpoints@2022-07-01&#39; = {
+  parent: resolver
+  name: &#39;inbound&#39;
+  location: location
   properties: {
-    remoteVirtualNetwork: { id: hubCentralUs.id }
-    allowVirtualNetworkAccess: true
-    allowForwardedTraffic: true
-    allowGatewayTransit: false
-    useRemoteGateways: false
+    ipConfigurations: [
+      {
+        subnet: { id: &#39;${hubVnetId}/subnets/dns-resolver-inbound&#39; }
+      }
+    ]
   }
 }
 </code></pre></div>
 <hr />
 <h2 id="security-considerations">Security considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Zero Trust alignment (NIST SP 800-207):</strong> Dual inspection ensures no cross-region flow bypasses policy enforcement. Even trusted replication traffic is subject to IPS at both boundaries.</li>
-<li><strong>Segmentation:</strong> Frontend/backend separation prevents lateral movement. A compromised frontend workload cannot directly reach the database tier without traversing the hub NVA and passing L7 inspection.</li>
-<li><strong>Encryption in transit:</strong> Global VNet peering traffic is encrypted on the Microsoft backbone (MACsec at the physical layer). For additional assurance, enable IPSec between NVA pairs for application-layer encryption.</li>
-<li><strong>Logging:</strong> Correlate NVA logs from both regions in a single Log Analytics workspace. Use cross-region flow analysis to detect anomalous lateral movement patterns.</li>
-<li><strong>Blast radius containment:</strong> If one region's NVA cluster is compromised, the other region's NVA provides an independent inspection boundary. Policy should be managed from a separate control plane, not from the NVA data plane.</li>
+<li><strong>Zero Trust alignment (NIST SP 800-207):</strong> DNS resolution is centralized through the hub, preventing spokes from directly querying external or on-premises DNS servers. All resolution paths are auditable.</li>
+<li><strong>DNS exfiltration:</strong> Monitor query logs for unusually long subdomain labels or high query volumes to a single domain, which may indicate DNS tunneling. Azure Private DNS Resolver logs integrate with Log Analytics.</li>
+<li><strong>Split-brain avoidance:</strong> Ensure on-premises and Azure zones do not overlap. Use distinct subdomains (<code>azure.newco.com</code> vs <code>corp.newco.com</code>) to prevent conflicting answers.</li>
+<li><strong>Logging:</strong> Enable diagnostic settings on the Private DNS Resolver and all private DNS zones. Correlate with NVA DNS inspection logs for full query visibility.</li>
+<li><strong>Zone access control:</strong> Use Azure RBAC to restrict who can modify private DNS zones and VNet links. Unauthorized zone changes could redirect traffic to malicious endpoints.</li>
 </ul>
 <hr />
 <h2 id="related-patterns">Related patterns<a class="headerlink" href="#related-patterns" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../branch-to-azure/">Branch to Azure</a> - how branch traffic enters each region's hub</li>
-<li><a href="../internet-egress/">Internet egress</a> - outbound path from spokes in each region</li>
-<li><a href="../front-door-ingress/">Front Door ingress</a> - global ingress that selects between regions based on health</li>
+<li><a href="../branch-to-azure/">Branch to Azure</a> - ExpressRoute path used for DNS forwarding to on-premises</li>
+<li><a href="../front-door-ingress/">Front Door ingress</a> - custom domain DNS (public) complements private DNS resolution</li>
+<li><a href="../netbox-integration/">NetBox integration</a> - IPAM data in NetBox feeds subnet and DNS zone planning</li>
 </ul>
 
 

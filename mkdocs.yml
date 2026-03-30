@@ -13,10 +13,15 @@ nav:
       - Internet Egress via Hub NVA: patterns/internet-egress.md
       - Front Door / Ingress: patterns/front-door-ingress.md
       - Region-to-Region Transit: patterns/region-transit.md
+      - Multi-Cloud Connectivity: patterns/multi-cloud-connectivity.md
+      - Hybrid DNS: patterns/dns-hybrid.md
+      - NetBox Integration: patterns/netbox-integration.md
   - ARD: ARD.md
   - Roadmap: ROADMAP.generated.md
   - Diagrams: diagrams.md
-  - Compliance: compliance/mappings.md
+  - Compliance:
+      - Mappings: compliance/mappings.md
+      - NIST SP 800-207: compliance/nist-800-207.md
 
 theme:
   name: material

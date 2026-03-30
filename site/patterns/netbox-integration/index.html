@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://danabindra.github.io/hybrid-azure-network-patterns/patterns/region-transit/">
+        <link rel="canonical" href="https://danabindra.github.io/hybrid-azure-network-patterns/patterns/netbox-integration/">
       
       
-        <link rel="prev" href="../front-door-ingress/">
+        <link rel="prev" href="../dns-hybrid/">
       
       
-        <link rel="next" href="../multi-cloud-connectivity/">
+        <link rel="next" href="../../ARD/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Region-to-Region Transit - Hybrid Azure Network Patterns</title>
+        <title>NetBox Integration - Hybrid Azure Network Patterns</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#region-to-region-transit" class="md-skip">
+        <a href="#netbox-irm-platform-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Region-to-Region Transit
+              NetBox Integration
             
           </span>
         </div>
@@ -527,32 +527,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Region-to-Region Transit
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../region-transit/" class="md-nav__link">
         
   
   
@@ -563,197 +541,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#traffic-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Traffic flow
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Traffic flow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cross-region-spoke-to-spoke" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cross-region spoke-to-spoke
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cross-region-replication-database-tier" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cross-region replication (database tier)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key components
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#routing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Routing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Routing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#central-us-hub" class="md-nav__link">
-    <span class="md-ellipsis">
-      Central US hub
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#east-us-2-hub" class="md-nav__link">
-    <span class="md-ellipsis">
-      East US 2 hub
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#frontendbackend-separation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Frontend/backend separation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementation-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementation notes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementation notes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#global-peering-costs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Global peering costs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nva-policy-synchronization" class="md-nav__link">
-    <span class="md-ellipsis">
-      NVA policy synchronization
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#failover-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Failover design
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#latency-budget" class="md-nav__link">
-    <span class="md-ellipsis">
-      Latency budget
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bicep-snippet-global-peering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bicep snippet (global peering)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#security-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security considerations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related patterns
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -809,10 +596,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../netbox-integration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    NetBox Integration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -823,6 +632,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipam-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPAM workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IPAM workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prefix-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prefix hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-spoke-provisioning-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      New spoke provisioning flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuit-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Circuit tracking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device inventory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terraform-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webhooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-and-dr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backup and DR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related patterns
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1015,7 +982,7 @@
 
 
   
-    <a href="https://github.com/danabindra/hybrid-azure-network-patterns/edit/main/docs/patterns/region-transit.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/danabindra/hybrid-azure-network-patterns/edit/main/docs/patterns/netbox-integration.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1024,34 +991,21 @@
     
       
     
-    <a href="https://github.com/danabindra/hybrid-azure-network-patterns/raw/main/docs/patterns/region-transit.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/danabindra/hybrid-azure-network-patterns/raw/main/docs/patterns/netbox-integration.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="region-to-region-transit">Region-to-region transit<a class="headerlink" href="#region-to-region-transit" title="Permanent link">&para;</a></h1>
+<h1 id="netbox-irm-platform-integration">NetBox IRM platform integration<a class="headerlink" href="#netbox-irm-platform-integration" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Multi-region architecture where traffic between Central US (primary) and East US 2 (secondary) traverses hub NVAs in both regions. Global VNet peering connects the two hub VNets, and each region maintains independent frontend/backend spoke separation with NVA inspection at every boundary. This pattern supports active-active workloads, disaster recovery failover, and cross-region data replication with consistent security policy enforcement.</p>
-<p><img alt="Region-to-region transit architecture" src="../../diagrams/region-to-region.svg" /></p>
+<p>NetBox serves as the infrastructure resource management (IRM) source of truth for IP address management, circuit tracking, and device inventory across the hybrid Azure network. Deployed in the hub VNet shared-services subnet, NetBox provides an API-driven single pane for all network resource data, feeding Terraform provisioning pipelines and operational dashboards.</p>
+<!-- TODO: ![NetBox integration architecture](../diagrams/netbox-integration.svg) -->
+
 <hr />
-<h2 id="traffic-flow">Traffic flow<a class="headerlink" href="#traffic-flow" title="Permanent link">&para;</a></h2>
-<h3 id="cross-region-spoke-to-spoke">Cross-region spoke-to-spoke<a class="headerlink" href="#cross-region-spoke-to-spoke" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Spoke A (Central US)</strong> workload initiates a connection to <strong>Spoke B (East US 2)</strong>.</li>
-<li><strong>Spoke A UDR</strong> sends traffic to the <strong>Central US hub NVA</strong> (via ILB).</li>
-<li><strong>Central US NVA</strong> inspects and forwards to the <strong>East US 2 hub</strong> via global VNet peering.</li>
-<li><strong>East US 2 hub UDR</strong> routes traffic to the <strong>East US 2 NVA</strong> (via ILB) for a second inspection.</li>
-<li><strong>East US 2 NVA</strong> forwards to <strong>Spoke B</strong>.</li>
-<li><strong>Return traffic</strong> follows the reverse path, ensuring symmetric inspection at both hubs.</li>
-</ol>
-<h3 id="cross-region-replication-database-tier">Cross-region replication (database tier)<a class="headerlink" href="#cross-region-replication-database-tier" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Backend spoke (Central US)</strong> SQL/Cosmos DB initiates replication to <strong>backend spoke (East US 2)</strong>.</li>
-<li>Traffic follows the same dual-NVA path, ensuring data-in-transit is inspected at both region boundaries.</li>
-<li>For high-throughput replication, NVA policy can allowlist known replication endpoints with reduced inspection depth (skip TLS decrypt, keep IPS).</li>
-</ol>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<p>NetBox runs as a containerized deployment (Docker Compose or Kubernetes) in the shared-services subnet of the hub VNet. It is accessible only through the hub NVA and internal load balancer. CI/CD pipelines in GitHub Actions query the NetBox API to retrieve prefix allocations before provisioning Azure resources via Terraform.</p>
 <hr />
 <h2 id="key-components">Key components<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h2>
 <table>
@@ -1059,178 +1013,217 @@
 <tr>
 <th>Component</th>
 <th>Role</th>
-<th>Azure resource</th>
+<th>Platform</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Hub VNet (Central US)</td>
-<td>Primary region transit and inspection</td>
-<td><code>Microsoft.Network/virtualNetworks</code></td>
+<td>NetBox application</td>
+<td>IRM, IPAM, circuit and device tracking</td>
+<td>Hub VNet shared-services subnet</td>
 </tr>
 <tr>
-<td>Hub VNet (East US 2)</td>
-<td>Secondary region transit and inspection</td>
-<td><code>Microsoft.Network/virtualNetworks</code></td>
+<td>PostgreSQL</td>
+<td>NetBox backend database</td>
+<td>Co-located or Azure Database for PostgreSQL</td>
 </tr>
 <tr>
-<td>Global VNet peering</td>
-<td>Backbone connectivity between hubs</td>
-<td><code>Microsoft.Network/virtualNetworks/virtualNetworkPeerings</code></td>
+<td>Redis</td>
+<td>NetBox caching and task queue</td>
+<td>Co-located or Azure Cache for Redis</td>
 </tr>
 <tr>
-<td>NVA VMSS (per region)</td>
-<td>L3-L7 inspection at each region boundary</td>
-<td><code>Microsoft.Compute/virtualMachineScaleSets</code></td>
+<td>Internal load balancer</td>
+<td>Stable endpoint for NetBox API</td>
+<td>Azure <code>Microsoft.Network/loadBalancers</code></td>
 </tr>
 <tr>
-<td>ILB (per region)</td>
-<td>Stable next-hop, HA across NVA instances</td>
-<td><code>Microsoft.Network/loadBalancers</code> (Standard, internal)</td>
+<td>GitHub Actions</td>
+<td>CI/CD pipeline consuming NetBox API</td>
+<td>GitHub</td>
 </tr>
 <tr>
-<td>Frontend spoke VNets</td>
-<td>Web tier, API gateways, public-facing workloads</td>
-<td><code>Microsoft.Network/virtualNetworks</code></td>
+<td>Terraform</td>
+<td>Infrastructure provisioning from NetBox data</td>
+<td>CI/CD runner</td>
 </tr>
 <tr>
-<td>Backend spoke VNets</td>
-<td>Databases, internal services, storage</td>
-<td><code>Microsoft.Network/virtualNetworks</code></td>
-</tr>
-<tr>
-<td>Azure Monitor</td>
-<td>Cross-region latency, NVA throughput, peering metrics</td>
-<td><code>Microsoft.Insights/metricAlerts</code></td>
+<td>NSG</td>
+<td>Restrict NetBox access to authorized subnets</td>
+<td>Azure <code>Microsoft.Network/networkSecurityGroups</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h2>
-<h3 id="central-us-hub">Central US hub<a class="headerlink" href="#central-us-hub" title="Permanent link">&para;</a></h3>
+<h2 id="ipam-workflow">IPAM workflow<a class="headerlink" href="#ipam-workflow" title="Permanent link">&para;</a></h2>
+<h3 id="prefix-hierarchy">Prefix hierarchy<a class="headerlink" href="#prefix-hierarchy" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Scope</th>
-<th>Prefix</th>
-<th>Next hop</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Hub UDR</td>
-<td>East US 2 spoke CIDRs</td>
-<td>Global peering</td>
-<td>Cross-region forward</td>
-</tr>
-<tr>
-<td>Hub UDR</td>
-<td>Central US spoke CIDRs</td>
-<td>NVA ILB</td>
-<td>Local spoke inspection</td>
-</tr>
-<tr>
-<td>Spoke UDR</td>
-<td><code>0.0.0.0/0</code></td>
-<td>NVA ILB</td>
-<td>Egress and cross-region via hub</td>
-</tr>
-<tr>
-<td>Spoke UDR</td>
-<td>East US 2 CIDRs</td>
-<td>NVA ILB</td>
-<td>Cross-region through local NVA first</td>
-</tr>
-</tbody>
-</table>
-<h3 id="east-us-2-hub">East US 2 hub<a class="headerlink" href="#east-us-2-hub" title="Permanent link">&para;</a></h3>
-<p>Mirrors the Central US routing table with region CIDRs swapped.</p>
-<blockquote>
-<p>Both hubs must have <code>disableBgpRoutePropagation = true</code> on spoke route tables. Global peering does not transitively advertise spoke routes, so all cross-region paths are UDR-driven.</p>
-</blockquote>
-<hr />
-<h2 id="frontendbackend-separation">Frontend/backend separation<a class="headerlink" href="#frontendbackend-separation" title="Permanent link">&para;</a></h2>
-<p>Each region maintains two tiers of spokes:</p>
-<table>
-<thead>
-<tr>
-<th>Tier</th>
+<th>Level</th>
+<th>Example</th>
+<th>NetBox object</th>
 <th>Purpose</th>
-<th>Connectivity</th>
-<th>Example workloads</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Frontend spoke</td>
-<td>Public-facing services</td>
-<td>Receives traffic from Front Door via Private Link; sends to backend via hub NVA</td>
-<td>API gateways, web apps, CDN origins</td>
+<td>Region supernet</td>
+<td><code>10.0.0.0/8</code></td>
+<td>Aggregate</td>
+<td>Top-level allocation boundary</td>
 </tr>
 <tr>
-<td>Backend spoke</td>
-<td>Data and internal services</td>
-<td>No direct internet access; only reachable through frontend via hub NVA</td>
-<td>SQL databases, Cosmos DB, internal APIs, storage accounts</td>
+<td>Hub VNet</td>
+<td><code>10.0.0.0/16</code></td>
+<td>Prefix (container)</td>
+<td>Hub address space</td>
+</tr>
+<tr>
+<td>Hub subnet</td>
+<td><code>10.0.1.0/24</code></td>
+<td>Prefix (active)</td>
+<td>NVA inspection subnet</td>
+</tr>
+<tr>
+<td>Spoke VNet</td>
+<td><code>10.1.0.0/16</code></td>
+<td>Prefix (container)</td>
+<td>Spoke address space</td>
+</tr>
+<tr>
+<td>Spoke subnet</td>
+<td><code>10.1.1.0/24</code></td>
+<td>Prefix (active)</td>
+<td>Workload subnet</td>
 </tr>
 </tbody>
 </table>
-<p>Frontend-to-backend traffic within the same region still traverses the hub NVA. There is no direct peering between frontend and backend spokes.</p>
+<h3 id="new-spoke-provisioning-flow">New spoke provisioning flow<a class="headerlink" href="#new-spoke-provisioning-flow" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Network engineer</strong> requests a new spoke VNet in NetBox, selecting the next available /16 from the region supernet.</li>
+<li><strong>NetBox</strong> allocates the prefix and assigns child subnets (/24) for workload, private endpoints, and management.</li>
+<li><strong>Terraform pipeline</strong> runs, querying NetBox API for the allocated prefixes via the <code>netbox</code> provider data sources.</li>
+<li><strong>Terraform</strong> provisions the spoke VNet, subnets, peering to hub, UDRs, and NSGs using the NetBox-sourced CIDRs.</li>
+<li><strong>Post-provisioning webhook</strong> updates the NetBox prefix status from <code>reserved</code> to <code>active</code> and tags it with the Azure subscription ID.</li>
+</ol>
+<hr />
+<h2 id="circuit-tracking">Circuit tracking<a class="headerlink" href="#circuit-tracking" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Example value</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Circuit provider</td>
+<td>Equinix</td>
+<td>Carrier identification</td>
+</tr>
+<tr>
+<td>Circuit ID</td>
+<td>ECX-CUS-001</td>
+<td>Provider reference number</td>
+</tr>
+<tr>
+<td>Circuit type</td>
+<td>ExpressRoute</td>
+<td>Connectivity technology</td>
+</tr>
+<tr>
+<td>A-side</td>
+<td>Equinix DA1 (Dallas)</td>
+<td>Provider edge location</td>
+</tr>
+<tr>
+<td>Z-side</td>
+<td>Azure Central US</td>
+<td>Azure peering location</td>
+</tr>
+<tr>
+<td>Bandwidth</td>
+<td>1 Gbps</td>
+<td>Provisioned capacity</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Active</td>
+<td>Operational state</td>
+</tr>
+</tbody>
+</table>
+<p>Track ExpressRoute circuits, SD-WAN overlays, and Equinix ECX Fabric virtual connections as circuit objects. Link circuits to the hub site and NVA device records for dependency mapping.</p>
+<hr />
+<h2 id="device-inventory">Device inventory<a class="headerlink" href="#device-inventory" title="Permanent link">&para;</a></h2>
+<p>Track NVA instances, ExpressRoute gateways, and DNS resolvers as device objects in NetBox:</p>
+<table>
+<thead>
+<tr>
+<th>Device role</th>
+<th>Example</th>
+<th>Tracked attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NVA (firewall)</td>
+<td>FortiGate VMSS instance</td>
+<td>Serial, firmware version, interfaces, assigned hub</td>
+</tr>
+<tr>
+<td>ER gateway</td>
+<td>Hub ER virtual network gateway</td>
+<td>SKU, provisioned bandwidth, linked circuits</td>
+</tr>
+<tr>
+<td>DNS resolver</td>
+<td>Azure Private DNS Resolver</td>
+<td>Inbound/outbound endpoint IPs, linked VNets</td>
+</tr>
+<tr>
+<td>Load balancer</td>
+<td>Hub NVA ILB</td>
+<td>Frontend IP, backend pool members</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="implementation-notes">Implementation notes<a class="headerlink" href="#implementation-notes" title="Permanent link">&para;</a></h2>
-<h3 id="global-peering-costs">Global peering costs<a class="headerlink" href="#global-peering-costs" title="Permanent link">&para;</a></h3>
-<p>Global VNet peering is billed per GB transferred (~$0.035/GB cross-region). For high-throughput replication workloads, evaluate whether the inspection overhead justifies the cost, or if an NVA allowlist for known replication flows can reduce processing load without compromising security posture.</p>
-<h3 id="nva-policy-synchronization">NVA policy synchronization<a class="headerlink" href="#nva-policy-synchronization" title="Permanent link">&para;</a></h3>
-<p>Both regions must enforce identical security policy. Use a centralized management plane (FortiManager or CheckPoint SmartConsole) to push policy to both NVA clusters simultaneously. Drift between regions creates compliance gaps.</p>
-<h3 id="failover-design">Failover design<a class="headerlink" href="#failover-design" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Active-active:</strong> Both regions serve traffic. Front Door routes to the closest healthy origin. Cross-region replication keeps data consistent.</li>
-<li><strong>Active-passive:</strong> Secondary region is warm standby. Recovery involves DNS cutover (Front Door handles this automatically) and promoting read replicas.</li>
-<li><strong>RTO target:</strong> &lt; 60 seconds for Front Door-based failover. Database promotion is workload-dependent.</li>
-</ul>
-<h3 id="latency-budget">Latency budget<a class="headerlink" href="#latency-budget" title="Permanent link">&para;</a></h3>
-<p>Central US to East US 2 round-trip latency is approximately 35-45ms over global VNet peering. Adding dual NVA inspection adds 1-3ms per hop depending on policy complexity. Total cross-region path: ~40-50ms.</p>
-<h3 id="bicep-snippet-global-peering">Bicep snippet (global peering)<a class="headerlink" href="#bicep-snippet-global-peering" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>resource peerCentralToEast &#39;Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2024-03-01&#39; = {
-  name: &#39;hub-centralus-to-hub-eastus2&#39;
-  parent: hubCentralUs
-  properties: {
-    remoteVirtualNetwork: { id: hubEastUs2.id }
-    allowVirtualNetworkAccess: true
-    allowForwardedTraffic: true
-    allowGatewayTransit: false
-    useRemoteGateways: false
-  }
-}
+<h3 id="terraform-integration">Terraform integration<a class="headerlink" href="#terraform-integration" title="Permanent link">&para;</a></h3>
+<p>Use the <code>e-breuninger/netbox</code> Terraform provider to query prefix allocations at plan time:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">data</span><span class="w"> </span><span class="nc">&quot;netbox_prefix&quot;</span><span class="w"> </span><span class="nv">&quot;spoke&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="na">cidr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.spoke_cidr</span>
+<span class="p">}</span>
 
-resource peerEastToCentral &#39;Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2024-03-01&#39; = {
-  name: &#39;hub-eastus2-to-hub-centralus&#39;
-  parent: hubEastUs2
-  properties: {
-    remoteVirtualNetwork: { id: hubCentralUs.id }
-    allowVirtualNetworkAccess: true
-    allowForwardedTraffic: true
-    allowGatewayTransit: false
-    useRemoteGateways: false
-  }
-}
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azurerm_virtual_network&quot;</span><span class="w"> </span><span class="nv">&quot;spoke&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="na">name</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;spoke-${var.workload_name}&quot;</span>
+<span class="w">  </span><span class="na">location</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="nv">var.location</span>
+<span class="w">  </span><span class="na">resource_group_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.resource_group_name</span>
+<span class="w">  </span><span class="na">address_space</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nv">data.netbox_prefix.spoke.cidr</span><span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
+<h3 id="webhooks">Webhooks<a class="headerlink" href="#webhooks" title="Permanent link">&para;</a></h3>
+<p>Configure NetBox webhooks to notify the CI/CD pipeline when prefix status changes. This enables automated drift detection: if a VNet is deleted in Azure but the prefix remains active in NetBox, the pipeline flags the discrepancy.</p>
+<h3 id="backup-and-dr">Backup and DR<a class="headerlink" href="#backup-and-dr" title="Permanent link">&para;</a></h3>
+<p>Back up the PostgreSQL database to Azure Blob Storage on a daily schedule. In a regional failure, restore NetBox in the East US 2 hub from the latest backup. NetBox is not in the critical data path, so RTO can be relaxed (&lt; 4 hours).</p>
 <hr />
 <h2 id="security-considerations">Security considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Zero Trust alignment (NIST SP 800-207):</strong> Dual inspection ensures no cross-region flow bypasses policy enforcement. Even trusted replication traffic is subject to IPS at both boundaries.</li>
-<li><strong>Segmentation:</strong> Frontend/backend separation prevents lateral movement. A compromised frontend workload cannot directly reach the database tier without traversing the hub NVA and passing L7 inspection.</li>
-<li><strong>Encryption in transit:</strong> Global VNet peering traffic is encrypted on the Microsoft backbone (MACsec at the physical layer). For additional assurance, enable IPSec between NVA pairs for application-layer encryption.</li>
-<li><strong>Logging:</strong> Correlate NVA logs from both regions in a single Log Analytics workspace. Use cross-region flow analysis to detect anomalous lateral movement patterns.</li>
-<li><strong>Blast radius containment:</strong> If one region's NVA cluster is compromised, the other region's NVA provides an independent inspection boundary. Policy should be managed from a separate control plane, not from the NVA data plane.</li>
+<li><strong>Zero Trust alignment (NIST SP 800-207):</strong> NetBox API access is restricted by NSG to authorized subnets (CI/CD runners, network team jump boxes). API authentication uses tokens with scoped permissions per integration.</li>
+<li><strong>Data sensitivity:</strong> NetBox contains the complete IP plan and network topology. Treat it as confidential infrastructure data. Restrict read access to network and security teams.</li>
+<li><strong>API token rotation:</strong> Rotate NetBox API tokens on a 90-day cycle. Store tokens in Azure Key Vault and inject them into CI/CD pipelines as secrets.</li>
+<li><strong>Audit logging:</strong> Enable NetBox change logging to track all IPAM modifications. Forward logs to Log Analytics for correlation with infrastructure changes.</li>
+<li><strong>Network isolation:</strong> NetBox sits in the shared-services subnet behind the hub NVA. It has no public IP and is not reachable from spoke workloads without explicit NSG rules.</li>
 </ul>
 <hr />
 <h2 id="related-patterns">Related patterns<a class="headerlink" href="#related-patterns" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../branch-to-azure/">Branch to Azure</a> - how branch traffic enters each region's hub</li>
-<li><a href="../internet-egress/">Internet egress</a> - outbound path from spokes in each region</li>
-<li><a href="../front-door-ingress/">Front Door ingress</a> - global ingress that selects between regions based on health</li>
+<li><a href="../branch-to-azure/">Branch to Azure</a> - circuits tracked in NetBox connect branches to the hub</li>
+<li><a href="../dns-hybrid/">Hybrid DNS</a> - DNS zone planning informed by NetBox IPAM data</li>
+<li><a href="../multi-cloud-connectivity/">Multi-cloud connectivity</a> - Equinix circuits managed as NetBox circuit objects</li>
 </ul>
 
 

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 1200 850" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="azureGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" style="stop-color:#0078d4;stop-opacity:0.8"/>
+      <stop offset="1" style="stop-color:#106ebe;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="dcGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" style="stop-color:#2d3748;stop-opacity:0.9"/>
+      <stop offset="1" style="stop-color:#1a202c;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="equinixGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" style="stop-color:#ff0000;stop-opacity:0.8"/>
+      <stop offset="1" style="stop-color:#cc0000;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="mplsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" style="stop-color:#38a169;stop-opacity:0.8"/>
+      <stop offset="1" style="stop-color:#2f855a;stop-opacity:0.9"/>
+    </linearGradient>
+    <pattern id="azureCloudIcon" patternUnits="userSpaceOnUse" width="20" height="20">
+      <rect width="20" height="20" fill="#e6f3ff"/>
+      <path d="M5,12 Q5,8 8,8 Q10,6 12,8 Q15,8 15,12 L5,12 Z" fill="#0078d4" opacity="0.6"/>
+    </pattern>
+    <pattern id="checkpointPattern" patternUnits="userSpaceOnUse" width="8" height="8">
+      <rect width="8" height="8" fill="#ff4444"/>
+      <rect x="2" y="2" width="4" height="4" fill="#ffffff"/>
+    </pattern>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="850" fill="#f7fafc" x="0.749" y="-6.115"/>
+  <text x="600" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2d3748" style="white-space: pre;">
+    Enterprise Azure Network Topology with Equinix ECX Express Route | BGP (ASN 65XXX)
+  </text>
+  <rect x="50" y="70" width="300" height="420" rx="10" fill="none" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="200" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4a5568" style="white-space: pre;">
+    On-Premises Infrastructure
+  </text>
+  <rect x="80" y="120" width="100" height="80" rx="5" fill="url(#dcGradient)" stroke="#2d3748" stroke-width="2"/>
+  <text x="130" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" style="white-space: pre;">
+    Data Center 1
+  </text>
+  <text x="130" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e2e8f0" style="white-space: pre;">
+    Primary Site
+  </text>
+  <text x="130" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e2e8f0" style="white-space: pre;">
+    10.1.0.0/16
+  </text>
+  <text x="130" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e2e8f0" style="white-space: pre;">
+    Applications
+  </text>
+  <rect x="210" y="120" width="100" height="80" rx="5" fill="url(#dcGradient)" stroke="#2d3748" stroke-width="2"/>
+  <text x="260" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" style="white-space: pre;">
+    Data Center 2
+  </text>
+  <text x="260" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e2e8f0" style="white-space: pre;">
+    DR Site
+  </text>
+  <text x="260" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e2e8f0" style="white-space: pre;">
+    10.2.0.0/16
+  </text>
+  <text x="260" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e2e8f0" style="white-space: pre;">
+    Backup/DR
+  </text>
+  <rect x="60" y="360" width="80" height="50" rx="5" fill="#4a5568" stroke="#2d3748" stroke-width="2"/>
+  <text x="100" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" style="white-space: pre;">
+    Branch Office
+  </text>
+  <text x="100" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#e2e8f0" style="white-space: pre;">
+    Remote Site
+  </text>
+  <text x="100" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#e2e8f0" style="white-space: pre;">
+    10.10.0.0/24
+  </text>
+  <ellipse cx="200" cy="280" rx="120" ry="60" fill="url(#mplsGradient)" stroke="#38a169" stroke-width="3"/>
+  <text x="200" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" style="white-space: pre;">
+    SD-WAN Managed
+  </text>
+  <text x="200" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" style="white-space: pre;">
+    MPLS Core
+  </text>
+  <text x="200" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e6fffa" style="white-space: pre;">
+    ASN 65XXX
+  </text>
+  <text x="200" y="307" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e6fffa" style="white-space: pre;">
+    VRF: AZURE-PROD
+  </text>
+  <rect x="150" y="420" width="100" height="40" rx="5" fill="#805ad5" stroke="#6b46c1" stroke-width="2"/>
+  <text x="200" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" style="white-space: pre;">
+    Express Route
+  </text>
+  <text x="200" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e9d8fd" style="white-space: pre;">
+    VRF Instance
+  </text>
+  <rect x="450" y="220" width="200" height="220" rx="10" fill="#fff5f5" stroke="#e53e3e" stroke-width="2"/>
+  <text x="550" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#c53030" style="white-space: pre;">
+    Equinix ECX Fabric
+  </text>
+  <rect x="470" y="260" width="80" height="70" rx="5" fill="url(#equinixGradient)" stroke="#c53030" stroke-width="2"/>
+  <text x="510" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" style="white-space: pre;">
+    ECX Circuit 1
+  </text>
+  <text x="510" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fed7d7" style="white-space: pre;">
+    Primary BGP
+  </text>
+  <text x="510" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fed7d7" style="white-space: pre;">
+    1 Gbps
+  </text>
+  <text x="510" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fed7d7" style="white-space: pre;">
+    → East US 2
+  </text>
+  <text x="510" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#fed7d7" style="white-space: pre;">
+    65XXX↔12076
+  </text>
+  <rect x="570" y="350" width="80" height="70" rx="5" fill="url(#equinixGradient)" stroke="#c53030" stroke-width="2"/>
+  <text x="610" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" style="white-space: pre;">
+    ECX Circuit 2
+  </text>
+  <text x="610" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fed7d7" style="white-space: pre;">
+    Secondary BGP
+  </text>
+  <text x="610" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fed7d7" style="white-space: pre;">
+    1 Gbps
+  </text>
+  <text x="610" y="402" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fed7d7" style="white-space: pre;">
+    → West US 2
+  </text>
+  <text x="610" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#fed7d7" style="white-space: pre;">
+    65XXX↔12076
+  </text>
+  <rect x="750" y="80" width="423.79" height="300" rx="15" fill="url(#azureCloudIcon)" stroke="#0078d4" stroke-width="3" style=""/>
+  <text x="950" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0078d4" style="white-space: pre;">
+    Azure East US 2 Region (ASN 12076)
+  </text>
+  <rect x="780" y="130" width="150" height="120" rx="8" fill="url(#azureGradient)" stroke="#0078d4" stroke-width="2"/>
+  <text x="855" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" style="white-space: pre;">
+    Hub VNet (East)
+  </text>
+  <text x="855" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#cce7ff" style="white-space: pre;">
+    10.100.0.0/16
+  </text>
+  <rect x="790" y="180" width="60" height="25" rx="3" fill="#ff6b35" stroke="#e55100" stroke-width="1"/>
+  <path d="M795,187 L800,190 L795,193 M805,187 L810,190 L805,193 M815,187 L820,190 L815,193" stroke="white" stroke-width="1" fill="none"/>
+  <text x="820" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="white" style="white-space: pre;">
+    ER Gateway
+  </text>
+  <rect x="860" y="180" width="60" height="25" rx="3" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <text x="890" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="white" style="white-space: pre;">
+    VPN Gateway
+  </text>
+  <text x="890" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#c4b5fd" style="white-space: pre;">
+    (Backup Only)
+  </text>
+  <rect x="825" y="215" width="60" height="25" rx="3" fill="url(#checkpointPattern)" stroke="#cc0000" stroke-width="1"/>
+  <text x="855" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="white" style="white-space: pre;">
+    Checkpoint
+  </text>
+  <text x="855" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" style="white-space: pre;">
+    VMSS
+  </text>
+  <rect x="980" y="130" width="80" height="60" rx="5" fill="#e0f2fe" stroke="#0288d1" stroke-width="1"/>
+  <circle cx="995" cy="145" r="4" fill="#0078d4"/>
+  <text x="1020" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#01579b" style="white-space: pre;">
+    Workload 1
+  </text>
+  <text x="1020" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#0277bd" style="white-space: pre;">
+    10.101.0.0/16
+  </text>
+  <text x="1020" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#0288d1" style="white-space: pre;">
+    Web/App Tier
+  </text>
+  <rect x="1080" y="130" width="80" height="60" rx="5" fill="#e8f5e8" stroke="#4caf50" stroke-width="1"/>
+  <circle cx="1095" cy="145" r="4" fill="#4caf50"/>
+  <text x="1120" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#1b5e20" style="white-space: pre;">
+    Workload 2
+  </text>
+  <text x="1120" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#2e7d32" style="white-space: pre;">
+    10.102.0.0/16
+  </text>
+  <text x="1120" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#388e3c" style="white-space: pre;">
+    Development
+  </text>
+  <rect x="1030" y="210" width="80" height="60" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <circle cx="1045" cy="225" r="4" fill="#ff9800"/>
+  <text x="1070" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#e65100" style="white-space: pre;">
+    Workload 3
+  </text>
+  <text x="1070" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#ef6c00" style="white-space: pre;">
+    10.103.0.0/16
+  </text>
+  <text x="1070" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#f57c00" style="white-space: pre;">
+    SQL/Storage
+  </text>
+  <ellipse cx="855" cy="320" rx="40" ry="20" fill="#ffd700" stroke="#ffb300" stroke-width="2"/>
+  <text x="855" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ff6f00" style="white-space: pre;">
+    Internet DIA
+  </text>
+  <rect x="750" y="440" width="400" height="300" rx="15" fill="url(#azureCloudIcon)" stroke="#0078d4" stroke-width="3"/>
+  <text x="950" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0078d4" style="white-space: pre;">
+    Azure West US 2 Region (ASN 12076)
+  </text>
+  <rect x="780" y="490" width="150" height="120" rx="8" fill="url(#azureGradient)" stroke="#0078d4" stroke-width="2"/>
+  <text x="855" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" style="white-space: pre;">
+    Hub VNet (West)
+  </text>
+  <text x="855" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#cce7ff" style="white-space: pre;">
+    10.200.0.0/16
+  </text>
+  <rect x="790" y="540" width="60" height="25" rx="3" fill="#ff6b35" stroke="#e55100" stroke-width="1"/>
+  <path d="M795,547 L800,550 L795,553 M805,547 L810,550 L805,553 M815,547 L820,550 L815,553" stroke="white" stroke-width="1" fill="none"/>
+  <text x="820" y="557" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="white" style="white-space: pre;">
+    ER Gateway
+  </text>
+  <rect x="860" y="540" width="60" height="25" rx="3" fill="#7c3aed" stroke="#5b21b6" stroke-width="1"/>
+  <text x="890" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="white" style="white-space: pre;">
+    VPN Gateway
+  </text>
+  <text x="890" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#c4b5fd" style="white-space: pre;">
+    (Backup Only)
+  </text>
+  <rect x="825" y="575" width="60" height="25" rx="3" fill="url(#checkpointPattern)" stroke="#cc0000" stroke-width="1"/>
+  <text x="855" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="white" style="white-space: pre;">
+    Checkpoint
+  </text>
+  <text x="855" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" style="white-space: pre;">
+    VMSS
+  </text>
+  <rect x="980" y="490" width="80" height="60" rx="5" fill="#e0f2fe" stroke="#0288d1" stroke-width="1"/>
+  <circle cx="995" cy="505" r="4" fill="#0078d4"/>
+  <text x="1020" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#01579b" style="white-space: pre;">
+    Workload 4
+  </text>
+  <text x="1020" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#0277bd" style="white-space: pre;">
+    10.201.0.0/16
+  </text>
+  <text x="1020" y="538" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#0288d1" style="white-space: pre;">
+    Disaster Recovery
+  </text>
+  <rect x="1080" y="490" width="80" height="60" rx="5" fill="#e8f5e8" stroke="#4caf50" stroke-width="1"/>
+  <circle cx="1095" cy="505" r="4" fill="#4caf50"/>
+  <text x="1120" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#1b5e20" style="white-space: pre;">
+    Workload 5
+  </text>
+  <text x="1120" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#2e7d32" style="white-space: pre;">
+    10.202.0.0/16
+  </text>
+  <text x="1120" y="538" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#388e3c" style="white-space: pre;">
+    Pre-Production
+  </text>
+  <rect x="1030" y="570" width="80" height="60" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <circle cx="1045" cy="585" r="4" fill="#ff9800"/>
+  <text x="1070" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#e65100" style="white-space: pre;">
+    Workload 6
+  </text>
+  <text x="1070" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#ef6c00" style="white-space: pre;">
+    10.203.0.0/16
+  </text>
+  <text x="1070" y="618" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#f57c00" style="white-space: pre;">
+    Long-term Storage
+  </text>
+  <ellipse cx="855" cy="680" rx="40" ry="20" fill="#ffd700" stroke="#ffb300" stroke-width="2"/>
+  <text x="855" y="685" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ff6f00" style="white-space: pre;">
+    Internet DIA
+  </text>
+  <line x1="140" y1="385" x2="174.96" y2="341.655" stroke="#4a5568" stroke-width="2" marker-end="url(#arrowhead)" style=""/>
+  <line x1="130" y1="200" x2="130" y2="226.016" stroke="#4a5568" stroke-width="3" marker-end="url(#arrowhead)" style=""/>
+  <line x1="260" y1="200" x2="260" y2="222.885" stroke="#4a5568" stroke-width="3" marker-end="url(#arrowhead)" style=""/>
+  <line x1="200" y1="340" x2="200" y2="420" stroke="#38a169" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="350.529" y1="470.037" x2="448.715" y2="411.027" stroke="#805ad5" stroke-width="4" marker-end="url(#arrowhead)" style=""/>
+  <line x1="550" y1="295" x2="780" y2="192" stroke="#e53e3e" stroke-width="4" marker-end="url(#arrowhead)"/>
+  <line x1="650.214" y1="401.729" x2="747.859" y2="518.511" stroke="#e53e3e" stroke-width="4" marker-end="url(#arrowhead)" style=""/>
+  <line x1="930" y1="170" x2="980" y2="160" stroke="#0078d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="933.56" y1="209.914" x2="1083.56" y2="189.914" stroke="#0078d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="920" y1="230" x2="1030" y2="240" stroke="#0078d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="930.042" y1="570.806" x2="1080.04" y2="550.806" stroke="#0078d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="930" y1="530" x2="980" y2="520" stroke="#0078d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="920" y1="580" x2="1030" y2="600" stroke="#0078d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="855" y1="250" x2="855" y2="300" stroke="#ffa500" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="855" y1="610" x2="855" y2="660" stroke="#ffa500" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="397.191" y="342.237" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#805ad5" style="white-space: pre; font-size: 8px;">
+    Routes Advertised:
+  </text>
+  <text x="397.191" y="354.237" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#805ad5" style="white-space: pre; font-size: 7px;">
+    10.1.0.0/16, 10.2.0.0/16
+  </text>
+  <text x="397.191" y="364.237" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#805ad5" style="white-space: pre; font-size: 7px;">
+    10.10.0.0/24 (Branch)
+  </text>
+  <text x="688.214" y="196.055" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#c53030" style="white-space: pre; font-size: 8px;">
+    Primary BGP
+  </text>
+  <text x="688.214" y="208.055" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#c53030" style="white-space: pre; font-size: 7px;">
+    65XXX ↔ 12076
+  </text>
+  <text x="669.533" y="481.903" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#c53030" style="white-space: pre; font-size: 8px;">
+    Secondary BGP
+  </text>
+  <text x="669.533" y="493.903" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#c53030" style="white-space: pre; font-size: 7px;">
+    65XXX ↔ 12076
+  </text>
+  <rect x="50" y="520" width="300" height="280" rx="5" fill="#f7fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="200" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2d3748" style="white-space: pre;">
+    Network Architecture Legend
+  </text>
+  <rect x="70" y="550" width="15" height="10" fill="url(#dcGradient)"/>
+  <text x="95" y="560" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">Data Centers | Branch</text>
+  <rect x="70" y="570" width="15" height="10" fill="url(#mplsGradient)"/>
+  <text x="95" y="580" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">SD-WAN MPLS Core (ASN 65XXX)</text>
+  <rect x="70" y="590" width="15" height="10" fill="url(#equinixGradient)"/>
+  <text x="95" y="600" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">Equinix ECX Fabric</text>
+  <rect x="70" y="610" width="15" height="10" fill="url(#azureGradient)"/>
+  <text x="95" y="620" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">Azure Hub VNets</text>
+  <rect x="70" y="630" width="15" height="10" fill="url(#checkpointPattern)"/>
+  <text x="95" y="640" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">Checkpoint VMSS Firewalls</text>
+  <rect x="70" y="650" width="15" height="10" fill="#e0f2fe"/>
+  <text x="95" y="660" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">Workload VNets (Prod/DR)</text>
+  <rect x="70" y="670" width="15" height="10" fill="#e8f5e8"/>
+  <text x="95" y="680" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">Dev/Test Environments</text>
+  <rect x="70" y="690" width="15" height="10" fill="#fff3e0"/>
+  <text x="95" y="700" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">Data/Storage Services</text>
+  <ellipse cx="77" cy="715" rx="7" ry="5" fill="#ffd700"/>
+  <text x="95" y="720" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">Direct Internet Access</text>
+  <rect x="70" y="730" width="15" height="10" fill="#7c3aed"/>
+  <text x="95" y="740" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">VPN Gateway (Backup/Migration)</text>
+  <line x1="200" y1="755" x2="215" y2="755" stroke="#e53e3e" stroke-width="3"/>
+  <text x="225" y="760" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">Express Route Circuits</text>
+  <line x1="200" y1="775" x2="215" y2="775" stroke="#0078d4" stroke-width="2"/>
+  <text x="225" y="780" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">VNet Peering</text>
+  <line x1="200" y1="795" x2="215" y2="795" stroke="#c53030" stroke-width="2" stroke-dasharray="2,2"/>
+  <text x="225" y="800" font-family="Arial, sans-serif" font-size="9" fill="#2d3748" style="white-space: pre;">BGP Peering (65XXX↔12076)</text>
+</svg>

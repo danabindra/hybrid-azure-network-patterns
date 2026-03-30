@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="bh-hero"
+           style="background: url('{{ base_url }}/assets/hero/network-hero.svg?v=4') center / cover no-repeat;">
+    <div class="bh-hero-inner">
+      <h1>Infrastructure Playpens</h1>
+      <p>Where cloud, networking, and automation collide — safely.</p>
+      <div class="bh-cta">
+        <a class="bh-btn" href="{{ base_url }}/playpens/">Browse Playpens</a>
+        <a class="bh-btn bh-btn--ghost" href="https://github.com/danabindra">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  {{ super() }}
+{% endblock %}
+

@@ -17,6 +17,9 @@ terraform.tfvars
 .DS_Store
 Thumbs.db
 
+# Claude
+CLAUDE.md
+
 # Logs
 *.log
 
@@ -27,6 +30,9 @@ Thumbs.db
 *.doc
 *.pdf
 *.docx
+
+# Build artifacts
+puppeteer-config.json
 
 # Graveyard Files
 

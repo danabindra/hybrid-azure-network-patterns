@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://danabindra.github.io/hybrid-azure-network-patterns/ARD/">
       
       
+        <link rel="prev" href="../patterns/netbox-integration/">
+      
+      
+        <link rel="next" href="../ROADMAP.generated/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>AcmeCo Azure Cloud Network Architecture Documentation - Hybrid Azure Network Patterns</title>
+        <title>ARD - Hybrid Azure Network Patterns</title>
       
     
     
@@ -45,6 +49,8 @@
         <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/hero.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -106,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AcmeCo Azure Cloud Network Architecture Documentation
+              ARD
             
           </span>
         </div>
@@ -256,6 +262,46 @@
   
   
   
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ARD
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ROADMAP.generated/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Roadmap
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
   
     <li class="md-tabs__item">
       <a href="../diagrams/" class="md-tabs__link">
@@ -276,17 +322,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../compliance/mappings/" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../compliance/mappings/" class="md-tabs__link">
+          
+  
   
   Compliance
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -496,9 +543,269 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/multi-cloud-connectivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-Cloud Connectivity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/dns-hybrid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hybrid DNS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/netbox-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NetBox Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ARD
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    ARD
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-requirements-document-ard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Requirements Document (ARD)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Requirements Document (ARD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-architectural-objectives-and-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Architectural Objectives and Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-functional-architectural-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Functional Architectural Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-non-functional-architectural-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Non-Functional Architectural Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-constraints-and-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Constraints and Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-risks-and-architectural-mitigations" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Risks and Architectural Mitigations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-verification-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Verification and Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-implementation-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Implementation Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Appendix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Approval
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROADMAP.generated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -531,9 +838,27 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../compliance/mappings/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -542,7 +867,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Compliance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance/mappings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mappings
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance/nist-800-207/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NIST SP 800-207
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -595,27 +978,37 @@
 This Architecture Requirements Document (ARD) specifies the architectural requirements for the AcmeCo Azure Cloud Network Platform. It builds on the PRD by detailing how the architecture must address functional and non-functional needs, ensuring alignment with Microsoft Cloud Adoption Framework (CAF) best practices, Accenture experiences, and Zero Trust principles from the provided presentation. The focus is on the structural, technical, and integration aspects to support a secure, scalable greenfield Azure deployment integrated with on-premises MPLS/SD-WAN.</p>
 <p><strong>Purpose:</strong><br />
 To define mandatory architectural elements, constraints, and quality attributes that guide the design, implementation, and verification of the network architecture. This ensures the solution meets enterprise-scale demands for high availability, security, and hybrid connectivity.</p>
-<p><strong>Scope:</strong><br />
-- <strong>In-Scope:</strong> Architectural patterns (e.g., Hub-Spoke), component specifications, integration points, performance benchmarks, and compliance requirements.<br />
-- <strong>Out-of-Scope:</strong> High-level business requirements (covered in PRD); low-level code implementations.  </p>
-<p><strong>Assumptions:</strong><br />
-- Greenfield Azure environment with no legacy dependencies beyond on-premises integration (PPT Page 4).<br />
-- Access to Azure Enterprise Agreement and required vendor licenses (e.g., Check Point for NVAs).</p>
+<p><strong>Scope:</strong>  </p>
+<ul>
+<li><strong>In-Scope:</strong> Architectural patterns (e.g., Hub-Spoke), component specifications, integration points, performance benchmarks, and compliance requirements.  </li>
+<li><strong>Out-of-Scope:</strong> High-level business requirements (covered in PRD); low-level code implementations.  </li>
+</ul>
+<p><strong>Assumptions:</strong>  </p>
+<ul>
+<li>Greenfield Azure environment with no legacy dependencies beyond on-premises integration (PPT Page 4).  </li>
+<li>Access to Azure Enterprise Agreement and required vendor licenses (e.g., Check Point for NVAs).</li>
+</ul>
 <h3 id="2-architectural-objectives-and-principles">2. Architectural Objectives and Principles<a class="headerlink" href="#2-architectural-objectives-and-principles" title="Permanent link">&para;</a></h3>
-<p><strong>Core Objectives:</strong><br />
-- Enforce Zero Trust architecture with centralized security transit for all traffic flows.<br />
-- Achieve high availability (HA) and disaster recovery (DR) across dual regions.<br />
-- Support scalable hybrid connectivity while minimizing latency and costs.<br />
-- Enable automation and observability for operational efficiency.</p>
-<p><strong>Guiding Principles:</strong><br />
-- <strong>Security First:</strong> No isolated networking pockets; all traffic inspected via NVAs (PPT Page 4).<br />
-- <strong>Modularity:</strong> Use subscription-based isolation (Core Infrastructure for hubs, Workloads for spokes – PPT Page 8).<br />
-- <strong>Standardization:</strong> Align with CAF/NIST SP 800-207; leverage Azure-native services where possible (PPT Page 28).<br />
-- <strong>Automation:</strong> Infrastructure as Code (IaC) via Terraform for reproducibility (PPT Page 27).</p>
-<p><strong>Success Metrics:</strong><br />
-- Architectural Compliance: 100% adherence to Zero Trust flows (verified via audits).<br />
-- Performance: 99.99% uptime; &lt;50ms inter-region latency.<br />
-- Scalability: Handle 500+ spokes without redesign.</p>
+<p><strong>Core Objectives:</strong>  </p>
+<ul>
+<li>Enforce Zero Trust architecture with centralized security transit for all traffic flows.  </li>
+<li>Achieve high availability (HA) and disaster recovery (DR) across dual regions.  </li>
+<li>Support scalable hybrid connectivity while minimizing latency and costs.  </li>
+<li>Enable automation and observability for operational efficiency.</li>
+</ul>
+<p><strong>Guiding Principles:</strong>  </p>
+<ul>
+<li><strong>Security First:</strong> No isolated networking pockets; all traffic inspected via NVAs (PPT Page 4).  </li>
+<li><strong>Modularity:</strong> Use subscription-based isolation (Core Infrastructure for hubs, Workloads for spokes – PPT Page 8).  </li>
+<li><strong>Standardization:</strong> Align with CAF/NIST SP 800-207; leverage Azure-native services where possible (PPT Page 28).  </li>
+<li><strong>Automation:</strong> Infrastructure as Code (IaC) via Terraform for reproducibility (PPT Page 27).</li>
+</ul>
+<p><strong>Success Metrics:</strong>  </p>
+<ul>
+<li>Architectural Compliance: 100% adherence to Zero Trust flows (verified via audits).  </li>
+<li>Performance: 99.99% uptime; &lt;50ms inter-region latency.  </li>
+<li>Scalability: Handle 500+ spokes without redesign.</li>
+</ul>
 <h3 id="3-functional-architectural-requirements">3. Functional Architectural Requirements<a class="headerlink" href="#3-functional-architectural-requirements" title="Permanent link">&para;</a></h3>
 <p><strong>Priority:</strong> High (H), Medium (M), Low (L)  </p>
 <table>

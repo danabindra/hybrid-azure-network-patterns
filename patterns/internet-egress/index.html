@@ -50,6 +50,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/hero.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -74,6 +76,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#internet-egress-via-hub-nva" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -259,6 +266,44 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../ARD/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ARD
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ROADMAP.generated/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Roadmap
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../diagrams/" class="md-tabs__link">
         
   
@@ -277,17 +322,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../compliance/mappings/" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../compliance/mappings/" class="md-tabs__link">
+          
+  
   
   Compliance
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -444,6 +490,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Internet Egress via Hub NVA
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -456,6 +517,130 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traffic-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traffic flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nva-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      NVA sizing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nat-gateway-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      NAT Gateway considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forced-tunneling-from-on-premises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forced tunneling from on-premises
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bicep-snippet-nat-gateway-egress-subnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bicep snippet (NAT Gateway + egress subnet)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related patterns
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -508,9 +693,122 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-cloud-connectivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-Cloud Connectivity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dns-hybrid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hybrid DNS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netbox-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NetBox Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ARD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROADMAP.generated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -543,9 +841,27 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../compliance/mappings/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -554,7 +870,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Compliance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../compliance/mappings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mappings
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../compliance/nist-800-207/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NIST SP 800-207
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -591,9 +965,158 @@
   
 
 
-  <h1>Internet Egress via Hub NVA</h1>
+<h1 id="internet-egress-via-hub-nva">Internet egress via hub NVA<a class="headerlink" href="#internet-egress-via-hub-nva" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Centralized outbound internet access for all spoke workloads through a hub VNet NVA inspection tier. Spoke route tables force <code>0.0.0.0/0</code> to the hub, where FortiGate or CheckPoint NVA clusters apply L3-L7 security policy before traffic exits through Azure NAT Gateway. This pattern eliminates the need for per-spoke internet breakouts and provides a single auditable egress point.</p>
+<p><img alt="Internet egress architecture" src="../../diagrams/internet-egress.svg" /></p>
+<hr />
+<h2 id="traffic-flow">Traffic flow<a class="headerlink" href="#traffic-flow" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Spoke workload</strong> initiates an outbound connection (e.g., API call, OS update, SaaS integration).</li>
+<li><strong>Spoke UDR</strong> <code>0.0.0.0/0 -&gt; Hub NVA ILB</code> forwards the packet to the hub VNet.</li>
+<li><strong>Internal load balancer (ILB)</strong> distributes traffic across the NVA VMSS instances (active-active).</li>
+<li><strong>NVA inspection</strong> applies URL filtering, IPS signatures, TLS inspection (where policy permits), and application-aware rules.</li>
+<li><strong>Allowed traffic</strong> is forwarded to the <strong>NVA external interface</strong> on the egress subnet.</li>
+<li><strong>NAT Gateway</strong> on the egress subnet translates the source IP to a deterministic public IP (useful for third-party allowlisting).</li>
+<li><strong>Return traffic</strong> follows the same path in reverse: NAT Gateway -&gt; NVA -&gt; ILB -&gt; spoke.</li>
+</ol>
+<hr />
+<h2 id="key-components">Key components<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+<th>Azure resource</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hub VNet</td>
+<td>Centralized transit and security</td>
+<td><code>Microsoft.Network/virtualNetworks</code></td>
+</tr>
+<tr>
+<td>NVA VMSS</td>
+<td>Inline L3-L7 inspection (FortiGate/CheckPoint)</td>
+<td><code>Microsoft.Compute/virtualMachineScaleSets</code></td>
+</tr>
+<tr>
+<td>Internal load balancer</td>
+<td>Stable next-hop for spoke UDRs, HA distribution</td>
+<td><code>Microsoft.Network/loadBalancers</code> (Standard, internal)</td>
+</tr>
+<tr>
+<td>NAT Gateway</td>
+<td>Deterministic outbound SNAT on egress subnet</td>
+<td><code>Microsoft.Network/natGateways</code></td>
+</tr>
+<tr>
+<td>Public IP prefix</td>
+<td>Predictable egress IPs for allowlisting</td>
+<td><code>Microsoft.Network/publicIPPrefixes</code></td>
+</tr>
+<tr>
+<td>Spoke UDR</td>
+<td>Forces default route to hub NVA</td>
+<td><code>Microsoft.Network/routeTables</code></td>
+</tr>
+<tr>
+<td>NSG</td>
+<td>Deny-by-default baseline on all subnets</td>
+<td><code>Microsoft.Network/networkSecurityGroups</code></td>
+</tr>
+<tr>
+<td>Log Analytics workspace</td>
+<td>NVA logs, NSG flow logs, NAT Gateway metrics</td>
+<td><code>Microsoft.OperationalInsights/workspaces</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Prefix</th>
+<th>Next hop</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spoke UDR</td>
+<td><code>0.0.0.0/0</code></td>
+<td>Hub NVA ILB</td>
+<td>All internet-bound traffic through hub</td>
+</tr>
+<tr>
+<td>Spoke UDR</td>
+<td>Hub VNet CIDR</td>
+<td>Hub NVA ILB</td>
+<td>Spoke-to-hub inspection</td>
+</tr>
+<tr>
+<td>NVA egress subnet UDR</td>
+<td><code>0.0.0.0/0</code></td>
+<td>Internet</td>
+<td>NAT Gateway handles SNAT</td>
+</tr>
+<tr>
+<td>NVA internal subnet UDR</td>
+<td>Spoke CIDRs</td>
+<td>VNet peering</td>
+<td>Return path to spokes</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Set <code>disableBgpRoutePropagation = true</code> on all spoke route tables to prevent learned routes from bypassing the NVA.</p>
+</blockquote>
+<hr />
+<h2 id="implementation-notes">Implementation notes<a class="headerlink" href="#implementation-notes" title="Permanent link">&para;</a></h2>
+<h3 id="nva-sizing">NVA sizing<a class="headerlink" href="#nva-sizing" title="Permanent link">&para;</a></h3>
+<p>Scale the VMSS based on aggregate spoke egress throughput. FortiGate VM16 supports up to 20 Gbps per instance with accelerated networking enabled. Start with a minimum of two instances for zone redundancy.</p>
+<h3 id="nat-gateway-considerations">NAT Gateway considerations<a class="headerlink" href="#nat-gateway-considerations" title="Permanent link">&para;</a></h3>
+<p>Each NAT Gateway supports up to 64,512 SNAT ports per public IP. Attach a public IP prefix (/28 or /27) to scale beyond single-IP limits. All spokes share the same egress IPs, simplifying third-party firewall allowlists.</p>
+<h3 id="forced-tunneling-from-on-premises">Forced tunneling from on-premises<a class="headerlink" href="#forced-tunneling-from-on-premises" title="Permanent link">&para;</a></h3>
+<p>When ExpressRoute advertises <code>0.0.0.0/0</code> from on-premises, Azure-originated internet traffic routes back through the branch. To keep cloud egress local, use a more specific UDR (<code>0.0.0.0/1</code> and <code>128.0.0.0/1</code>) pointing to the NVA, which takes precedence over the BGP-learned default.</p>
+<h3 id="bicep-snippet-nat-gateway-egress-subnet">Bicep snippet (NAT Gateway + egress subnet)<a class="headerlink" href="#bicep-snippet-nat-gateway-egress-subnet" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>param location string = resourceGroup().location
 
+resource natPip &#39;Microsoft.Network/publicIPAddresses@2024-03-01&#39; = {
+  name: &#39;newco-egress-pip&#39;
+  location: location
+  sku: { name: &#39;Standard&#39; }
+  properties: { publicIPAllocationMethod: &#39;Static&#39; }
+}
 
+resource natGw &#39;Microsoft.Network/natGateways@2024-03-01&#39; = {
+  name: &#39;newco-egress-natgw&#39;
+  location: location
+  sku: { name: &#39;Standard&#39; }
+  properties: {
+    publicIpAddresses: [{ id: natPip.id }]
+    idleTimeoutInMinutes: 4
+  }
+}
+</code></pre></div>
+<hr />
+<h2 id="security-considerations">Security considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Zero Trust alignment (NIST SP 800-207):</strong> Every outbound flow is inspected regardless of source spoke or workload identity. The NVA acts as the policy enforcement point for all internet-bound traffic.</li>
+<li><strong>TLS inspection:</strong> Deploy with caution. Requires distributing the NVA CA certificate to all spoke workloads. Exempt sensitive endpoints (banking, healthcare portals) via FQDN bypass lists.</li>
+<li><strong>Logging:</strong> NVA syslog, NSG flow logs (v2), and NAT Gateway metrics should all feed into a central Log Analytics workspace. Set up alerts for SNAT port exhaustion and NVA CPU &gt; 80%.</li>
+<li><strong>DDoS protection:</strong> Enable Azure DDoS Protection Standard on the hub VNet to protect the NAT Gateway public IPs.</li>
+</ul>
+<hr />
+<h2 id="related-patterns">Related patterns<a class="headerlink" href="#related-patterns" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../branch-to-azure/">Branch to Azure</a> - how branch traffic reaches spoke workloads through the same hub</li>
+<li><a href="../front-door-ingress/">Front Door ingress</a> - inbound path that bypasses the hub NVA via Private Link</li>
+<li><a href="../region-transit/">Region-to-region transit</a> - cross-region traffic that also traverses hub NVAs</li>
+</ul>
 
 
 

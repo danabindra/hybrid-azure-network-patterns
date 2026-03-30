@@ -50,6 +50,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/hero.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -74,6 +76,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#internet-ingress-via-front-door" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -259,6 +266,44 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../ARD/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ARD
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ROADMAP.generated/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Roadmap
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../diagrams/" class="md-tabs__link">
         
   
@@ -277,17 +322,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../compliance/mappings/" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../compliance/mappings/" class="md-tabs__link">
+          
+  
   
   Compliance
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -467,6 +513,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Front Door / Ingress
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -479,6 +540,163 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traffic-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traffic flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture decisions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture decisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-private-link-instead-of-public-origin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Private Link instead of public origin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waf-policy-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      WAF policy design
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-domain-and-tls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom domain and TLS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-probes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health probes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caching-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caching strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bicep-snippet-front-door-private-link-origin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bicep snippet (Front Door + Private Link origin)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related patterns
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -508,9 +726,122 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-cloud-connectivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-Cloud Connectivity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dns-hybrid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hybrid DNS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netbox-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NetBox Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ARD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROADMAP.generated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -543,9 +874,27 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../compliance/mappings/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -554,7 +903,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Compliance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../compliance/mappings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mappings
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../compliance/nist-800-207/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NIST SP 800-207
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -591,9 +998,192 @@
   
 
 
-  <h1>Front Door / Ingress</h1>
+<h1 id="internet-ingress-via-front-door">Internet ingress via Front Door<a class="headerlink" href="#internet-ingress-via-front-door" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Global inbound traffic reaches Azure workloads through Azure Front Door with WAF protection, bypassing the hub NVA tier entirely via Private Link. This pattern provides low-latency global load balancing, DDoS absorption at the Microsoft edge, and origin cloaking so backend workloads are never directly exposed to the public internet.</p>
+<p><img alt="Front Door ingress architecture" src="../../diagrams/internet-ingress-front-door.svg" /></p>
+<hr />
+<h2 id="traffic-flow">Traffic flow<a class="headerlink" href="#traffic-flow" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Client</strong> sends HTTPS request to <code>app.newco.com</code>.</li>
+<li><strong>DNS</strong> resolves to Azure Front Door anycast IP (Microsoft global edge).</li>
+<li><strong>Front Door WAF</strong> evaluates the request against managed and custom rule sets (OWASP CRS, bot protection, geo-filtering, rate limiting).</li>
+<li><strong>Front Door</strong> selects the optimal origin based on latency probes and health checks.</li>
+<li><strong>Private Link</strong> connection from Front Door to the origin (internal load balancer or App Service) keeps traffic on the Microsoft backbone. No public IP needed on the origin.</li>
+<li><strong>Origin load balancer</strong> distributes to backend compute (VMSS, AKS, App Service).</li>
+<li><strong>Response</strong> returns through Front Door, which applies caching and compression rules.</li>
+</ol>
+<blockquote>
+<p>The hub NVA is intentionally bypassed for Front Door ingress. The NVA is designed for outbound and east-west inspection. Routing inbound web traffic through it would add latency and create a scaling bottleneck. WAF policy at Front Door provides the equivalent L7 protection for inbound flows.</p>
+</blockquote>
+<hr />
+<h2 id="key-components">Key components<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+<th>Azure resource</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Azure Front Door Premium</td>
+<td>Global L7 load balancing, SSL offload, caching</td>
+<td><code>Microsoft.Cdn/profiles</code> (Premium tier)</td>
+</tr>
+<tr>
+<td>WAF policy</td>
+<td>OWASP CRS 3.2, bot protection, custom rules</td>
+<td><code>Microsoft.Network/frontDoorWebApplicationFirewallPolicies</code></td>
+</tr>
+<tr>
+<td>Private Link service</td>
+<td>Origin cloaking, backbone-only connectivity</td>
+<td><code>Microsoft.Network/privateLinkServices</code></td>
+</tr>
+<tr>
+<td>Private endpoint</td>
+<td>Front Door connection into spoke VNet</td>
+<td><code>Microsoft.Network/privateEndpoints</code></td>
+</tr>
+<tr>
+<td>Internal load balancer</td>
+<td>Backend distribution in spoke</td>
+<td><code>Microsoft.Network/loadBalancers</code> (Standard, internal)</td>
+</tr>
+<tr>
+<td>App Service (alternative)</td>
+<td>PaaS origin with built-in Private Link support</td>
+<td><code>Microsoft.Web/sites</code></td>
+</tr>
+<tr>
+<td>Azure DNS</td>
+<td>CNAME to Front Door endpoint, plus validation TXT</td>
+<td><code>Microsoft.Network/dnsZones</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="architecture-decisions">Architecture decisions<a class="headerlink" href="#architecture-decisions" title="Permanent link">&para;</a></h2>
+<h3 id="why-private-link-instead-of-public-origin">Why Private Link instead of public origin<a class="headerlink" href="#why-private-link-instead-of-public-origin" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Public origin</th>
+<th>Private Link origin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Origin IP exposure</td>
+<td>Public IP required, discoverable</td>
+<td>No public IP, fully cloaked</td>
+</tr>
+<tr>
+<td>Traffic path</td>
+<td>Front Door -&gt; internet -&gt; origin PIP</td>
+<td>Front Door -&gt; Microsoft backbone -&gt; PE</td>
+</tr>
+<tr>
+<td>NSG requirements</td>
+<td>Must allow Front Door service tag</td>
+<td>Only private traffic, deny all public</td>
+</tr>
+<tr>
+<td>DDoS surface</td>
+<td>Origin PIP is attackable</td>
+<td>No public surface to attack</td>
+</tr>
+</tbody>
+</table>
+<p>Private Link is the recommended approach for all production workloads.</p>
+<h3 id="waf-policy-design">WAF policy design<a class="headerlink" href="#waf-policy-design" title="Permanent link">&para;</a></h3>
+<p>Apply a base WAF policy at the Front Door profile level, then override per-route where applications need specific exclusions. Use prevention mode for production and detection mode during onboarding to tune false positives.</p>
+<hr />
+<h2 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h2>
+<p>No spoke UDR changes are needed for Front Door ingress. The Private Link connection terminates at a private endpoint in the spoke VNet, and return traffic follows the private endpoint's effective routes. The hub NVA default route (<code>0.0.0.0/0</code>) does not apply because the traffic never hits the spoke's route table as internet-sourced.</p>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Prefix</th>
+<th>Next hop</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spoke UDR</td>
+<td>(no entry needed)</td>
+<td>-</td>
+<td>Private Link traffic is backbone-routed</td>
+</tr>
+<tr>
+<td>NSG on origin subnet</td>
+<td>Allow from PE subnet</td>
+<td>ILB/app port</td>
+<td>Only traffic source is the private endpoint</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="implementation-notes">Implementation notes<a class="headerlink" href="#implementation-notes" title="Permanent link">&para;</a></h2>
+<h3 id="custom-domain-and-tls">Custom domain and TLS<a class="headerlink" href="#custom-domain-and-tls" title="Permanent link">&para;</a></h3>
+<p>Front Door manages certificate lifecycle for custom domains via Azure-managed certificates or customer Key Vault certificates. Use CNAME flattening (or <code>afdverify</code> prefix) to validate domain ownership before cutover.</p>
+<h3 id="health-probes">Health probes<a class="headerlink" href="#health-probes" title="Permanent link">&para;</a></h3>
+<p>Configure health probes on Front Door to hit a dedicated <code>/health</code> endpoint on the origin. Set probe interval to 30 seconds with a 3-probe failure threshold. This avoids probe traffic overwhelming thin backends.</p>
+<h3 id="caching-strategy">Caching strategy<a class="headerlink" href="#caching-strategy" title="Permanent link">&para;</a></h3>
+<p>Enable caching for static assets (images, CSS, JS) with query string stripping. Disable caching for API routes and authenticated content. Use cache purge API integration in CI/CD pipelines for deployments.</p>
+<h3 id="bicep-snippet-front-door-private-link-origin">Bicep snippet (Front Door + Private Link origin)<a class="headerlink" href="#bicep-snippet-front-door-private-link-origin" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>param location string = resourceGroup().location
 
+resource afd &#39;Microsoft.Cdn/profiles@2024-02-01&#39; = {
+  name: &#39;newco-frontdoor&#39;
+  location: &#39;global&#39;
+  sku: { name: &#39;Premium_AzureFrontDoor&#39; }
+}
 
+resource endpoint &#39;Microsoft.Cdn/profiles/afdEndpoints@2024-02-01&#39; = {
+  parent: afd
+  name: &#39;newco-web&#39;
+  location: &#39;global&#39;
+  properties: { enabledState: &#39;Enabled&#39; }
+}
+
+resource originGroup &#39;Microsoft.Cdn/profiles/originGroups@2024-02-01&#39; = {
+  parent: afd
+  name: &#39;newco-origins&#39;
+  properties: {
+    loadBalancingSettings: {
+      sampleSize: 4
+      successfulSamplesRequired: 3
+    }
+    healthProbeSettings: {
+      probePath: &#39;/health&#39;
+      probeProtocol: &#39;Https&#39;
+      probeIntervalInSeconds: 30
+    }
+  }
+}
+</code></pre></div>
+<hr />
+<h2 id="security-considerations">Security considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Zero Trust alignment (NIST SP 800-207):</strong> Front Door WAF acts as the policy enforcement point for all inbound web traffic. Private Link ensures that even if WAF is misconfigured, origins have no public attack surface.</li>
+<li><strong>Origin cloaking:</strong> Remove or never create public IPs on origin resources. NSGs on the origin subnet should deny all inbound except from the private endpoint subnet.</li>
+<li><strong>Bot protection:</strong> Enable the bot manager rule set on Front Door Premium to block known-bad bots and challenge suspicious automated traffic.</li>
+<li><strong>Logging:</strong> Enable Front Door diagnostic logs (access logs, WAF logs, health probe logs) to Log Analytics. Correlate with origin application logs using <code>X-Azure-Ref</code> header.</li>
+<li><strong>Rate limiting:</strong> Apply rate limit rules at Front Door to absorb volumetric L7 attacks before they reach origins.</li>
+</ul>
+<hr />
+<h2 id="related-patterns">Related patterns<a class="headerlink" href="#related-patterns" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../internet-egress/">Internet egress</a> - outbound path for the same spoke workloads</li>
+<li><a href="../branch-to-azure/">Branch to Azure</a> - how internal users reach the same backends via ExpressRoute</li>
+<li><a href="../region-transit/">Region-to-region transit</a> - failover routing when the primary region origin is unhealthy</li>
+</ul>
 
 
 

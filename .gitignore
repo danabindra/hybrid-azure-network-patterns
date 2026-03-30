@@ -31,6 +31,9 @@ CLAUDE.md
 *.pdf
 *.docx
 
+# Build artifacts
+puppeteer-config.json
+
 # Graveyard Files
 
 .graveyard/*

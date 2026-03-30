@@ -1,3 +1,7 @@
+---
+template: home.html
+---
+
 # Hybrid Azure Network Patterns
 
 Production-tested network architecture patterns for enterprise Azure deployments with hub-spoke topology, NVA security inspection, hybrid connectivity, and multi-region resilience.

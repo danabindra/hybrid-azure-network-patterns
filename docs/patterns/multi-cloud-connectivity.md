@@ -4,7 +4,7 @@
 
 Private cross-cloud connectivity between Azure and Oracle Cloud Infrastructure (OCI) using Equinix ECX Fabric as the interconnection layer. Traffic between clouds stays on private circuits through Equinix, never touching the public internet. The Azure side terminates on the existing hub ExpressRoute gateway, maintaining NVA inspection for all cross-cloud flows.
 
-<!-- TODO: ![Multi-cloud connectivity architecture](../diagrams/multi-cloud-connectivity.svg) -->
+![Multi-cloud connectivity architecture](../diagrams/multicloud_connectivity_flow.svg)
 
 ---
 

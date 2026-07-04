@@ -4,7 +4,7 @@
 
 NetBox serves as the infrastructure resource management (IRM) source of truth for IP address management, circuit tracking, and device inventory across the hybrid Azure network. Deployed in the hub VNet shared-services subnet, NetBox provides an API-driven single pane for all network resource data, feeding Terraform provisioning pipelines and operational dashboards.
 
-<!-- TODO: ![NetBox integration architecture](../diagrams/netbox-integration.svg) -->
+![NetBox integration architecture](../diagrams/netbox_enterprise_integration_uniform.svg)
 
 ---
 

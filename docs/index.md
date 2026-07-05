@@ -9,7 +9,7 @@ Production-tested network architecture patterns for enterprise Azure deployments
 ## Patterns
 
 | Pattern | Description |
-|---------|-------------|
+| --------- | ------------- |
 | [Branch to Azure](patterns/branch-to-azure.md) | ExpressRoute and SD-WAN connectivity from enterprise branches through hub NVA inspection |
 | [Internet egress](patterns/internet-egress.md) | Centralized outbound internet access through hub NVA with NAT Gateway |
 | [Front Door ingress](patterns/front-door-ingress.md) | Global inbound web traffic via Azure Front Door with WAF and Private Link origin cloaking |

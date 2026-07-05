@@ -17,7 +17,7 @@ NetBox runs as a containerized deployment (Docker Compose or Kubernetes) in the 
 ## Key components
 
 | Component | Role | Platform |
-|-----------|------|----------|
+| ----------- | ------ | ---------- |
 | NetBox application | IRM, IPAM, circuit and device tracking | Hub VNet shared-services subnet |
 | PostgreSQL | NetBox backend database | Co-located or Azure Database for PostgreSQL |
 | Redis | NetBox caching and task queue | Co-located or Azure Cache for Redis |
@@ -33,7 +33,7 @@ NetBox runs as a containerized deployment (Docker Compose or Kubernetes) in the 
 ### Prefix hierarchy
 
 | Level | Example | NetBox object | Purpose |
-|-------|---------|---------------|---------|
+| ------- | --------- | --------------- | --------- |
 | Region supernet | `10.0.0.0/8` | Aggregate | Top-level allocation boundary |
 | Hub VNet | `10.0.0.0/16` | Prefix (container) | Hub address space |
 | Hub subnet | `10.0.1.0/24` | Prefix (active) | NVA inspection subnet |
@@ -53,7 +53,7 @@ NetBox runs as a containerized deployment (Docker Compose or Kubernetes) in the 
 ## Circuit tracking
 
 | Field | Example value | Purpose |
-|-------|--------------|---------|
+| ------- | -------------- | --------- |
 | Circuit provider | Equinix | Carrier identification |
 | Circuit ID | ECX-CUS-001 | Provider reference number |
 | Circuit type | ExpressRoute | Connectivity technology |
@@ -71,7 +71,7 @@ Track ExpressRoute circuits, SD-WAN overlays, and Equinix ECX Fabric virtual con
 Track NVA instances, ExpressRoute gateways, and DNS resolvers as device objects in NetBox:
 
 | Device role | Example | Tracked attributes |
-|-------------|---------|-------------------|
+| ------------- | --------- | ------------------- |
 | NVA (firewall) | FortiGate VMSS instance | Serial, firmware version, interfaces, assigned hub |
 | ER gateway | Hub ER virtual network gateway | SKU, provisioned bandwidth, linked circuits |
 | DNS resolver | Azure Private DNS Resolver | Inbound/outbound endpoint IPs, linked VNets |

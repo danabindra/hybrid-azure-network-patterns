@@ -23,7 +23,7 @@ Centralized outbound internet access for all spoke workloads through a hub VNet 
 ## Key components
 
 | Component | Role | Azure resource |
-|-----------|------|----------------|
+| ----------- | ------ | ---------------- |
 | Hub VNet | Centralized transit and security | `Microsoft.Network/virtualNetworks` |
 | NVA VMSS | Inline L3-L7 inspection (FortiGate/CheckPoint) | `Microsoft.Compute/virtualMachineScaleSets` |
 | Internal load balancer | Stable next-hop for spoke UDRs, HA distribution | `Microsoft.Network/loadBalancers` (Standard, internal) |
@@ -38,7 +38,7 @@ Centralized outbound internet access for all spoke workloads through a hub VNet 
 ## Routing
 
 | Scope | Prefix | Next hop | Notes |
-|-------|--------|----------|-------|
+| ------- | -------- | ---------- | ------- |
 | Spoke UDR | `0.0.0.0/0` | Hub NVA ILB | All internet-bound traffic through hub |
 | Spoke UDR | Hub VNet CIDR | Hub NVA ILB | Spoke-to-hub inspection |
 | NVA egress subnet UDR | `0.0.0.0/0` | Internet | NAT Gateway handles SNAT |

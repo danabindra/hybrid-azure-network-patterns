@@ -30,7 +30,7 @@ Multi-region architecture where traffic between Central US (primary) and East US
 ## Key components
 
 | Component | Role | Azure resource |
-|-----------|------|----------------|
+| ----------- | ------ | ---------------- |
 | Hub VNet (Central US) | Primary region transit and inspection | `Microsoft.Network/virtualNetworks` |
 | Hub VNet (East US 2) | Secondary region transit and inspection | `Microsoft.Network/virtualNetworks` |
 | Global VNet peering | Backbone connectivity between hubs | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` |
@@ -47,7 +47,7 @@ Multi-region architecture where traffic between Central US (primary) and East US
 ### Central US hub
 
 | Scope | Prefix | Next hop | Notes |
-|-------|--------|----------|-------|
+| ------- | -------- | ---------- | ------- |
 | Hub UDR | East US 2 spoke CIDRs | Global peering | Cross-region forward |
 | Hub UDR | Central US spoke CIDRs | NVA ILB | Local spoke inspection |
 | Spoke UDR | `0.0.0.0/0` | NVA ILB | Egress and cross-region via hub |
@@ -66,7 +66,7 @@ Mirrors the Central US routing table with region CIDRs swapped.
 Each region maintains two tiers of spokes:
 
 | Tier | Purpose | Connectivity | Example workloads |
-|------|---------|-------------|-------------------|
+| ------ | --------- | ------------- | ------------------- |
 | Frontend spoke | Public-facing services | Receives traffic from Front Door via Private Link; sends to backend via hub NVA | API gateways, web apps, CDN origins |
 | Backend spoke | Data and internal services | No direct internet access; only reachable through frontend via hub NVA | SQL databases, Cosmos DB, internal APIs, storage accounts |
 

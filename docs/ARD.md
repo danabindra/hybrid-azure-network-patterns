@@ -57,7 +57,7 @@ To define mandatory architectural elements, constraints, and quality attributes 
 **Priority:** High (H), Medium (M), Low (L)  
 
 | Req ID | Description | Priority | Architectural Details | Acceptance Criteria |
-|--------|-------------|----------|-----------------------|----------------------|
+| -------- | ------------- | ---------- | ----------------------- | ---------------------- |
 | AR-01 | Hub-Spoke Topology Implementation | H | Traditional Hub-Spoke with dual-region hubs (Central US primary, East US 2 secondary); VNet peering and route tables for transit. | Deployed hubs support FE/BE separation; peering enforced via ARM templates (PPT Page 5, ADR-001). |
 | AR-02 | Centralized Security and Inspection | H | NVAs (e.g., Check Point CloudGuard) as transit points; UDRs route spoke traffic to NVAs for logging/policy enforcement. | All inter-spoke and egress traffic inspected; no direct peering allowed (PPT Page 7, 21). |
 | AR-03 | Hybrid Connectivity Architecture | H | ExpressRoute circuits via Equinix CX for diversity; Site-to-Site VPN as resilient backup; SD-WAN overlay integration. | Dual AZ circuits per region; BGP for dynamic routing (PPT Page 8, 10). |
@@ -118,7 +118,7 @@ To define mandatory architectural elements, constraints, and quality attributes 
 ### 6. Risks and Architectural Mitigations
 
 | Risk | Likelihood/Impact | Architectural Mitigation |
-|------|-------------------|--------------------------|
+| ------ | ------------------- | -------------------------- |
 | Latency in hybrid transit | High/Medium | Optimize routes with BGP; use ExpressRoute Premium (PPT Page 10). |
 | NVA Performance Bottlenecks | Medium/High | Auto-scaling groups; load balancing across AZs. |
 | IPAM Sync Failures | Low/Medium | Redundant API calls; fallback to manual allocation. |

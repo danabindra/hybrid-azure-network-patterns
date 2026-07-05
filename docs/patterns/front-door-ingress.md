@@ -25,7 +25,7 @@ Global inbound traffic reaches Azure workloads through Azure Front Door with WAF
 ## Key components
 
 | Component | Role | Azure resource |
-|-----------|------|----------------|
+| ----------- | ------ | ---------------- |
 | Azure Front Door Premium | Global L7 load balancing, SSL offload, caching | `Microsoft.Cdn/profiles` (Premium tier) |
 | WAF policy | OWASP CRS 3.2, bot protection, custom rules | `Microsoft.Network/frontDoorWebApplicationFirewallPolicies` |
 | Private Link service | Origin cloaking, backbone-only connectivity | `Microsoft.Network/privateLinkServices` |
@@ -41,7 +41,7 @@ Global inbound traffic reaches Azure workloads through Azure Front Door with WAF
 ### Why Private Link instead of public origin
 
 | | Public origin | Private Link origin |
-|--|--------------|-------------------|
+| -- | -------------- | ------------------- |
 | Origin IP exposure | Public IP required, discoverable | No public IP, fully cloaked |
 | Traffic path | Front Door -> internet -> origin PIP | Front Door -> Microsoft backbone -> PE |
 | NSG requirements | Must allow Front Door service tag | Only private traffic, deny all public |

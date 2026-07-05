@@ -4,7 +4,7 @@
 
 Unified name resolution across Azure and on-premises using Azure Private DNS Resolver in the hub VNet, integrated with on-premises Infoblox Grid and Active Directory DNS. Azure workloads resolve on-premises names through conditional forwarding, and branch users resolve Azure Private Link endpoints through the same path in reverse. The hub acts as the DNS transit point, keeping resolution paths consistent with the network inspection model.
 
-<!-- TODO: ![Hybrid DNS architecture](../diagrams/dns-hybrid.svg) -->
+![Hybrid DNS architecture](../diagrams/azure_auth_dns_flows_fixed.svg)
 
 ---
 
@@ -35,7 +35,7 @@ Unified name resolution across Azure and on-premises using Azure Private DNS Res
 ## Key components
 
 | Component | Role | Azure resource |
-|-----------|------|----------------|
+| ----------- | ------ | ---------------- |
 | Azure Private DNS Resolver | Inbound/outbound DNS resolution in hub | `Microsoft.Network/dnsResolvers` |
 | Inbound endpoint | Receives queries from on-premises and spokes | `Microsoft.Network/dnsResolvers/inboundEndpoints` |
 | Outbound endpoint | Forwards queries to on-premises DNS | `Microsoft.Network/dnsResolvers/outboundEndpoints` |
@@ -62,7 +62,7 @@ DNS traffic (UDP/TCP 53) follows the same UDR paths as all other traffic:
 ## Private DNS zone inventory
 
 | Zone | Purpose |
-|------|---------|
+| ------ | --------- |
 | `privatelink.blob.core.windows.net` | Storage account private endpoints |
 | `privatelink.database.windows.net` | Azure SQL private endpoints |
 | `privatelink.vaultcore.azure.net` | Key Vault private endpoints |

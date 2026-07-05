@@ -4,7 +4,7 @@
 
 Private cross-cloud connectivity between Azure and Oracle Cloud Infrastructure (OCI) using Equinix ECX Fabric as the interconnection layer. Traffic between clouds stays on private circuits through Equinix, never touching the public internet. The Azure side terminates on the existing hub ExpressRoute gateway, maintaining NVA inspection for all cross-cloud flows.
 
-<!-- TODO: ![Multi-cloud connectivity architecture](../diagrams/multi-cloud-connectivity.svg) -->
+![Multi-cloud connectivity architecture](../diagrams/multicloud_connectivity_flow.svg)
 
 ---
 
@@ -32,7 +32,7 @@ Private cross-cloud connectivity between Azure and Oracle Cloud Infrastructure (
 ## Key components
 
 | Component | Role | Platform |
-|-----------|------|----------|
+| ----------- | ------ | ---------- |
 | ExpressRoute circuit | Private connectivity from Azure hub to Equinix | Azure `Microsoft.Network/expressRouteCircuits` |
 | ExpressRoute gateway | Circuit termination in hub GatewaySubnet | Azure `Microsoft.Network/virtualNetworkGateways` |
 | Equinix ECX Fabric | Cloud-neutral interconnection layer | Equinix portal / API |
@@ -47,7 +47,7 @@ Private cross-cloud connectivity between Azure and Oracle Cloud Infrastructure (
 ## Routing
 
 | Scope | Prefix | Next hop | Notes |
-|-------|--------|----------|-------|
+| ------- | -------- | ---------- | ------- |
 | Spoke UDR | OCI VCN CIDRs | Hub NVA ILB | Cross-cloud traffic through inspection |
 | Hub NVA UDR | OCI VCN CIDRs | ExpressRoute gateway | Post-inspection forward to Equinix |
 | Hub GatewaySubnet UDR | Spoke CIDRs | NVA ILB | OCI-initiated traffic through NVA |

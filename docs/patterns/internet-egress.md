@@ -99,5 +99,6 @@ resource natGw 'Microsoft.Network/natGateways@2024-03-01' = {
 ## Related patterns
 
 - [Branch to Azure](branch-to-azure.md) - how branch traffic reaches spoke workloads through the same hub
+- [DIA circuit](dia-circuit.md) - decentralized breakout at colo and branch edges that complements hub egress
 - [Front Door ingress](front-door-ingress.md) - inbound path that bypasses the hub NVA via Private Link
 - [Region-to-region transit](region-transit.md) - cross-region traffic that also traverses hub NVAs

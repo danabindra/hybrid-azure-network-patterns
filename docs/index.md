@@ -12,6 +12,7 @@ Production-tested network architecture patterns for enterprise Azure deployments
 | --------- | ------------- |
 | [Branch to Azure](patterns/branch-to-azure.md) | ExpressRoute and SD-WAN connectivity from enterprise branches through hub NVA inspection |
 | [Internet egress](patterns/internet-egress.md) | Centralized outbound internet access through hub NVA with NAT Gateway |
+| [DIA circuit](patterns/dia-circuit.md) | Dedicated Internet Access at colocation and branch edges for local breakout, SD-WAN underlay, and egress migration off the legacy DC |
 | [Front Door ingress](patterns/front-door-ingress.md) | Global inbound web traffic via Azure Front Door with WAF and Private Link origin cloaking |
 | [Region-to-region transit](patterns/region-transit.md) | Multi-region traffic with dual NVA inspection and global VNet peering |
 | [Multi-cloud connectivity](patterns/multi-cloud-connectivity.md) | Private cross-cloud connectivity to OCI via Equinix ECX Fabric |

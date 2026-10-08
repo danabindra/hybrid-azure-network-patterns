@@ -17,6 +17,13 @@ nav:
       - Hybrid DNS: patterns/dns-hybrid.md
       - NetBox Integration: patterns/netbox-integration.md
   - ARD: ARD.md
+  - ADRs:
+      - Decision Log: adr/index.md
+      - 0001 Hub-Spoke over vWAN: adr/0001-hub-spoke-over-vwan.md
+      - 0002 Palo Alto Cloud NGFW: adr/0002-palo-cloud-ngfw.md
+      - 0003 Cloud NGFW Management Plane: adr/0003-cloud-ngfw-management.md
+      - 0004 Azure DNS Resolution Path: adr/0004-azure-dns-resolution-path.md
+      - Template: adr/template.md
   - Roadmap: ROADMAP.generated.md
   - Diagrams: diagrams.md
   - Compliance:

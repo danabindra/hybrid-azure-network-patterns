@@ -1,4 +1,4 @@
-# ADR-0002: Use Traditional Hub-Spoke Architecture Over Azure vWAN
+# ADR-0001: Use Traditional Hub-Spoke Architecture Over Azure vWAN
 
 ## Status
 Accepted
@@ -46,8 +46,11 @@ We will implement a **Traditional Hub-Spoke architecture** with customer-managed
 
 ## References
 - [Azure Hub-Spoke Reference Architecture](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
-- [Network Topology and Connectivity - Architecture Document](../architecture/network-topology.md)
+- Network Topology and Connectivity architecture document
 - Original presentation requirement specifying need for granular control
+
+## Related decisions
+- The inspection platform named here as an NVA option was later settled in [ADR-0002](0002-palo-cloud-ngfw.md), which selects a managed cloud NGFW service.
 
 ## Decision Makers
 - Network Architecture Team
